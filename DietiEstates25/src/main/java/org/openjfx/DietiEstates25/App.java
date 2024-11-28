@@ -1,38 +1,87 @@
 package org.openjfx.DietiEstates25;
 
+import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
+import javafx.stage.Screen;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
-/**
- * JavaFX App
- */
 public class App extends Application {
 
-    private static Scene scene;
+    private VBox splashLayout;
+    private HBox welcomeLayout;
 
     @Override
-    public void start(Stage stage) throws IOException {
-        scene = new Scene(loadFXML("primary"), 640, 480);
+    public void start(Stage primaryStage) {
+        showSplashScreen(primaryStage);
+    }
+
+    public void showSplashScreen(Stage stage) {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("SplashPage.fxml"));
+        try {
+            splashLayout = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
+
+        Scene scene = new Scene(splashLayout);
+        stage.initStyle(StageStyle.UNDECORATED);
         stage.setScene(scene);
+        stage.setMinWidth(640);
+        stage.setMinHeight(360);
+        stage.centerOnScreen();
+        stage.setResizable(false);
+
         stage.show();
+
+        FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), splashLayout);
+        fadeOut.setFromValue(1.0);
+        fadeOut.setToValue(0.0);
+        fadeOut.setOnFinished(event -> {
+            stage.close();
+            showWelcomeScreen();
+        });
+        
+        fadeOut.play();
     }
 
-    static void setRoot(String fxml) throws IOException {
-        scene.setRoot(loadFXML(fxml));
-    }
+    public void showWelcomeScreen() {
+        Stage welcomeStage = new Stage();
+        
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(getClass().getResource("WelcomePage.fxml"));
+        try {
+            welcomeLayout = loader.load();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return;
+        }
 
-    private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(App.class.getResource(fxml + ".fxml"));
-        return fxmlLoader.load();
+        Scene scene = new Scene(welcomeLayout);
+        welcomeStage.setScene(scene);
+        welcomeStage.setTitle("DietiEstate25");
+        welcomeStage.initStyle(StageStyle.DECORATED);
+        welcomeStage.setWidth(Screen.getPrimary().getBounds().getWidth());
+        welcomeStage.setHeight(Screen.getPrimary().getBounds().getHeight());
+        welcomeStage.setResizable(true);
+        welcomeStage.centerOnScreen();
+        welcomeStage.setMinWidth(1280);
+        welcomeStage.setMinHeight(720);
+        welcomeStage.show();
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 
 }
