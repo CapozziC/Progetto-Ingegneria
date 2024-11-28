@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Icon/icons8-società-cliente-96.png" />
+                  <Image url="@Icon/icons8-società-cliente-96.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" text="Fai parte di un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470">
@@ -37,7 +37,7 @@
          <children>
             <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Icon/icons8-scambio-chiavi-96.png" />
+                  <Image url="@Icon/icons8-scambio-chiavi-96.png" />
                </image>
             </ImageView>
             <Label alignment="CENTER" text="Vuoi cercare casa?" textAlignment="CENTER" textFill="#4a3470">

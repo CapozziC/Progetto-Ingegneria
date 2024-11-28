@@ -39,7 +39,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Icon/icons8-logo-di-google-48.png" />
+                  <Image url="@Icon/icons8-logo-di-google-48.png" />
                </image>
             </ImageView>
          </graphic>
@@ -51,7 +51,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Icon/icons8-facebook-50.png" />
+                  <Image url="@Icon/icons8-facebook-50.png" />
                </image>
             </ImageView>
          </graphic>
@@ -63,7 +63,7 @@
          <graphic>
             <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../../Icon/icons8-github-50.png" />
+                  <Image url="@Icon/icons8-github-50.png" />
                </image>
             </ImageView>
          </graphic>
@@ -75,7 +75,7 @@
       </Label>
       <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="131.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Icon/icons8-informazioni-30.png" />
+            <Image url="@Icon/icons8-informazioni-30.png" />
          </image>
       </ImageView>
    </children>

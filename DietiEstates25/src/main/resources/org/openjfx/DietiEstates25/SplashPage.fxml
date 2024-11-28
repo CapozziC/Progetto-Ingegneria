@@ -10,7 +10,7 @@
    <children>
       <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../../Icon/icons8-casa-100.png" />
+            <Image url="@Icon/icons8-casa-100.png" />
          </image></ImageView>
       <Label alignment="CENTER" contentDisplay="CENTER" text="La casa dei tuoi sogni è più vicina di quanto immagini" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
          <font>

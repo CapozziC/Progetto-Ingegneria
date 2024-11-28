@@ -27,7 +27,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Icon/icons8-esterno-30.png" />
+                              <Image url="@Icon/icons8-esterno-30.png" />
                            </image></ImageView>
                      </graphic>
                   </Button>
@@ -41,7 +41,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Icon/icons8-genere-utente-neutro-30.png" />
+                              <Image url="@Icon/icons8-genere-utente-neutro-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -56,7 +56,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Icon/icons8-stretta-di-mano-30.png" />
+                              <Image url="@Icon/icons8-stretta-di-mano-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -71,7 +71,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Icon/icons8-logout-arrotondato-sinistra-30.png" />
+                              <Image url="@Icon/icons8-logout-arrotondato-sinistra-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -87,7 +87,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../../../../../../Icon/icons8-aprire-il-riquadro-30.png" />
+                              <Image url="@Icon/icons8-aprire-il-riquadro-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
