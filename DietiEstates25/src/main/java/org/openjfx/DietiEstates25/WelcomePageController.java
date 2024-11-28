@@ -3,8 +3,8 @@ package org.openjfx.DietiEstates25;
 import javafx.fxml.FXML;
 
 import javafx.scene.control.Button;
-
-import javafx.scene.input.MouseEvent;
+import javafx.scene.control.SplitPane;
+import javafx.scene.layout.Pane;
 
 public class WelcomePageController {
 	@FXML
@@ -13,6 +13,13 @@ public class WelcomePageController {
 	private Button buttonAccediUtente;
 	@FXML
 	private Button buttonRegistratiUtente;
+	@FXML
+	private SplitPane splitPane;
+	@FXML
+	private Pane paneMobile;
+	@FXML
+	private Button buttonMobile;
+	
 	
 	@FXML
 	public void initialize() {
