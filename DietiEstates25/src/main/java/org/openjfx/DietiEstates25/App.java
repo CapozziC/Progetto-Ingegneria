@@ -1,6 +1,7 @@
 package org.openjfx.DietiEstates25;
 
 import javafx.animation.FadeTransition;
+import javafx.animation.PauseTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -46,15 +47,18 @@ public class App extends Application {
 
         stage.show();
 
-        FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), splashLayout);
-        fadeOut.setFromValue(1.0);
-        fadeOut.setToValue(0.0);
-        fadeOut.setOnFinished(event -> {
-            stage.close();
-            showWelcomeScreen();
+        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+        pause.setOnFinished(event -> {
+            FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), splashLayout);
+            fadeOut.setFromValue(1.0);
+            fadeOut.setToValue(0.0);
+            fadeOut.setOnFinished(fadeEvent -> {
+                stage.close();
+                showWelcomeScreen();
+            });
+            fadeOut.play();
         });
-        
-        fadeOut.play();
+        pause.play();
     }
 
     public void showWelcomeScreen() {
