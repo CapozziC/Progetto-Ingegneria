@@ -1,47 +1,58 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <groupId>org.openjfx</groupId>
     <artifactId>DietiEstates25</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
+        <!-- Utilizza una versione di Java supportata (ad esempio JDK 11) -->
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
+
     <dependencies>
+        <!-- JavaFX Controls -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>13</version>
+            <version>23</version> <!-- Usa JavaFX 23 per compatibilità con JDK 11 o superiore -->
         </dependency>
+
+        <!-- JavaFX FXML -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>23</version>
+            <version>23</version> <!-- Usa la stessa versione di javafx-controls -->
         </dependency>
+
+        <!-- Aggiungi altre dipendenze JavaFX se necessario -->
     </dependencies>
+
     <build>
         <plugins>
+            <!-- Plugin per la compilazione con la versione di JDK che stai usando -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>23</release>
+                    <release>11</release> <!-- JDK 11, assicurati di usare una versione compatibile con JavaFX -->
                 </configuration>
             </plugin>
+
+            <!-- Plugin per JavaFX, necessario per l'esecuzione dell'app -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.6</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running -->
-                        <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.openjfx.DietiEstates25.App</mainClass>
+                            <mainClass>org.openjfx.DietiEstates25.App</mainClass> <!-- Modifica con la tua main class -->
                         </configuration>
                     </execution>
                 </executions>
