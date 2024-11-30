@@ -122,11 +122,11 @@
    <top>
       <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
          <children>
-            <JFXButton contentDisplay="GRAPHIC_ONLY">
+            <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icon/TitleBarIcons/icons8-linea-orizzontale-50.png" />
+                        <Image url="@Icon/TitleBar/icons8-iconizza-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -135,7 +135,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icon/TitleBarIcons/icons8-schermo-intero-50.png" />
+                        <Image url="@Icon/TitleBar/icons8-schermo-intero-50.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -144,7 +144,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icon/TitleBarIcons/icons8-eliminare-50.png" />
+                        <Image url="@Icon/TitleBar/icons8-eliminare-50.png" />
                      </image>
                   </ImageView>
                </graphic>

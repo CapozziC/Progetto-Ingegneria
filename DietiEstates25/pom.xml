@@ -8,7 +8,6 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <!-- Utilizza una versione di Java supportata (ad esempio JDK 11) -->
         <maven.compiler.source>23</maven.compiler.source>
         <maven.compiler.target>23</maven.compiler.target>
     </properties>
@@ -18,32 +17,37 @@
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-controls</artifactId>
-            <version>23</version> <!-- Usa JavaFX 23 per compatibilità con JDK 11 o superiore -->
+            <version>23</version>
         </dependency>
 
         <!-- JavaFX FXML -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-fxml</artifactId>
-            <version>23</version> <!-- Usa la stessa versione di javafx-controls -->
+            <version>23</version>
         </dependency>
 
-        <!-- Aggiungi altre dipendenze JavaFX se necessario -->
+        <!-- JFoenix -->
+        <dependency>
+            <groupId>com.jfoenix</groupId>
+            <artifactId>jfoenix</artifactId>
+            <version>9.0.10</version>
+        </dependency>
     </dependencies>
 
     <build>
         <plugins>
-            <!-- Plugin per la compilazione con la versione di JDK che stai usando -->
+            <!-- Plugin per la compilazione -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.8.0</version>
                 <configuration>
-                    <release>23</release> <!-- JDK 11, assicurati di usare una versione compatibile con JavaFX -->
+                    <release>23</release>
                 </configuration>
             </plugin>
 
-            <!-- Plugin per JavaFX, necessario per l'esecuzione dell'app -->
+            <!-- Plugin per JavaFX -->
             <plugin>
                 <groupId>org.openjfx</groupId>
                 <artifactId>javafx-maven-plugin</artifactId>
@@ -52,7 +56,7 @@
                     <execution>
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.openjfx.DietiEstates25.App</mainClass> <!-- Modifica con la tua main class -->
+                            <mainClass>org.openjfx.DietiEstates25.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>

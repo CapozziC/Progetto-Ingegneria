@@ -14,6 +14,7 @@ import javafx.stage.Screen;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
+import org.openjfx.DietiEstates25.WindowsManager;
 
 import java.io.IOException;
 
@@ -24,7 +25,13 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-        showSplashScreen(primaryStage);
+//        showSplashScreen(primaryStage);
+    	try {
+			WindowsManager.openWindow("WelcomePage.fxml", "WelcomePage", null);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     }
 
     public void showSplashScreen(Stage stage) {

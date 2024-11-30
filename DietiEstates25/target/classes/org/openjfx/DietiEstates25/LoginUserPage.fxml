@@ -34,7 +34,7 @@
                         </Label>
                         <TextField layoutX="64.0" layoutY="57.0" prefHeight="29.0" prefWidth="216.0" promptText="Email" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;" />
                         <PasswordField layoutX="64.0" layoutY="106.0" prefHeight="29.0" prefWidth="215.0" promptText="Password" style="-fx-border-radius: 10; -fx-border-color: #6756be; -fx-border-width: 2px;" />
-                        <JFXButton fx:id="ButtonAccediUsers" buttonType="RAISED" contentDisplay="CENTER" layoutX="63.0" layoutY="169.0" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="#f8f6f6">
+                        <JFXButton fx:id="ButtonAccediUsers" buttonType="RAISED" contentDisplay="CENTER" layoutX="63.0" layoutY="169.0" onAction="#openHomePage" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="#f8f6f6">
                            <font>
                               <Font name="System Bold Italic" size="14.0" />
                            </font>
@@ -80,7 +80,7 @@
                               </ImageView>
                            </graphic>
                         </Button>
-                        <Button fx:id="ButtonInfoUsers" layoutX="263.0" layoutY="106.0" minWidth="18.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="18.0" style="-fx-background-color: transparen; -fx-border-color: transparen;">
+                        <Button fx:id="ButtonInfoUsers" layoutX="263.0" layoutY="106.0" minWidth="18.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="18.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
                            <graphic>
                               <ImageView fx:id="Back" fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
