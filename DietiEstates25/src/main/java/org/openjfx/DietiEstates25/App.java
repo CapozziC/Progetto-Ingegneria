@@ -34,64 +34,64 @@ public class App extends Application {
 		}
     }
 
-    public void showSplashScreen(Stage stage) {
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("SplashPage.fxml"));
-        try {
-            splashLayout = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-
-        Scene scene = new Scene(splashLayout);
-        stage.initStyle(StageStyle.UNDECORATED);
-        stage.setScene(scene);
-        stage.setMinWidth(640);
-        stage.setMinHeight(360);
-        stage.centerOnScreen();
-        stage.setResizable(false);
-
-        stage.show();
-
-        PauseTransition pause = new PauseTransition(Duration.seconds(1));
-        pause.setOnFinished(event -> {
-            FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), splashLayout);
-            fadeOut.setFromValue(1.0);
-            fadeOut.setToValue(0.0);
-            fadeOut.setOnFinished(fadeEvent -> {
-                stage.close();
-                showWelcomeScreen();
-            });
-            fadeOut.play();
-        });
-        pause.play();
-    }
-
-    public void showWelcomeScreen() {
-        Stage welcomeStage = new Stage();
-        
-        FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(getClass().getResource("WelcomePage.fxml"));
-        try {
-            welcomeLayout = loader.load();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return;
-        }
-
-        Scene scene = new Scene(welcomeLayout);
-        welcomeStage.setScene(scene);
-        welcomeStage.setTitle("DietiEstate25");
-        welcomeStage.initStyle(StageStyle.DECORATED);
-        welcomeStage.setWidth(Screen.getPrimary().getBounds().getWidth());
-        welcomeStage.setHeight(Screen.getPrimary().getBounds().getHeight());
-        welcomeStage.setResizable(true);
-        welcomeStage.centerOnScreen();
-        welcomeStage.setMinWidth(1280);
-        welcomeStage.setMinHeight(720);
-        welcomeStage.show();
-    }
+//    public void showSplashScreen(Stage stage) {
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(getClass().getResource("SplashPage.fxml"));
+//        try {
+//            splashLayout = loader.load();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return;
+//        }
+//
+//        Scene scene = new Scene(splashLayout);
+//        stage.initStyle(StageStyle.UNDECORATED);
+//        stage.setScene(scene);
+//        stage.setMinWidth(640);
+//        stage.setMinHeight(360);
+//        stage.centerOnScreen();
+//        stage.setResizable(false);
+//
+//        stage.show();
+//
+//        PauseTransition pause = new PauseTransition(Duration.seconds(1));
+//        pause.setOnFinished(event -> {
+//            FadeTransition fadeOut = new FadeTransition(Duration.seconds(3), splashLayout);
+//            fadeOut.setFromValue(1.0);
+//            fadeOut.setToValue(0.0);
+//            fadeOut.setOnFinished(fadeEvent -> {
+//                stage.close();
+//                showWelcomeScreen();
+//            });
+//            fadeOut.play();
+//        });
+//        pause.play();
+//    }
+//
+//    public void showWelcomeScreen() {
+//        Stage welcomeStage = new Stage();
+//        
+//        FXMLLoader loader = new FXMLLoader();
+//        loader.setLocation(getClass().getResource("WelcomePage.fxml"));
+//        try {
+//            welcomeLayout = loader.load();
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            return;
+//        }
+//
+//        Scene scene = new Scene(welcomeLayout);
+//        welcomeStage.setScene(scene);
+//        welcomeStage.setTitle("DietiEstate25");
+//        welcomeStage.initStyle(StageStyle.DECORATED);
+//        welcomeStage.setWidth(Screen.getPrimary().getBounds().getWidth());
+//        welcomeStage.setHeight(Screen.getPrimary().getBounds().getHeight());
+//        welcomeStage.setResizable(true);
+//        welcomeStage.centerOnScreen();
+//        welcomeStage.setMinWidth(1280);
+//        welcomeStage.setMinHeight(720);
+//        welcomeStage.show();
+//    }
 
     public static void main(String[] args) {
         launch(args);

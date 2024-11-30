@@ -15,7 +15,7 @@ public class WindowsManager {
 	public static void openWindow(String fxmlPath, String title, Modality modality) throws IOException {
 		FXMLLoader loader = new FXMLLoader(WindowsManager.class.getResource(fxmlPath));
 	    Parent root = loader.load();
-
+	    
 	    Stage stage = new Stage();
 	    stage.setTitle(title);
 	    stage.setScene(new Scene(root));
