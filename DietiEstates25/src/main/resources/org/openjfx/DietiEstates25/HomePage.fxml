@@ -1,37 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #6756be; -fx-border-width: 0 0 1 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
    <left>
-      <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #4a3470;" BorderPane.alignment="CENTER">
+      <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
          <children>
             <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" prefHeight="720.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <Button fx:id="buttonHome" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #9593D9;" text="Home" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
+                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #9593D9;" text="Home" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/icons8-esterno-30.png" />
+                              <Image url="@Icon/HomePageIcons/icons8-home-30.png" />
                            </image></ImageView>
                      </graphic>
-                  </Button>
-                  <Button fx:id="buttonProfilo" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Profilo" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Profilo" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -41,12 +42,12 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/icons8-genere-utente-neutro-30.png" />
+                              <Image url="@Icon/HomePageIcons/icons8-profilo-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </Button>
-                  <Button fx:id="buttonOfferte" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Offerte" textFill="WHITE">
+                  </JFXButton>
+                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Offerte" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -56,12 +57,12 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/icons8-stretta-di-mano-30.png" />
+                              <Image url="@Icon/HomePageIcons/icons8-offerte-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </Button>
-                  <Button fx:id="buttonLogout" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Logout" textFill="WHITE">
+                  </JFXButton>
+                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Appuntamenti" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -71,13 +72,28 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/icons8-logout-arrotondato-sinistra-30.png" />
+                              <Image url="@Icon/HomePageIcons/icons8-appuntamenti-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </Button>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonLogout" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePageIcons/icons8-logout-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
                   <Separator prefHeight="0.0" prefWidth="200.0" />
-                  <Button fx:id="buttonNascondi" alignment="CENTER_LEFT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Nascondi pannello" textFill="WHITE">
+                  <JFXButton fx:id="buttonNascondi" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Nascondi pannello" textFill="WHITE">
                      <font>
                         <Font size="14.0" />
                      </font>
@@ -87,11 +103,11 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/icons8-aprire-il-riquadro-30.png" />
+                              <Image url="@Icon/HomePageIcons/icons8-nascondi-pannello-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
-                  </Button>
+                  </JFXButton>
                </children>
                <padding>
                   <Insets top="20.0" />
@@ -101,6 +117,39 @@
       </Pane>
    </left>
    <center>
-      <Pane prefHeight="720.0" prefWidth="1187.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+      <Pane prefHeight="720.0" prefWidth="1187.0" style="-fx-background-color: white; -fx-background-radius: 20 0 0 20;" BorderPane.alignment="CENTER" />
    </center>
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBarIcons/icons8-linea-orizzontale-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBarIcons/icons8-schermo-intero-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBarIcons/icons8-eliminare-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
 </BorderPane>

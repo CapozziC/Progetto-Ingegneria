@@ -15,6 +15,8 @@ public class HomePageController {
 	@FXML
 	private Button buttonOfferte;
 	@FXML
+	private Button buttonAppuntamenti;
+	@FXML
 	private Button buttonLogout;
 	@FXML
 	private Button buttonNascondi;
@@ -29,11 +31,11 @@ public class HomePageController {
 	
 	@FXML
 	public void initialize() {
-		setButtonHoverEffect(buttonHome, "#4a3470", "#9593D9");
-		setButtonHoverEffect(buttonProfilo, "#4a3470", "#9593D9");
-		setButtonHoverEffect(buttonOfferte, "#4a3470", "#9593D9");
-		setButtonHoverEffect(buttonLogout, "#4a3470", "#9593D9");
-		setButtonHoverEffect(buttonNascondi, "#4a3470", "#9593D9");
+		setButtonHoverEffect(buttonHome, "#6756be", "#9593D9");
+		setButtonHoverEffect(buttonProfilo, "#6756be", "#9593D9");
+		setButtonHoverEffect(buttonOfferte, "#6756be", "#9593D9");
+		setButtonHoverEffect(buttonLogout, "#6756be", "#9593D9");
+		setButtonHoverEffect(buttonNascondi, "#6756be", "#9593D9");
 		buttonNascondi.setOnAction(event -> handleButtonClick());
 	}
 
