@@ -22,6 +22,10 @@ public class HomePageController {
     private VBox VBoxLaterale;
     @FXML
     private Button buttonIconizza;
+    @FXML
+    private Button buttonMassimizza;
+    @FXML
+    private Button buttonChiudi;
 
     private static final String ORIGINAL_COLOR = "#6756be";
     private static final String HOVER_COLOR = "#9593D9";
@@ -36,10 +40,13 @@ public class HomePageController {
 
     @FXML
     public void initialize() {
-        List<Button> buttons = List.of(buttonHome, buttonProfilo, buttonOfferte, buttonAppuntamenti, buttonLogout, buttonNascondi);
+        List<Button> buttons = List.of(buttonHome, buttonProfilo, buttonOfferte, buttonAppuntamenti, buttonLogout);
         buttons.forEach(button -> setButtonHoverEffect(button, ORIGINAL_COLOR, HOVER_COLOR));
+        setButtonHoverEffect(buttonNascondi, "#4a3371", "#E56B6F");
+        setButtonHoverEffect(buttonChiudi, "white", "#ff6767");
+        setButtonHoverEffect(buttonIconizza, "white", "#a7ff97");
+        setButtonHoverEffect(buttonMassimizza, "white", "#faff67");
         buttonNascondi.setOnAction(event -> handleButtonClick());
-        buttonIconizza.setOnAction(event -> iconizedWindow());
     }
 
     private void setButtonHoverEffect(Button button, String originalColor, String hoverColor) {
@@ -79,7 +86,22 @@ public class HomePageController {
     }
     
     public void iconizedWindow() {
-    	Stage stage = (Stage) buttonHome.getScene().getWindow();
+    	Stage stage = (Stage) buttonChiudi.getScene().getWindow();
     	stage.setIconified(true);
+    }
+    
+    public void maximizedWindow() {
+    	Stage stage = (Stage) buttonChiudi.getScene().getWindow();
+    	if (!stage.isFullScreen()) {
+			stage.setFullScreen(true);
+    	}
+    	else {
+    		stage.setFullScreen(false);
+    	}
+    }
+    
+    public void closeWindow() {
+    	Stage stage = (Stage) buttonChiudi.getScene().getWindow();
+    	stage.close();
     }
 }

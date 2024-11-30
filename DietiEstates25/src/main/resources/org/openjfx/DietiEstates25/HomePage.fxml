@@ -12,13 +12,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #6756be; -fx-border-width: 0 0 1 0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #6756be;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
    <left>
       <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" prefHeight="720.0" prefWidth="200.0" spacing="20.0">
+            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" prefHeight="690.0" prefWidth="200.0" spacing="20.0">
                <children>
-                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #9593D9;" text="Home" textFill="WHITE">
+                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Home" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -120,9 +120,9 @@
       <Pane prefHeight="720.0" prefWidth="1187.0" style="-fx-background-color: white; -fx-background-radius: 20 0 0 20;" BorderPane.alignment="CENTER" />
    </center>
    <top>
-      <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
          <children>
-            <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow">
+            <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow" HBox.hgrow="ALWAYS">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -130,8 +130,11 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
-            <JFXButton contentDisplay="GRAPHIC_ONLY">
+            <JFXButton fx:id="buttonMassimizza" contentDisplay="GRAPHIC_ONLY" onAction="#maximizedWindow" HBox.hgrow="ALWAYS">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -139,8 +142,11 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
-            <JFXButton contentDisplay="GRAPHIC_ONLY">
+            <JFXButton fx:id="buttonChiudi" contentDisplay="GRAPHIC_ONLY" onAction="#closeWindow" HBox.hgrow="ALWAYS">
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -148,6 +154,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
          </children>
       </HBox>

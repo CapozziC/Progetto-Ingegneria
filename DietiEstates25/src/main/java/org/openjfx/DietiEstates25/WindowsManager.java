@@ -19,13 +19,13 @@ public class WindowsManager {
 	    Stage stage = new Stage();
 	    stage.setTitle(title);
 	    stage.setScene(new Scene(root));
-        stage.initStyle(StageStyle.DECORATED);
-        stage.setWidth(Screen.getPrimary().getBounds().getWidth());
-        stage.setHeight(Screen.getPrimary().getBounds().getHeight());
-        stage.setResizable(true);
-        stage.centerOnScreen();
+        stage.initStyle(StageStyle.UNDECORATED);
+        stage.setWidth(1280);
+        stage.setHeight(720);
         stage.setMinWidth(1280);
         stage.setMinHeight(720);
+        stage.setResizable(true);
+        stage.centerOnScreen();
 	    if (modality != null) {
 	    	stage.initModality(modality);
 	    	}
