@@ -15,19 +15,19 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="130.0" layoutY="153.0" prefHeight="25.0" prefWidth="461.0" />
+      <TextField layoutX="130.0" layoutY="153.0" prefHeight="25.0" prefWidth="461.0" style="-fx-background-radius: 10;" />
       <Label layoutX="130.0" layoutY="232.0" text="Password" textFill="#4a3371">
          <font>
             <Font size="18.0" />
          </font>
       </Label>
-      <TextField layoutX="131.0" layoutY="259.0" prefHeight="25.0" prefWidth="461.0" />
+      <TextField layoutX="131.0" layoutY="259.0" prefHeight="25.0" prefWidth="461.0" style="-fx-border-radius: 10; -fx-background-radius: 10;" />
       <Button alignment="CENTER" contentDisplay="CENTER" layoutX="131.0" layoutY="298.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="30.0" style="-fx-background-color: transparent;" textAlignment="CENTER">
          <font>
             <Font size="18.0" />
          </font>
       </Button>
-      <Button alignment="CENTER" layoutX="322.0" layoutY="447.0" mnemonicParsing="false" text="Accedi" textAlignment="CENTER">
+      <Button alignment="CENTER" layoutX="322.0" layoutY="447.0" mnemonicParsing="false" style="-fx-background-color: #6756be; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, #ffae00, 10, 0.1, 5,5);" text="Accedi" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font size="18.0" />
          </font>
