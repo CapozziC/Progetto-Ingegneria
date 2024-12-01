@@ -66,13 +66,11 @@ public class WelcomePageController {
 	
 	public void openLoginUserPage() {
 		try {
-			Stage stage = (Stage) buttonAccediUtente.getScene().getWindow();
-			WindowsManager.closeWindow(stage);
-			WindowsManager.openWindow("LoginUserPage.fxml", "Login", null);
+			WindowsManager.loadLoginUserScene();
 		} catch (IOException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
 	}
 	
 	public void hideAndShowSidePanel(VBox hidepanelmobile, VBox showpanelmobile) {

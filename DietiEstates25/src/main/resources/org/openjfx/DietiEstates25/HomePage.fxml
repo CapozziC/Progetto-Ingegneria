@@ -22,7 +22,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/HomePageIcons/icons8-home-30.png" />
+                              <Image url="@Icon/HomePage/icons8-home-30.png" />
                            </image></ImageView>
                      </graphic>
                      <font>
@@ -42,7 +42,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/HomePageIcons/icons8-profilo-30.png" />
+                              <Image url="@Icon/HomePage/icons8-profilo-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -57,7 +57,7 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/HomePageIcons/icons8-offerte-30.png" />
+                              <Image url="@Icon/HomePage/icons8-offerte-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -72,42 +72,52 @@
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@Icon/HomePageIcons/icons8-appuntamenti-30.png" />
+                              <Image url="@Icon/HomePage/icons8-appuntamenti-30.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="buttonLogout" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePageIcons/icons8-logout-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
-                  <Separator prefHeight="0.0" prefWidth="200.0" />
-                  <JFXButton fx:id="buttonNascondi" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Nascondi pannello" textFill="WHITE">
-                     <font>
-                        <Font size="14.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePageIcons/icons8-nascondi-pannello-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                  </JFXButton>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/HomePage/icons8-logout-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                        <Separator prefHeight="0.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <JFXButton fx:id="buttonNascondi" alignment="BASELINE_CENTER" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Nascondi pannello" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/HomePage/icons8-nascondi-pannello-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                     <padding>
+                        <Insets bottom="20.0" />
+                     </padding>
+                  </VBox>
                </children>
                <padding>
                   <Insets top="20.0" />
@@ -116,9 +126,6 @@
          </children>
       </Pane>
    </left>
-   <center>
-      <Pane prefHeight="720.0" prefWidth="1187.0" style="-fx-background-color: white; -fx-background-radius: 20 0 0 20;" BorderPane.alignment="CENTER" />
-   </center>
    <top>
       <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
          <children>
@@ -161,4 +168,7 @@
          </children>
       </HBox>
    </top>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20 0 0 20;" BorderPane.alignment="CENTER" />
+   </center>
 </BorderPane>

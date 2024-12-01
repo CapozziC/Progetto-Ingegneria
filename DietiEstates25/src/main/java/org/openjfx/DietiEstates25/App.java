@@ -25,9 +25,10 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) {
-//        showSplashScreen(primaryStage);
+    	WindowsManager.setPrimaryStage(primaryStage);
     	try {
-			WindowsManager.openWindow("WelcomePage.fxml", "WelcomePage", null);
+			WindowsManager.loadWelcomeScene();
+			primaryStage.show();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -66,31 +67,6 @@ public class App extends Application {
 //            fadeOut.play();
 //        });
 //        pause.play();
-//    }
-//
-//    public void showWelcomeScreen() {
-//        Stage welcomeStage = new Stage();
-//        
-//        FXMLLoader loader = new FXMLLoader();
-//        loader.setLocation(getClass().getResource("WelcomePage.fxml"));
-//        try {
-//            welcomeLayout = loader.load();
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            return;
-//        }
-//
-//        Scene scene = new Scene(welcomeLayout);
-//        welcomeStage.setScene(scene);
-//        welcomeStage.setTitle("DietiEstate25");
-//        welcomeStage.initStyle(StageStyle.DECORATED);
-//        welcomeStage.setWidth(Screen.getPrimary().getBounds().getWidth());
-//        welcomeStage.setHeight(Screen.getPrimary().getBounds().getHeight());
-//        welcomeStage.setResizable(true);
-//        welcomeStage.centerOnScreen();
-//        welcomeStage.setMinWidth(1280);
-//        welcomeStage.setMinHeight(720);
-//        welcomeStage.show();
 //    }
 
     public static void main(String[] args) {

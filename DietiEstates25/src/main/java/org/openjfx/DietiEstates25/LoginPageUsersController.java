@@ -40,9 +40,7 @@ public class LoginPageUsersController {
 	}
 	public void openHomePage() {
 		try {
-			Stage stage = (Stage) ButtonAccediUsers.getScene().getWindow();
-			WindowsManager.closeWindow(stage);
-			WindowsManager.openWindow("HomePage.fxml", "Home", null);
+			WindowsManager.loadHomeScene();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}

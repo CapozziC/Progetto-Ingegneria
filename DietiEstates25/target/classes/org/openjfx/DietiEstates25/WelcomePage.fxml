@@ -8,118 +8,13 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.WelcomePageController">
-   <center>
-      <Pane prefHeight="700.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
-         <children>
-            <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" style="-fx-border-color: #6756be; -fx-border-width: 5;">
-               <children>
-                  <StackPane prefHeight="700.0" prefWidth="635.0" HBox.hgrow="ALWAYS">
-                     <children>
-                        <VBox fx:id="vboxSinistra" alignment="CENTER" prefHeight="700.0" prefWidth="640.0" spacing="50.0" style="-fx-border-color: #6756be; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-società-cliente-96.png" />
-                                 </image>
-                              </ImageView>
-                              <Label alignment="CENTER" text="Fai parte di un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="buttonEntraAgenzia" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Entra" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox fx:id="vboxPannelloMobileSinistra" alignment="CENTER" prefHeight="700.0" prefWidth="640.0" spacing="50.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);">
-                           <children>
-                              <Label contentDisplay="CENTER" text="Fai parte di un'agenezia immobiliare?" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <JFXButton fx:id="buttonPannelloMobileSinistra" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: white;" text="Entra" textFill="#6756be">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </JFXButton>
-                           </children>
-                        </VBox>
-                     </children>
-                  </StackPane>
-                  <StackPane prefHeight="700.0" prefWidth="638.0" HBox.hgrow="ALWAYS">
-                     <children>
-                        <VBox fx:id="vboxDestra" alignment="CENTER" prefHeight="700.0" prefWidth="640.0" spacing="50.0" style="-fx-border-color: #4A3371; -fx-border-width: 2;">
-                           <children>
-                              <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-scambio-chiavi-96.png" />
-                                 </image>
-                              </ImageView>
-                              <Label alignment="CENTER" text="Vuoi cercare casa?" textAlignment="CENTER" textFill="#4a3470">
-                                 <font>
-                                    <Font size="24.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="buttonAccediUtente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openLoginUserPage" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Accedi" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                              <Button fx:id="buttonRegistratiUtente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Registrati" textAlignment="CENTER" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </Button>
-                           </children>
-                        </VBox>
-                        <VBox fx:id="vboxPannelloMobileDestra" alignment="CENTER" prefHeight="700.0" prefWidth="640.0" spacing="50.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" visible="false">
-                           <children>
-                              <Label contentDisplay="CENTER" text="Cerchi casa?" textFill="WHITE">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                              </Label>
-                              <JFXButton fx:id="buttonPannelloMobileDestra" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: white;" text="Entra" textFill="#6756be">
-                                 <font>
-                                    <Font size="18.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </JFXButton>
-                           </children>
-                        </VBox>
-                     </children>
-                  </StackPane>
-               </children>
-            </HBox>
-         </children>
-      </Pane>
-   </center>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.WelcomePageController">
    <top>
-      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER_RIGHT">
+      <HBox alignment="CENTER_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
             <JFXButton fx:id="buttonIconizza" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow" HBox.hgrow="ALWAYS">
                <graphic>
@@ -160,4 +55,104 @@
          </children>
       </HBox>
    </top>
+   <center>
+      <HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="1280.0" BorderPane.alignment="CENTER">
+         <children>
+            <StackPane prefHeight="700.0" prefWidth="200.0" HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="vboxSinistra" alignment="CENTER" spacing="50.0" StackPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@Icon/icons8-società-cliente-96.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Fai parte di un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonEntraAgenzia" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Entra" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxPannelloMobileSinistra" alignment="CENTER" spacing="50.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" StackPane.alignment="CENTER">
+                     <children>
+                        <Label contentDisplay="CENTER" text="Fai parte di un'agenzia immobiliare?" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="buttonPannelloMobileSinistra" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: white;" text="Entra" textFill="#6756be" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+            <StackPane HBox.hgrow="ALWAYS">
+               <children>
+                  <VBox fx:id="vboxDestra" alignment="CENTER" spacing="50.0" StackPane.alignment="CENTER">
+                     <children>
+                        <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="ALWAYS">
+                           <image>
+                              <Image url="@Icon/icons8-scambio-chiavi-96.png" />
+                           </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Vuoi cercare casa?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Label>
+                        <Button fx:id="buttonAccediUtente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#openLoginUserPage" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Accedi" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="buttonRegistratiUtente" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: #9593D9;" text="Registrati" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </VBox>
+                  <VBox fx:id="vboxPannelloMobileDestra" alignment="CENTER" spacing="50.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" visible="false" StackPane.alignment="CENTER">
+                     <children>
+                        <Label contentDisplay="CENTER" text="Cerchi casa?" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <JFXButton fx:id="buttonPannelloMobileDestra" prefHeight="45.0" prefWidth="120.0" style="-fx-background-color: white;" text="Entra" textFill="#6756be" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </center>
 </BorderPane>
