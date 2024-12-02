@@ -3,12 +3,16 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
@@ -16,7 +20,7 @@
    <left>
       <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" prefHeight="690.0" prefWidth="200.0" spacing="20.0">
+            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" spacing="20.0">
                <children>
                   <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Home" textFill="WHITE">
                      <graphic>
@@ -77,7 +81,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" spacing="20.0" VBox.vgrow="ALWAYS">
                      <children>
                         <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
                            <font>
@@ -114,9 +118,6 @@
                      <VBox.margin>
                         <Insets />
                      </VBox.margin>
-                     <padding>
-                        <Insets bottom="20.0" />
-                     </padding>
                   </VBox>
                </children>
                <padding>
@@ -127,7 +128,7 @@
       </Pane>
    </left>
    <top>
-      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #4a3371;" BorderPane.alignment="TOP_RIGHT">
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #6756be;" BorderPane.alignment="TOP_RIGHT">
          <children>
             <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow" HBox.hgrow="ALWAYS">
                <graphic>
@@ -169,6 +170,107 @@
       </HBox>
    </top>
    <center>
-      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 20 0 0 20;" BorderPane.alignment="CENTER" />
+      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane fx:id="paneProfilo" StackPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="345.0" layoutY="80.0" spacing="30.0">
+                     <children>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Nome" textFill="#6756be">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldNome" editable="false" promptText="Nome" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Cognome" textFill="#6756be">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldCognome" editable="false" promptText="Cognome" style="-fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white; -fx-border-width: 2;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Email" textFill="#6756be">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldEmail" editable="false" promptText="Email" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-border-width: 2;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Password" textFill="#6756be">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <PasswordField fx:id="textFieldPassword" editable="false" promptText="Paasword" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </PasswordField>
+                           </children>
+                        </VBox>
+                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
+                           <children>
+                              <Label text="Indirizzo" textFill="#6756be">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </Label>
+                              <TextField fx:id="textFieldIndirizzo" editable="false" promptText="Indirizzo" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 2; -fx-border-radius: 5;">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </VBox>
+                        <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
+                           <children>
+                              <JFXButton fx:id="buttonModificaDati" onAction="#setTextFieldsEditable" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Modifica dati" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="buttonSalvaDati" disable="true" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Salva" textFill="WHITE" HBox.hgrow="ALWAYS">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
    </center>
 </BorderPane>

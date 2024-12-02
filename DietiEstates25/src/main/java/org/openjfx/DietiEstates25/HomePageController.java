@@ -2,6 +2,7 @@ package org.openjfx.DietiEstates25;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -11,9 +12,7 @@ import org.openjfx.DietiEstates25.WindowsManager;
 import java.util.List;
 
 public class HomePageController {
-
-    private App main;
-    
+	
     @FXML
     private Button buttonHome, buttonProfilo, buttonOfferte, buttonAppuntamenti, buttonLogout, buttonNascondi;
     @FXML
@@ -26,6 +25,20 @@ public class HomePageController {
     private Button buttonMassimizza;
     @FXML
     private Button buttonChiudi;
+    @FXML
+    private TextField textFieldNome;
+    @FXML
+    private TextField textFieldCognome;
+    @FXML
+    private TextField textFieldEmail;
+    @FXML
+    private TextField textFieldPassword;
+    @FXML
+    private TextField textFieldIndirizzo;
+    @FXML
+    private Button buttonModificaDati;
+    @FXML
+    private Button buttonSalvaDati;
 
     private static final String ORIGINAL_COLOR = "#6756be";
     private static final String HOVER_COLOR = "#9593D9";
@@ -33,10 +46,6 @@ public class HomePageController {
     private static final double COLLAPSED_WIDTH = 70;
     private static final double BUTTON_WIDTH_EXPANDED = 170;
     private static final double BUTTON_WIDTH_COLLAPSED = 30;
-
-    public void setMain(App main) {
-        this.main = main;
-    }
 
     @FXML
     public void initialize() {
@@ -47,6 +56,7 @@ public class HomePageController {
         setButtonHoverEffect(buttonIconizza, "white", "#a7ff97");
         setButtonHoverEffect(buttonMassimizza, "white", "#faff67");
         buttonNascondi.setOnAction(event -> handleButtonClick());
+        buttonModificaDati.setOnAction(event -> setTextFieldsEditable());
     }
 
     private void setButtonHoverEffect(Button button, String originalColor, String hoverColor) {
@@ -83,6 +93,26 @@ public class HomePageController {
             VBoxLaterale.setPrefWidth(COLLAPSED_WIDTH);
             PaneLaterale.setPrefWidth(COLLAPSED_WIDTH);
         }
+    }
+    
+    public void setTextFieldsEditable() {
+    	textFieldNome.setEditable(true);
+    	textFieldCognome.setEditable(true);
+    	textFieldEmail.setEditable(true);
+    	textFieldPassword.setEditable(true);
+    	textFieldIndirizzo.setEditable(true);
+    	buttonModificaDati.setDisable(true);
+    	buttonSalvaDati.setDisable(false);
+    }
+    
+    public void setTextFieldsNotEditable() {
+    	textFieldNome.setEditable(false);
+    	textFieldCognome.setEditable(false);
+    	textFieldEmail.setEditable(false);
+    	textFieldPassword.setEditable(false);
+    	textFieldIndirizzo.setEditable(false);
+    	buttonModificaDati.setDisable(false);
+    	buttonSalvaDati.setDisable(true);
     }
     
     public void iconizedWindow() {
