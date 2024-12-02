@@ -86,5 +86,9 @@ public class WindowsManager {
     public static void loadHomeScene() throws IOException {
         changeScene("HomePage.fxml", "HomeScene");
     }
+    
+    public static void loadSplashScene() throws IOException {
+    	changeScene("SplashPage", "SplashScene");
+    }
 
 }
