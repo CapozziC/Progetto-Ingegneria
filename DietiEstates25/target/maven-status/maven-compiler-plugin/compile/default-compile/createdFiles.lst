@@ -3,5 +3,5 @@ org/openjfx/DietiEstates25/App.class
 org/openjfx/DietiEstates25/HomePageController.class
 org/openjfx/DietiEstates25/WindowsManager.class
 module-info.class
-org/openjfx/DietiEstates25/LoginPageUsersController.class
+org/openjfx/DietiEstates25/LoginUserPageController.class
 org/openjfx/DietiEstates25/WelcomePageController.class
