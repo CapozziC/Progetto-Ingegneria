@@ -1,18 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.LoginUserPageController">
    <top>
-      <HBox prefHeight="36.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+      <HBox alignment="TOP_RIGHT" prefHeight="20.0" prefWidth="1280.0" style="-fx-border-color: #6756be;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="buttonMinimizzaUser" contentDisplay="GRAPHIC_ONLY" prefHeight="30.0" prefWidth="50.0" text="Button">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-iconizza-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY">
+               <graphic>
+                  <ImageView fx:id="buttonMassimizzaUser" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-schermo-intero-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" prefHeight="20.0" prefWidth="20.0" text="Button">
+               <graphic>
+                  <ImageView fx:id="buttonChiudiUser" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-eliminare-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></HBox>
    </top>
    <left>
       <Pane prefHeight="644.0" prefWidth="593.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" BorderPane.alignment="CENTER" />
@@ -20,42 +52,104 @@
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Label layoutX="108.0" layoutY="23.0" prefHeight="49.0" prefWidth="323.0" style="-fx-text-fill: #6756be;" text="Accedi/Registrati">
+            <Label layoutX="108.0" layoutY="23.0" prefHeight="49.0" prefWidth="323.0" style="-fx-text-fill: #6756be;" text="Accedi">
                <font>
                   <Font name="Damascus Medium" size="24.0" />
                </font>
             </Label>
-            <TextField layoutX="103.0" layoutY="73.0" prefHeight="54.0" prefWidth="412.0" promptText="Email" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;">
+            <TextField layoutX="103.0" layoutY="73.0" prefHeight="54.0" prefWidth="412.0" promptText="Email" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <TextField layoutX="103.0" layoutY="154.0" prefHeight="54.0" prefWidth="412.0" promptText="Password" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;">
+            <TextField layoutX="103.0" layoutY="154.0" prefHeight="54.0" prefWidth="412.0" promptText="Password" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
                <font>
                   <Font size="24.0" />
                </font>
             </TextField>
-            <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="279.0" prefHeight="54.0" prefWidth="416.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="WHITE">
+            <JFXButton fx:id="buttonAccediUser" buttonType="RAISED" layoutX="104.0" layoutY="279.0" prefHeight="54.0" prefWidth="416.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </JFXButton>
-            <CheckBox layoutX="110.0" layoutY="349.0" mnemonicParsing="false" text="Ricordami" textFill="#6756be">
+            <CheckBox fx:id="buttonRicordamiUser" layoutX="110.0" layoutY="349.0" mnemonicParsing="false" text="Ricordami" textFill="#6756be">
                <font>
                   <Font size="18.0" />
                </font>
             </CheckBox>
-            <Button layoutX="102.0" layoutY="220.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: white;" text="Ho dimenticato la password" textFill="#6756be">
+            <Button fx:id="buttonRicordaPasswordUser" layoutX="102.0" layoutY="220.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: white;" text="Ho dimenticato la password" textFill="#6756be">
                <font>
                   <Font size="18.0" />
                </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Label layoutX="236.0" layoutY="397.0" text="Oppure accedi con ">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Button layoutX="113.0" layoutY="538.0" mnemonicParsing="false" text="Button" />
+            <Button fx:id="buttonGoogleUser" layoutX="109.0" layoutY="493.0" mnemonicParsing="false" prefHeight="54.0" prefWidth="52.0" style="-fx-border-color: white; -fx-background-color: white;">
+               <graphic>
+                  <ImageView fitHeight="45.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/icons8-logo-di-google-48.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+            <Button fx:id="buttonFvUser" layoutX="283.0" layoutY="485.0" mnemonicParsing="false" prefHeight="73.0" prefWidth="80.0" style="-fx-background-color: white; -fx-border-color: white;">
+               <graphic>
+                  <ImageView fitHeight="57.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/icons8-facebook-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="buttonGitUser" layoutX="464.0" layoutY="484.0" mnemonicParsing="false" prefHeight="64.0" prefWidth="69.0" style="-fx-background-color: white; -fx-border-color: white;">
+               <graphic>
+                  <ImageView fitHeight="64.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/icons8-github-50.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button fx:id="buttonBackUser" layoutX="13.0" layoutY="13.0" mnemonicParsing="false" prefHeight="68.0" prefWidth="70.0" style="-fx-background-color: white; -fx-border-color: white;">
+               <graphic>
+                  <ImageView fitHeight="52.0" fitWidth="63.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/icons8-segno-a-v-a-sinsitra-60.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="115.0" layoutY="607.0" prefHeight="29.0" prefWidth="288.0" text="Non hai ancora un account?" textFill="#6756be">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buttonRegistratiUser" buttonType="RAISED" layoutX="422.0" layoutY="601.0" prefHeight="33.0" prefWidth="119.0" style="-fx-border-radius: 10; -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Registrati" textFill="#fffdfd">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
          </children>
       </Pane>
    </center>
