@@ -1,108 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import com.jfoenix.controls.JFXButton?>
-<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Pane?>
-<?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="657.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.LoginPageUsersController">
-   <children>
-      <BorderPane layoutX="-2.0" layoutY="-1.0" prefHeight="400.0" prefWidth="657.0">
-         <left>
-            <Pane prefHeight="409.0" prefWidth="313.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" BorderPane.alignment="CENTER" />
-         </left>
-         <center>
-            <StackPane prefHeight="150.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0" />
-                  <Pane prefHeight="418.0" prefWidth="376.0">
-                     <children>
-                        <Label layoutX="60.0" layoutY="7.0" prefHeight="47.0" prefWidth="181.0" style="-fx-text-fill: #6756be;" text="Accedi/Registrati">
-                           <font>
-                              <Font name="Damascus Bold" size="18.0" />
-                           </font>
-                        </Label>
-                        <TextField layoutX="64.0" layoutY="57.0" prefHeight="29.0" prefWidth="216.0" promptText="Email" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;" />
-                        <PasswordField layoutX="64.0" layoutY="106.0" prefHeight="29.0" prefWidth="215.0" promptText="Password" style="-fx-border-radius: 10; -fx-border-color: #6756be; -fx-border-width: 2px;" />
-                        <JFXButton fx:id="ButtonAccediUsers" buttonType="RAISED" contentDisplay="CENTER" layoutX="63.0" layoutY="169.0" onAction="#openHomePage" prefHeight="31.0" prefWidth="217.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="#f8f6f6">
-                           <font>
-                              <Font name="System Bold Italic" size="14.0" />
-                           </font>
-                        </JFXButton>
-                        <CheckBox fx:id="ButtonRicordaUsers" layoutX="60.0" layoutY="208.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="76.0" style="-fx-text-fill: #6756be;" text="Ricordami">
-                           <font>
-                              <Font size="10.0" />
-                           </font>
-                        </CheckBox>
-                        <Button layoutX="61.0" layoutY="135.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-text-fill: #6756be; -fx-font-size: 8;" text="Recupera password">
-                           <font>
-                              <Font size="1.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="DEFAULT" />
-                           </cursor>
-                        </Button>
-                        <Label layoutX="115.0" layoutY="253.0" text="Oppure accedi con " />
-                        <Button fx:id="ButtonGoogleUsers" layoutX="37.0" layoutY="300.0" minWidth="41.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="41.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 30;">
-                           <graphic>
-                              <ImageView fx:id="Google" fitHeight="43.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-logo-di-google-48.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="ButtonFBUsers" layoutX="133.0" layoutY="302.0" minWidth="35.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="35.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 30;">
-                           <graphic>
-                              <ImageView fx:id="Fb" fitHeight="31.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-facebook-50.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="ButtonGitUsers" layoutX="237.0" layoutY="300.0" minWidth="35.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-color: transparent; -fx-border-color: transparent; -fx-border-radius: 30;">
-                           <graphic>
-                              <ImageView fx:id="Git" fitHeight="43.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-github-50.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <Button fx:id="ButtonInfoUsers" layoutX="263.0" layoutY="106.0" minWidth="18.0" mnemonicParsing="false" prefHeight="29.0" prefWidth="18.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
-                           <graphic>
-                              <ImageView fx:id="Back" fitHeight="14.0" fitWidth="15.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-informazioni-30.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </Button>
-                        <JFXButton fx:id="ButtunBackUsers" buttonType="RAISED" layoutX="2.0" layoutY="14.0" minHeight="20.0" minWidth="38.0" prefHeight="33.0" prefWidth="38.0" style="-fx-background-color: transparent; -fx-border-color: transparent;">
-                           <graphic>
-                              <ImageView fitHeight="27.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/icons8-segno-a-v-a-sinsitra-60.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
-                     </children>
-                  </Pane>
-               </children>
-            </StackPane>
-         </center>
-      </BorderPane>
-   </children>
-</AnchorPane>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="36.0" prefWidth="1280.0" BorderPane.alignment="CENTER" />
+   </top>
+   <left>
+      <Pane prefHeight="644.0" prefWidth="593.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" BorderPane.alignment="CENTER" />
+   </left>
+   <center>
+      <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="108.0" layoutY="23.0" prefHeight="49.0" prefWidth="323.0" style="-fx-text-fill: #6756be;" text="Accedi/Registrati">
+               <font>
+                  <Font name="Damascus Medium" size="24.0" />
+               </font>
+            </Label>
+            <TextField layoutX="103.0" layoutY="73.0" prefHeight="54.0" prefWidth="412.0" promptText="Email" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <TextField layoutX="103.0" layoutY="154.0" prefHeight="54.0" prefWidth="412.0" promptText="Password" style="-fx-border-width: 2px; -fx-border-color: #6756be; -fx-border-radius: 10;">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </TextField>
+            <JFXButton buttonType="RAISED" layoutX="104.0" layoutY="279.0" prefHeight="54.0" prefWidth="416.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5); -fx-background-radius: 10;" text="Accedi" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </JFXButton>
+            <CheckBox layoutX="110.0" layoutY="349.0" mnemonicParsing="false" text="Ricordami" textFill="#6756be">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </CheckBox>
+            <Button layoutX="102.0" layoutY="220.0" mnemonicParsing="false" style="-fx-background-color: white; -fx-border-color: white;" text="Ho dimenticato la password" textFill="#6756be">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="236.0" layoutY="397.0" text="Oppure accedi con ">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <JFXButton fx:id="buttonGoogleUser" buttonType="RAISED" layoutX="87.0" layoutY="523.0" prefHeight="51.0" prefWidth="61.0" />
+            <JFXButton fx:id="buttonFacebookUser" buttonType="RAISED" layoutX="293.0" layoutY="537.0" text="Button" />
+            <JFXButton fx:id="buttonGitUser" buttonType="RAISED" layoutX="488.0" layoutY="534.0" />
+         </children>
+      </Pane>
+   </center>
+</BorderPane>
