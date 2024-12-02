@@ -90,5 +90,8 @@ public class WindowsManager {
     public static void loadSplashScene() throws IOException {
     	changeScene("SplashPage", "SplashScene");
     }
-
+    public static void BackWelcomeScene() throws IOException {
+    	changeScene("WelcomePag.fxml", "WelcomeScene");
+    }
+    
 }
