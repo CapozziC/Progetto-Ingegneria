@@ -55,9 +55,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <JFXButton fx:id="buttonGoogleUser" buttonType="RAISED" layoutX="87.0" layoutY="523.0" prefHeight="51.0" prefWidth="61.0" />
-            <JFXButton fx:id="buttonFacebookUser" buttonType="RAISED" layoutX="293.0" layoutY="537.0" text="Button" />
-            <JFXButton fx:id="buttonGitUser" buttonType="RAISED" layoutX="488.0" layoutY="534.0" />
+            <Button layoutX="113.0" layoutY="538.0" mnemonicParsing="false" text="Button" />
          </children>
       </Pane>
    </center>
