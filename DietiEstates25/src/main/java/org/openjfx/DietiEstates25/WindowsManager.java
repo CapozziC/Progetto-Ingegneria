@@ -29,10 +29,10 @@ public class WindowsManager {
 	    stage.setTitle(title);
 	    stage.setScene(new Scene(root));
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setWidth(1280);
-        stage.setHeight(720);
-        stage.setMinWidth(1280);
-        stage.setMinHeight(720);
+        stage.setWidth(1600);
+        stage.setHeight(900);
+        stage.setMinWidth(1600);
+        stage.setMinHeight(900);
         stage.setResizable(false);
         stage.centerOnScreen();
 	    if (modality != null) {
@@ -46,13 +46,13 @@ public class WindowsManager {
         Parent root = loader.load();
         primaryStage.setTitle(title);
         primaryStage.setScene(new Scene(root));
-        primaryStage.setWidth(1280);
-        primaryStage.setHeight(720);
-        primaryStage.setMinWidth(1280);
-        primaryStage.setMinHeight(720);
+        primaryStage.setWidth(1600);
+        primaryStage.setHeight(900);
+        primaryStage.setMinWidth(1600);
+        primaryStage.setMinHeight(900);
         primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
-        makeStageDraggable(root);
+        makeStageDraggable(root); 
     }
 	
 	public static void closeWindow(Stage stage) {
