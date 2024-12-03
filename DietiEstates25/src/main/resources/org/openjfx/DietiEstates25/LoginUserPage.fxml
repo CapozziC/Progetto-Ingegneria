@@ -135,20 +135,6 @@
                   <Font size="24.0" />
                </font>
             </PasswordField>
-            <Label fx:id="infoLabelUser" layoutX="101.0" layoutY="274.0" prefHeight="217.0" prefWidth="310.0" style="-fx-background-color: white; -fx-border-color: #6756be;" text="La password deve contenere:&#10;-Almeno 8 caratteri;&#10; -un carattere maiuscolo;&#10; -un numero;&#10; -un carattere speciale tra:!&quot;#?&amp;%$+@/|;" visible="false" wrapText="true">
-               <font>
-                  <Font size="13.0" />
-               </font>
-            </Label>
-            <Button fx:id="buttonInfoUser" layoutX="80.0" layoutY="222.0" mnemonicParsing="false" prefHeight="44.0" prefWidth="31.0" style="-fx-border-color: white; -fx-background-color: white;">
-               <graphic>
-                  <ImageView fitHeight="31.0" fitWidth="35.0" onMouseClicked="#ShowInfoPassword" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icon/icons8-informazioni-30.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-            </Button>
          </children>
       </Pane>
    </right>
