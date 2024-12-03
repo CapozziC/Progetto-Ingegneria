@@ -5,6 +5,7 @@
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
@@ -16,13 +17,13 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #6756be;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #6756be;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.HomePageController">
    <left>
-      <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="200.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
+      <Pane fx:id="PaneLaterale" prefHeight="720.0" prefWidth="220.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
          <children>
-            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" spacing="20.0">
+            <VBox fx:id="VBoxLaterale" alignment="TOP_CENTER" prefHeight="858.0" prefWidth="220.0" spacing="20.0">
                <children>
-                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Home" textFill="WHITE">
+                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" text="Home" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -30,15 +31,15 @@
                            </image></ImageView>
                      </graphic>
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Profilo" textFill="WHITE">
+                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" text="Profilo" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -51,9 +52,9 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Offerte" textFill="WHITE">
+                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" text="Offerte" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -66,9 +67,9 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Appuntamenti" textFill="WHITE">
+                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" text="Appuntamenti" textFill="WHITE">
                      <font>
-                        <Font size="14.0" />
+                        <Font size="18.0" />
                      </font>
                      <cursor>
                         <Cursor fx:constant="HAND" />
@@ -81,11 +82,11 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="220.0" spacing="20.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
                            <font>
-                              <Font size="14.0" />
+                              <Font size="18.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
@@ -99,15 +100,15 @@
                            </graphic>
                         </JFXButton>
                         <Separator prefHeight="0.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                        <JFXButton fx:id="buttonNascondi" alignment="BASELINE_CENTER" graphicTextGap="10.0" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: #4a3470;" text="Nascondi pannello" textFill="WHITE" VBox.vgrow="ALWAYS">
+                        <JFXButton fx:id="buttonNascondi" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #4a3470;" text="Nascondi" textFill="WHITE" VBox.vgrow="ALWAYS">
                            <font>
-                              <Font size="14.0" />
+                              <Font size="18.0" />
                            </font>
                            <cursor>
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imageNascondi" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Icon/HomePage/icons8-nascondi-pannello-30.png" />
                                  </image>
@@ -116,7 +117,7 @@
                         </JFXButton>
                      </children>
                      <VBox.margin>
-                        <Insets />
+                        <Insets bottom="20.0" />
                      </VBox.margin>
                   </VBox>
                </children>
@@ -128,11 +129,11 @@
       </Pane>
    </left>
    <top>
-      <HBox alignment="TOP_RIGHT" prefHeight="30.0" prefWidth="1280.0" style="-fx-background-color: white; -fx-border-color: #6756be;" BorderPane.alignment="TOP_RIGHT">
+      <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="1600.0" style="-fx-background-color: white; -fx-border-color: #6756be;" BorderPane.alignment="TOP_RIGHT">
          <children>
             <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" onAction="#iconizedWindow" HBox.hgrow="ALWAYS">
                <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icon/TitleBar/icons8-iconizza-50.png" />
                      </image>
@@ -142,21 +143,9 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
-            <JFXButton fx:id="buttonMassimizza" contentDisplay="GRAPHIC_ONLY" onAction="#maximizedWindow" HBox.hgrow="ALWAYS">
-               <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icon/TitleBar/icons8-schermo-intero-50.png" />
-                     </image>
-                  </ImageView>
-               </graphic>
-               <cursor>
-                  <Cursor fx:constant="HAND" />
-               </cursor>
-            </JFXButton>
             <JFXButton fx:id="buttonChiudi" contentDisplay="GRAPHIC_ONLY" onAction="#closeWindow" HBox.hgrow="ALWAYS">
                <graphic>
-                  <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@Icon/TitleBar/icons8-eliminare-50.png" />
                      </image>
@@ -170,104 +159,96 @@
       </HBox>
    </top>
    <center>
-      <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+      <StackPane style="-fx-background-color: white;" BorderPane.alignment="CENTER">
          <children>
-            <Pane fx:id="paneProfilo" StackPane.alignment="CENTER">
+            <Pane fx:id="paneProfilo" visible="false" StackPane.alignment="CENTER">
                <children>
-                  <VBox alignment="CENTER" layoutX="345.0" layoutY="80.0" spacing="30.0">
-                     <children>
-                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Label text="Nome" textFill="#6756be">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="textFieldNome" editable="false" promptText="Nome" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Label text="Cognome" textFill="#6756be">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="textFieldCognome" editable="false" promptText="Cognome" style="-fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white; -fx-border-width: 2;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Label text="Email" textFill="#6756be">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="textFieldEmail" editable="false" promptText="Email" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-border-width: 2;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Label text="Password" textFill="#6756be">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <PasswordField fx:id="textFieldPassword" editable="false" promptText="Paasword" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </PasswordField>
-                           </children>
-                        </VBox>
-                        <VBox alignment="CENTER_LEFT" VBox.vgrow="ALWAYS">
-                           <children>
-                              <Label text="Indirizzo" textFill="#6756be">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </Label>
-                              <TextField fx:id="textFieldIndirizzo" editable="false" promptText="Indirizzo" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 2; -fx-border-radius: 5;">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                              </TextField>
-                           </children>
-                        </VBox>
-                        <HBox alignment="CENTER" spacing="50.0" VBox.vgrow="ALWAYS">
-                           <children>
-                              <JFXButton fx:id="buttonModificaDati" onAction="#setTextFieldsEditable" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Modifica dati" textFill="WHITE" HBox.hgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </JFXButton>
-                              <JFXButton fx:id="buttonSalvaDati" disable="true" prefHeight="40.0" prefWidth="170.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Salva" textFill="WHITE" HBox.hgrow="ALWAYS">
-                                 <font>
-                                    <Font size="14.0" />
-                                 </font>
-                                 <cursor>
-                                    <Cursor fx:constant="HAND" />
-                                 </cursor>
-                              </JFXButton>
-                           </children>
-                        </HBox>
-                     </children>
-                  </VBox>
+                  <Label layoutX="260.0" layoutY="111.0" text="Nome" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldNome" editable="false" layoutX="260.0" layoutY="135.0" prefHeight="40.0" prefWidth="250.0" promptText="Nome" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="720.0" layoutY="110.0" text="Cognome" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldCognome" editable="false" layoutX="720.0" layoutY="133.0" prefWidth="250.0" promptText="Cognome" style="-fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white; -fx-border-width: 2;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="260.0" layoutY="236.0" text="Email" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldEmail" editable="false" layoutX="260.0" layoutY="260.0" prefWidth="250.0" promptText="Email" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-border-width: 2;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="260.0" layoutY="361.0" text="Indirizzo" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldIndirizzo" editable="false" layoutX="260.0" layoutY="385.0" prefWidth="250.0" promptText="Indirizzo" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 2; -fx-border-radius: 5;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="720.0" layoutY="236.0" text="Password" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <PasswordField fx:id="textFieldPassword" editable="false" layoutX="720.0" layoutY="260.0" prefWidth="250.0" promptText="Paasword" style="-fx-border-width: 2; -fx-border-color: #6756be; -fx-border-radius: 5; -fx-background-color: white;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </PasswordField>
+                  <Label layoutX="720.0" layoutY="361.0" text="Data di iscrizione" textFill="#6756be">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="textFieldData" editable="false" layoutX="720.0" layoutY="385.0" prefWidth="250.0" promptText="gg/mm/aa" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 2; -fx-border-radius: 5;">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </TextField>
+                  <JFXButton fx:id="buttonModificaDati" layoutX="291.0" layoutY="549.0" onAction="#setTextFieldsEditable" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Modifica dati" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonSalvaDati" disable="true" layoutX="749.0" layoutY="550.0" onAction="#setTextFieldsNotEditable" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" text="Salva" textFill="WHITE">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </JFXButton>
+               </children>
+            </Pane>
+            <Pane fx:id="paneOfferte" prefHeight="200.0" prefWidth="200.0" visible="false">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="860.0" prefWidth="400.0" vbarPolicy="ALWAYS" />
+                  <ScrollPane hbarPolicy="NEVER" layoutX="398.0" layoutY="1.0" prefHeight="860.0" prefWidth="980.0" vbarPolicy="ALWAYS" />
+               </children>
+            </Pane>
+            <Pane fx:id="paneAppuntamenti" prefHeight="200.0" prefWidth="200.0" visible="false" StackPane.alignment="CENTER">
+               <children>
+                  <Label layoutX="10.0" layoutY="30.0" text="Lista Appuntamenti:" textFill="#6756be">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane hbarPolicy="NEVER" layoutY="101.0" prefHeight="760.0" prefWidth="1380.0" vbarPolicy="ALWAYS" />
                </children>
             </Pane>
          </children>
