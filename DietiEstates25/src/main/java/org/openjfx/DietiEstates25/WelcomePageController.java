@@ -41,6 +41,7 @@ public class WelcomePageController {
     private Button buttonMassimizza;
     @FXML
     private Button buttonChiudi;
+    
 	
     private static final String ORIGINAL_COLOR = "#6756be";
     private static final String HOVER_COLOR = "#9593D9";
