@@ -35,30 +35,20 @@ public class SignUpUserPageController {
 
 
 
-@FXML
+	@FXML
+	public void initialize() {
+		setFocusListenerSignUp(textFieldNomeSignUp);
+		setFocusListenerSignUp(textFieldCognomeSignUp);
+		setFocusListenerSignUp(textFieldIndirizzoSignUp);
+		setFocusListenerSignUp(textFieldEmailSignUp);
+		setFocusListenerSignUp(textFieldConfermaPasswordSignUp);
+		buttonBackSignUp.setOnAction(event->WindowsManager.loadLoginUserScene());
+		buttonInfoSignUp.setOnMouseClicked(this::showInfoPasswordSignUp);
+	}
 
 
-public void initialize() {
-	setFocusListenerSignUp(textFieldNomeSignUp);
-	setFocusListenerSignUp(textFieldCognomeSignUp);
-	setFocusListenerSignUp(textFieldIndirizzoSignUp);
-	setFocusListenerSignUp(textFieldEmailSignUp);
-	setFocusListenerSignUp(textFieldConfermaPasswordSignUp);
-	buttonBackSignUp.setOnAction(event->loadLoginUserScene());
-	buttonInfoSignUp.setOnMouseClicked(this::showInfoPasswordSignUp);
-	
-  }
-
-public void loadLoginUserScene() {
-    try {
-        WindowsManager.loadLoginUserScene();
-    } catch (IOException e) {
-        e.printStackTrace();
-    }
-  }
-
-private void setFocusListenerSignUp(TextField textField) {
-    textField.focusedProperty().addListener((observable, oldValue, newValue) -> {
+	private void setFocusListenerSignUp(TextField textField) {
+		textField.focusedProperty().addListener((observable, oldValue, newValue) -> {
         if (newValue) {
             textField.setStyle("-fx-border-color: #6756be; -fx-border-width: 2px; -fx-border-radius: 5;");
         } else {
@@ -70,10 +60,10 @@ private void setFocusListenerSignUp(TextField textField) {
         }
     });
  }
-public void showInfoPasswordSignUp(MouseEvent event) {
-    if (labelInfoPasswordSignUp != null) {
-    	labelInfoPasswordSignUp.setVisible(!labelInfoPasswordSignUp.isVisible());
-    }
+	public void showInfoPasswordSignUp(MouseEvent event) {
+		if (labelInfoPasswordSignUp != null) {
+			labelInfoPasswordSignUp.setVisible(!labelInfoPasswordSignUp.isVisible());
+		}
 
-  }
+	}
 }

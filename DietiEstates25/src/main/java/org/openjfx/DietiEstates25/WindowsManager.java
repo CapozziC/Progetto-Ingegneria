@@ -105,6 +105,15 @@ public class WindowsManager {
 			e.printStackTrace();
 		}
     }
+    
+    public static void loadSignUpScene() {
+        try {
+			changeScene("SignUpUserPage.fxml", "SignUpScene");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
+    
 
     public static void loadHomeScene() {
 		try {
@@ -147,8 +156,4 @@ public class WindowsManager {
         alert.setHeaderText(headertext);
         alert.showAndWait();
     }
-    public static void loadSignUpScene() throws IOException {
-        changeScene("SignUpUserPage.fxml", "SignUpScene");
-    }
-    
 }

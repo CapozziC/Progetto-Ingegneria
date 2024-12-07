@@ -14,11 +14,6 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.control.Label;
 
-
-
-
-
-
 public class LoginUserPageController {
 	@FXML
 	private Button buttonMinimizzaUser;
@@ -58,38 +53,25 @@ public class LoginUserPageController {
 	private ImageView imgEye;
 	
 	private boolean isPasswordVisible = false;
-	
-	
-	
-	
 
-	
-	
-	
 	@FXML
 	public void initialize() {
-	setFocusListener(textFieldEmailUser);
-	setFocusListener(passwordFieldPasswordUser);	
-	buttonClosedEye.setOnAction(event -> showTextPassword());
-	buttonInfoUser.setOnMouseClicked(this::showInfoPassword);
-	buttonChiudiUser.setOnMouseClicked(event -> closeLoginPage());
-	buttonMinimizzaUser.setOnMouseClicked(event ->minimizeLoginPage());
-	buttonBackUser.setOnAction(event -> loadWelcomeScene());
-    buttonAccediUser.setOnAction(event -> loadHomeScene());
-    buttonRegistratiUser.setOnAction(event->loadSignUpScene());
-    
-   
-    
-    passwordFieldPasswordUser.textProperty().addListener((observable, oldValue, newValue) -> {
+		setFocusListener(textFieldEmailUser);
+		setFocusListener(passwordFieldPasswordUser);	
+		buttonClosedEye.setOnAction(event -> showTextPassword());
+		buttonInfoUser.setOnMouseClicked(this::showInfoPassword);
+		buttonChiudiUser.setOnMouseClicked(event -> closeLoginPage());
+		buttonMinimizzaUser.setOnMouseClicked(event ->minimizeLoginPage());
+		buttonBackUser.setOnAction(event -> WindowsManager.loadWelcomeScene());
+		buttonAccediUser.setOnAction(event -> WindowsManager.loadHomeScene());
+		buttonRegistratiUser.setOnAction(event-> WindowsManager.loadSignUpScene());
+		passwordFieldPasswordUser.textProperty().addListener((observable, oldValue, newValue) -> {
     	textFieldPasswordVisible.setText(newValue);
-    });
+		});
         textFieldPasswordVisible.textProperty().addListener((observable, oldValue, newValue) -> {
         passwordFieldPasswordUser.setText(newValue);
-    });
-
-    
-     
-}
+        });
+    }
 	
 	private void closeLoginPage() {
 	        Stage stage = (Stage) buttonChiudiUser.getScene().getWindow();
@@ -100,36 +82,7 @@ public class LoginUserPageController {
 	        Stage stage = (Stage) buttonMinimizzaUser.getScene().getWindow();
 	        stage.setIconified(true);
 	    }  
-	    
-	    private void loadSignUpScene() {
-			 try {
-		            WindowsManager.loadSignUpScene();
-		        } catch (IOException e) {
-		            e.printStackTrace();
-		        }
-			} 
 
-    
-	   private void loadWelcomeScene() {
-	        try {
-	            WindowsManager.loadWelcomeScene();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
-
-	    private void loadHomeScene() {
-	        try {
-	            WindowsManager.loadHomeScene();
-	        } catch (IOException e) {
-	            e.printStackTrace();
-	        }
-	    }
-		 
-	 
-		        
-
-		 
        private void setFocusListener(TextField textField) {
 	    textField.focusedProperty().addListener((observable, oldValue, newValue) -> {
 	        if (newValue) {
