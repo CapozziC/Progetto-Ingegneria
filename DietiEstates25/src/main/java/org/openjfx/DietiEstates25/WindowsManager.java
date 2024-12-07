@@ -147,5 +147,8 @@ public class WindowsManager {
         alert.setHeaderText(headertext);
         alert.showAndWait();
     }
+    public static void loadSignUpScene() throws IOException {
+        changeScene("SignUpUserPage.fxml", "SignUpScene");
+    }
     
 }
