@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="130.0" prefWidth="1080.0" style="-fx-border-radius: 10; -fx-border-color: #9593D9; -fx-border-width: 2; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="110.0" prefWidth="1060.0" spacing="30.0" style="-fx-background-radius: 10;">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Data" VBox.vgrow="NEVER">
+                     <font>
+                        <Font name="Roboto Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelDataAppuntamento" alignment="CENTER" contentDisplay="CENTER" text="28 Nov" VBox.vgrow="NEVER">
+                     <font>
+                        <Font name="Roboto Black" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator orientation="VERTICAL" prefHeight="200.0" HBox.hgrow="ALWAYS" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label alignment="CENTER" text="Ora" VBox.vgrow="NEVER">
+                     <font>
+                        <Font name="Roboto Black" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="labelOraAppuntamento" alignment="CENTER" text="12:30" VBox.vgrow="NEVER">
+                     <font>
+                        <Font name="Roboto Black" size="24.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <Separator layoutX="306.0" layoutY="10.0" orientation="VERTICAL" prefHeight="200.0" />
+            <Label fx:id="labelNomeAppartamento" alignment="CENTER" text="Nome Appartamento" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+            </Label>
+            <Separator orientation="VERTICAL" prefHeight="200.0" />
+            <JFXButton stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Visualizza immobile" />
+            <Separator orientation="VERTICAL" prefHeight="200.0" HBox.hgrow="ALWAYS" />
+            <JFXButton fx:id="buttonEliminaAppuntamento" alignment="CENTER" contentDisplay="CENTER" prefHeight="39.0" prefWidth="120.0" style="-fx-background-color: #E56B6F;" text="Elimina" textFill="WHITE" HBox.hgrow="ALWAYS">
+               <font>
+                  <Font name="Roboto Black" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+   </children>
+</Pane>

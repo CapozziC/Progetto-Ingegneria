@@ -1,7 +1,7 @@
-org/openjfx/DietiEstates25/SplashPageController.class
-org/openjfx/DietiEstates25/App.class
-org/openjfx/DietiEstates25/HomePageController.class
-org/openjfx/DietiEstates25/WindowsManager.class
+org\openjfx\DietiEstates25\App.class
+org\openjfx\DietiEstates25\WelcomePageController.class
+org\openjfx\DietiEstates25\WindowsManager.class
+org\openjfx\DietiEstates25\SplashPageController.class
 module-info.class
-org/openjfx/DietiEstates25/LoginUserPageController.class
-org/openjfx/DietiEstates25/WelcomePageController.class
+org\openjfx\DietiEstates25\LoginUserPageController.class
+org\openjfx\DietiEstates25\HomePageController.class

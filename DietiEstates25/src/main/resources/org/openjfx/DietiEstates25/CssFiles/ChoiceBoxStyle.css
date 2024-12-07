@@ -1,0 +1,45 @@
+.choice-box {
+    -fx-background-color: white;
+    -fx-border-color: #6756BE;
+    -fx-border-width: 2;
+    -fx-border-radius: 5;
+	-fx-selection-bar: #6756BE; /*Colore dell'elemento selezionato*/
+	-fx-cursor: hand;
+}
+
+.choice-box .label {
+    -fx-text-fill: #6756BE;
+	-fx-background-color: transparent;
+    -fx-font-family: "Roboto Black";
+    -fx-font-size: 18px;
+}
+
+.choice-box .arrow {
+    -fx-padding: 7;
+	-fx-background-color: #6756BE;
+	-fx-transition: -fx-rotate 0.3s ease;
+}
+
+.choice-box .left-container .radio {
+	-fx-background-color: #6756BE;
+}
+
+/* Colora la spunta accanto all'elemento scelto
+.choice-box .left-container .radio {
+	-fx-background-color: white;
+}*/
+
+.choice-box .list-view .cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #6756BE;
+    -fx-font-family: "Roboto Black";
+    -fx-font-size: 18px;
+}
+
+.choice-box .menu {
+	-fx-background-color: red;
+}
+
+.choice-box .menu-item:focused .label{
+    -fx-text-fill: white;
+}

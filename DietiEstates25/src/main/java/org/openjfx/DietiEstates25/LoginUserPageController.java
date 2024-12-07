@@ -71,24 +71,10 @@ public class LoginUserPageController {
 		    
 
     
-	 buttonBackUser.setOnAction(event -> {
-		try {
-			WindowsManager.loadWelcomeScene();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	});
+	 buttonBackUser.setOnAction(event -> WindowsManager.loadWelcomeScene());
 		        
 	 
-	 buttonAccediUser.setOnAction(event->{
-		try {
-			WindowsManager.loadHomeScene();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	 });
+	 buttonAccediUser.setOnAction(event-> WindowsManager.loadHomeScene());
 		        
 }
 		 
@@ -104,7 +90,7 @@ private void setFocusListener(TextField textField) {
 	            }
 	        }
 	    });
-	}  
+}
 	   
 	
 	public void ShowInfoPassword(MouseEvent event) {

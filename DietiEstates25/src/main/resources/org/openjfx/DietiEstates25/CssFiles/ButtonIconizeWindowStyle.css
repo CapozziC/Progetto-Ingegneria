@@ -1,0 +1,11 @@
+.button {
+	-fx-background-color: white;
+	-fx-pref-width: 30px;
+	-fx-pref-height: 30px;
+	-fx-content-display: GRAPHIC_ONLY;
+	-fx-cursor: HAND;
+}
+
+.button:hover {
+	-fx-background-color: #a7ff97;
+}

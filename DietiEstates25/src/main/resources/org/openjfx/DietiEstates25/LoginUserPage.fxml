@@ -22,7 +22,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icon/TitleBar/icons8-iconizza-50.png" />
+                        <Image url="@Icon/TitleBar/icons8-linea-orizzontale-30.png" />
                      </image>
                   </ImageView>
                </graphic>
@@ -31,7 +31,7 @@
                <graphic>
                   <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@Icon/TitleBar/icons8-eliminare-50.png" />
+                        <Image url="@Icon/TitleBar/icons8-eliminare-30.png" />
                      </image>
                   </ImageView>
                </graphic>

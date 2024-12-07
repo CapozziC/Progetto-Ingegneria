@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="710.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: #9593D9; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" layoutX="4.0" layoutY="10.0" prefHeight="180.0" prefWidth="700.0" spacing="20.0">
+         <children>
+            <ImageView fitHeight="180.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></ImageView>
+            <Separator orientation="VERTICAL" prefHeight="150.0" HBox.hgrow="NEVER" />
+            <VBox prefHeight="140.0" prefWidth="465.0" spacing="10.0">
+               <children>
+                  <HBox spacing="140.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label prefWidth="149.0" text="Via Appartmento">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #9593D9; -fx-border-width: 2; -fx-border-radius: 5;" text="Nome Agenzia">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox spacing="140.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Label prefWidth="149.0" text="Prezzo Appartamento">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #9593D9;" text="In Vendita">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <VBox prefHeight="200.0" prefWidth="100.0" />
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appartamento che si trova in via Antonio, perfettamente nuovo ma senza bagno, balcone, cucina, letti ecc" wrappingWidth="440.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Text>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <JFXButton alignment="CENTER" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #FFC856; -fx-border-width: 2; -fx-border-radius: 5;" text="Visita" textAlignment="CENTER" textFill="#ffc856">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #FFC856; -fx-border-width: 2; -fx-border-radius: 5;" text="Offri" textAlignment="CENTER" textFill="#ffc856">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                        <JFXButton alignment="CENTER" prefWidth="100.0" style="-fx-background-color: white; -fx-border-color: #FFC856; -fx-border-width: 2; -fx-border-radius: 5;" text="Visualizza" textAlignment="CENTER" textFill="#ffc856">
+                           <font>
+                              <Font name="Roboto Black" size="14.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <HBox.margin>
+                  <Insets bottom="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</Pane>
