@@ -93,5 +93,8 @@ public class WindowsManager {
     public static void BackWelcomeScene() throws IOException {
     	changeScene("WelcomePag.fxml", "WelcomeScene");
     }
+    public static void loadSignUpScene() throws IOException {
+        changeScene("SignUpUserPage.fxml", "SignUpScene");
+    }
     
 }
