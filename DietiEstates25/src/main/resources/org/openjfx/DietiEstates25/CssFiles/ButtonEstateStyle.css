@@ -1,0 +1,18 @@
+.button {
+	-fx-bakcgorund-color: white;
+	-fx-border-radius: 5;
+	-fx-border-width: 2;
+	-fx-border-color: #FFC856;
+	-fx-text-fill: #FFC856;
+	-fx-text-alignment: CENTER;
+	-fx-font-family: "Roboto Black";
+	-fx-font-size: 14px;
+	-fx-cursor: hand;
+}
+
+.button:hover {
+	-fx-background-color: #FFC856;
+	-fx-text-fill: white;
+}
+
+/

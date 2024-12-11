@@ -1,14 +1,18 @@
 package org.openjfx.DietiEstates25;
 
 import java.io.IOException;
+import java.util.function.Consumer;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.ButtonType;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.VBox;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
@@ -31,7 +35,7 @@ public class WindowsManager {
 		
 	}
 	
-	public static void openWindow(String fxmlPath, String title, Modality modality) throws IOException {
+	public static void openWindow(String fxmlPath, String title, int width, int height, Modality modality, Stage fatherstage) throws IOException {
 		FXMLLoader loader = new FXMLLoader(WindowsManager.class.getResource(fxmlPath));
 	    Parent root = loader.load();
 	    
@@ -39,27 +43,33 @@ public class WindowsManager {
 	    stage.setTitle(title);
 	    stage.setScene(new Scene(root));
         stage.initStyle(StageStyle.UNDECORATED);
-        stage.setWidth(WINDOW_WIDTH);
-        stage.setHeight(WINDOW_HEIGHT);
-        stage.setMinWidth(WINDOW_WIDTH);
-        stage.setMinHeight(WINDOW_HEIGHT);
+        stage.setWidth(width);
+        stage.setHeight(height);
+        stage.setMinWidth(width);
+        stage.setMinHeight(height);
         stage.setResizable(false);
         stage.centerOnScreen();
-	    if (modality != null) {
+        if (fatherstage==null) {
+			stage.initOwner(getPrimaryStage());
+		}
+        else {
+        	stage.initOwner(fatherstage);
+        }
+		if (modality != null) {
 	    	stage.initModality(modality);
 	    }
 	    stage.show();
 	}
 	
-    public static void changeScene(String fxmlPath, String title) throws IOException {
+    public static void changeScene(String fxmlPath, String title, double width, double height) throws IOException {
         FXMLLoader loader = new FXMLLoader(WindowsManager.class.getResource(fxmlPath));
         Parent root = loader.load();
         primaryStage.setTitle(title);
         primaryStage.setScene(new Scene(root));
-        primaryStage.setWidth(WINDOW_WIDTH);
-        primaryStage.setHeight(WINDOW_HEIGHT);
-        primaryStage.setMinWidth(WINDOW_WIDTH);
-        primaryStage.setMinHeight(WINDOW_HEIGHT);
+        primaryStage.setWidth(width);
+        primaryStage.setHeight(height);
+        primaryStage.setMinWidth(width);
+        primaryStage.setMinHeight(height);
         primaryStage.setResizable(false);
         primaryStage.centerOnScreen();
         primaryStage.show();
@@ -92,7 +102,7 @@ public class WindowsManager {
     
     public static void loadWelcomeScene() {
 		try {
-			changeScene("WelcomePage.fxml", "WelcomeScene");
+			changeScene("WelcomePage.fxml", "WelcomeScene", WINDOW_WIDTH, WINDOW_HEIGHT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -100,24 +110,31 @@ public class WindowsManager {
 
     public static void loadLoginUserScene() {
 		try {
-			changeScene("LoginUserPage.fxml", "LoginScene");
-		} catch (IOException e) {
+			changeScene("LoginUserPage.fxml", "LoginScene", WINDOW_WIDTH, WINDOW_HEIGHT);
+		} catch (Exception e) {
 			e.printStackTrace();
 		}
     }
     
     public static void loadSignUpScene() {
         try {
-			changeScene("SignUpUserPage.fxml", "SignUpScene");
+			changeScene("SignUpUserPage.fxml", "SignUpScene", WINDOW_WIDTH, WINDOW_HEIGHT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
     }
     
+    public static void loadSearchScene() {
+    	try {
+			changeScene("SearchPage.fxml", "Search", 1000, 500);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+    }
 
     public static void loadHomeScene() {
 		try {
-			changeScene("HomePage.fxml", "HomeScene");
+			changeScene("HomePage.fxml", "HomeScene", WINDOW_WIDTH, WINDOW_HEIGHT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -125,35 +142,17 @@ public class WindowsManager {
     
     public static void loadSplashScene() {
 		try {
-			changeScene("SplashPage.fxml", "SplashScene");
+			changeScene("SplashPage.fxml", "SplashScene", WINDOW_WIDTH, WINDOW_HEIGHT);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
     }
     
-    public static void showDecisionPopup(String title, String headertext, String contenttext, String headertextinformation) {
-    	Alert alert = new Alert(AlertType.WARNING);
-        alert.setTitle(title);
-        alert.setHeaderText(headertext);
-        alert.setContentText(contenttext);
-
-        ButtonType buttonOk = new ButtonType("OK");
-        ButtonType buttonCancel = new ButtonType("Annulla");
-        alert.getButtonTypes().setAll(buttonOk, buttonCancel);
-
-        alert.showAndWait().ifPresent(response -> {
-            if (response == buttonOk) {
-                showInformationPopup(title, headertextinformation);
-            } else if (response == buttonCancel) {
-                System.out.println("L'utente ha annullato l'operazione");
-            }
-        });
-    }
-    
-    public static void showInformationPopup(String title, String headertext) {
-    	Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle(title);
-        alert.setHeaderText(headertext);
-        alert.showAndWait();
+    public static void loadEstateAgentScene() {
+    	try {
+			changeScene("EstateAgentPage.fxml", "EstateAgentScene", WINDOW_WIDTH, WINDOW_HEIGHT);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
 }

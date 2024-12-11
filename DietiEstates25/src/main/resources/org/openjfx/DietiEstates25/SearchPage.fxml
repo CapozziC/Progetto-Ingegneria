@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.SearchPageController">
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="30.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="buttonIconizza" stylesheets="@CssFiles/ButtonIconizeWindowStyle.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-linea-orizzontale-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buttonChiudi" stylesheets="@CssFiles/ButtonCloseWindowStyle.css">
+               <graphic>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-eliminare-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children></HBox>
+   </top>
+   <center>
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #6756BE;">
+               <children>
+                  <StackPane style="-fx-background-color: #EDECF8; -fx-background-radius: 5;" StackPane.alignment="CENTER">
+                     <StackPane.margin>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                     </StackPane.margin>
+                  </StackPane>
+                  <VBox fx:id="vBoxCerca" alignment="CENTER" spacing="20.0" style="-fx-background-color: white; -fx-background-radius: 5;" StackPane.alignment="CENTER">
+                     <children>
+                        <Label contentDisplay="TEXT_ONLY" text="Inserisci un indirizzo per iniziare la ricerca" textAlignment="CENTER" textFill="#6756be" VBox.vgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                        <Pane VBox.vgrow="NEVER">
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                           <children>
+                              <TextField fx:id="textFieldCerca" prefHeight="60.0" prefWidth="700.0" promptText="Cerca" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: #6756BE; -fx-border-radius: 10; -fx-border-width: 2;">
+                                 <font>
+                                    <Font size="24.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="70.0" right="40.0" />
+                                 </padding>
+                              </TextField>
+                              <JFXButton fx:id="buttonEliminaTesto" contentDisplay="GRAPHIC_ONLY" layoutX="645.0" layoutY="11.0" visible="false">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icon/HomePage/icons8-eliminare-30.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="NONE" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                              <JFXButton fx:id="buttonCercaIcona" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="11.0">
+                                 <graphic>
+                                    <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Icon/HomePage/icons8-ricerca-viola-30.png" />
+                                       </image>
+                                       <cursor>
+                                          <Cursor fx:constant="NONE" />
+                                       </cursor>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </JFXButton>
+                           </children>
+                        </Pane>
+                        <HBox alignment="CENTER_LEFT" spacing="5.0" VBox.vgrow="NEVER">
+                           <children>
+                              <ComboBox prefWidth="120.0" promptText="Prezzo" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" HBox.hgrow="NEVER" />
+                              <ComboBox prefWidth="120.0" promptText="Superficie" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" HBox.hgrow="NEVER" />
+                              <ComboBox prefWidth="120.0" promptText="Tipologia" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" HBox.hgrow="NEVER" />
+                              <ComboBox prefWidth="120.0" promptText="Locali" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" HBox.hgrow="NEVER" />
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="buttonCerca" alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="40.0" prefWidth="150.0" style="-fx-background-color: white; -fx-background-radius: 20; -fx-border-radius: 20; -fx-border-width: 2; -fx-border-color: #6756BE;" text="Cerca" textFill="#6756be" VBox.vgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="100.0" right="100.0" />
+                     </padding>
+                     <StackPane.margin>
+                        <Insets bottom="60.0" left="60.0" right="60.0" top="60.0" />
+                     </StackPane.margin>
+                  </VBox>
+               </children>
+            </StackPane>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

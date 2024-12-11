@@ -5,7 +5,10 @@ import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.scene.Group;
 import javafx.scene.control.Button;
+import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
+import javafx.scene.control.ListCell;
+import javafx.scene.control.ListView;
 import javafx.scene.control.SplitPane;
 import javafx.scene.effect.DropShadow;
 import javafx.scene.image.Image;
@@ -13,7 +16,10 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.util.Callback;
 import javafx.util.Duration;
+
+import java.io.InputStream;
 
 import org.openjfx.DietiEstates25.WindowsManager;
 
@@ -46,6 +52,8 @@ public class WelcomePageController {
     private StackPane stackPaneCorniceDestra;
     @FXML
     private StackPane stackPaneCorniceSinistra;
+    @FXML
+    private ComboBox<String> comboBoxLingua;
 
     private boolean isAtInitialPosition = true;
 
@@ -54,10 +62,13 @@ public class WelcomePageController {
     	buttonIconizza.setOnAction(event -> WindowsManager.iconizeWindows());
     	buttonChiudi.setOnAction(event -> WindowsManager.closeWindow());
         buttonAccediUtente.setOnAction(event -> WindowsManager.loadLoginUserScene());
+        buttonRegistratiUtente.setOnAction(event -> WindowsManager.loadSignUpScene());
         buttonGroupMobile.setOnAction(event -> movePaneMobile());
+        buttonEntraAgenzia.setOnAction(event -> WindowsManager.loadEstateAgentScene());
         setShadowForComponent();
         setButtonCloseImage();
         setButtonIconizeImage();
+        setComboBoxLanguageItems();
     }
 
     public void movePaneMobile() {
@@ -91,7 +102,7 @@ public class WelcomePageController {
             transition.setByX(-800);
             transition.setByY(0);
             transition.setOnFinished(e -> {
-                labelGroupMobile.setText("Fai parte di un'agenzia immobiliare?");
+                labelGroupMobile.setText("Lavori per un'agenzia immobiliare?");
                 vBoxMobile.setStyle(vboxMobileOldStyle + "; -fx-background-color: linear-gradient(to left, #6756be, #c084f5);");
             });
 
@@ -132,5 +143,38 @@ public class WelcomePageController {
     			});
     	buttonIconizza.setOnMouseExited(event -> {imageIconizza.setImage(new Image(getClass().getResource("Icon/TitleBar/icons8-linea-orizzontale-30.png").toExternalForm()));
 		});
+    }
+    
+    private void setComboBoxLanguageItems() {
+        comboBoxLingua.getItems().addAll(
+        	"/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png",
+            "/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-gran-bretagna-40.png"
+        );
+
+        Callback<ListView<String>, ListCell<String>> cellFactory = new Callback<>() {
+            @Override
+            public ListCell<String> call(ListView<String> param) {
+                return new ListCell<>() {
+                    private final ImageView imageView = new ImageView();
+
+                    @Override
+                    protected void updateItem(String iconPath, boolean empty) {
+                        super.updateItem(iconPath, empty);
+                        if (empty || iconPath == null) {
+                            setGraphic(null);
+                        } else {
+                            imageView.setImage(new Image(getClass().getResourceAsStream(iconPath)));
+                            imageView.setFitWidth(20);
+                            imageView.setFitHeight(20);
+                            setGraphic(imageView);
+                        }
+                    }
+                };
+            }
+        };
+
+        comboBoxLingua.setCellFactory(cellFactory);
+        comboBoxLingua.setButtonCell(cellFactory.call(null));
+        comboBoxLingua.getSelectionModel().select("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png");
     }
 }
