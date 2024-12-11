@@ -4,7 +4,10 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
+<<<<<<< HEAD
+=======
 <?import javafx.scene.control.ComboBox?>
+>>>>>>> ivanbranch
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -16,7 +19,11 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="900.0" minWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.WelcomePageController">
    <top>
+<<<<<<< HEAD
+      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+=======
       <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="1600.0" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 0 0 1 0;" BorderPane.alignment="TOP_RIGHT">
+>>>>>>> ivanbranch
          <children>
             <JFXButton fx:id="buttonIconizza" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" stylesheets="@CssFiles/ButtonIconizeWindowStyle.css" HBox.hgrow="ALWAYS">
                <graphic>
@@ -48,7 +55,11 @@
    <center>
       <StackPane BorderPane.alignment="CENTER">
          <children>
+<<<<<<< HEAD
+            <HBox alignment="CENTER" StackPane.alignment="CENTER">
+=======
             <HBox alignment="CENTER" prefHeight="870.0" prefWidth="1600.0" StackPane.alignment="CENTER">
+>>>>>>> ivanbranch
                <children>
                   <StackPane prefHeight="862.0" prefWidth="800.0" style="-fx-background-color: #6756be;" HBox.hgrow="NEVER">
                      <children>
@@ -69,7 +80,11 @@
                                           <Image url="@Icon/icons8-società-cliente-96.png" />
                                        </image>
                                     </ImageView>
+<<<<<<< HEAD
+                                    <Label alignment="CENTER" text="Fai parte di un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
+=======
                                     <Label alignment="CENTER" text="Lavori per un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
+>>>>>>> ivanbranch
                                        <font>
                                           <Font name="Roboto Black" size="36.0" />
                                        </font>
@@ -147,12 +162,20 @@
             </HBox>
             <Group fx:id="groupMobile" StackPane.alignment="CENTER_LEFT">
                <children>
+<<<<<<< HEAD
+                  <StackPane prefHeight="870.0" prefWidth="800.0" style="-fx-background-color: #9593D9;">
+=======
                   <StackPane prefHeight="860.0" prefWidth="800.0" style="-fx-background-color: #9593D9;">
+>>>>>>> ivanbranch
                      <padding>
                         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                      </padding>
                   </StackPane>
+<<<<<<< HEAD
+                  <VBox fx:id="vBoxMobile" alignment="CENTER" prefHeight="870.0" prefWidth="800.0" spacing="80.0" style="-fx-background-color: linear-gradient(to left, #6756be, #c084f5);;">
+=======
                   <VBox fx:id="vBoxMobile" alignment="CENTER" prefHeight="860.0" prefWidth="800.0" spacing="80.0" style="-fx-background-color: linear-gradient(to left, #6756be, #c084f5);;">
+>>>>>>> ivanbranch
                      <children>
                         <Label fx:id="labelGroupMobile" alignment="CENTER" contentDisplay="CENTER" text="Lavori per un'agenzia immobiliare?" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
                            <font>
@@ -169,11 +192,14 @@
                         </JFXButton>
                      </children>
                   </VBox>
+<<<<<<< HEAD
+=======
                   <ComboBox fx:id="comboBoxLingua" layoutX="700.0" layoutY="45.0" prefHeight="40.0" prefWidth="40.0" stylesheets="@CssFiles/ComboBoxLanguageStyle.css">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ComboBox>
+>>>>>>> ivanbranch
                </children>
             </Group>
          </children>

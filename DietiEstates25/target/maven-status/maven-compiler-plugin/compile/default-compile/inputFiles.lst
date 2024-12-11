@@ -1,3 +1,13 @@
+<<<<<<< HEAD
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/module-info.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/WelcomePageController.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/App.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/WindowsManager.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/SplashPageController.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/HomePageController.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/SignUpUserPageController.java
+/Users/carla/git/Progetto-Ingegneria/DietiEstates25/src/main/java/org/openjfx/DietiEstates25/LoginUserPageController.java
+=======
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\PopupManager.java
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\App.java
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\SearchPageController.java
@@ -11,3 +21,4 @@ C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\WindowsManager.java
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\FilterWindowController.java
 C:\Users\ivane\git\Progetto-Ingegneria\DietiEstates25\src\main\java\org\openjfx\DietiEstates25\EditablePopupController.java
+>>>>>>> ivanbranch
