@@ -16,7 +16,7 @@
 
 <BorderPane fx:id="borderPaneUser" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.LoginUserPageController">
    <top>
-      <HBox alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="1600.0" style="-fx-border-color: #6756be;" BorderPane.alignment="CENTER">
+      <HBox fx:id="hBoxUser" alignment="TOP_RIGHT" prefHeight="31.0" prefWidth="1600.0" style="-fx-border-color: #6756be;" BorderPane.alignment="CENTER">
          <children>
             <JFXButton fx:id="buttonMinimizzaUser" contentDisplay="GRAPHIC_ONLY" prefHeight="30.0" prefWidth="50.0" text="Button">
                <graphic>

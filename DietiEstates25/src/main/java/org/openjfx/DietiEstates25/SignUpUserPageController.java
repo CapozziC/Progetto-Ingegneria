@@ -7,6 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.HBox;
 
 import org.openjfx.DietiEstates25.WindowsManager;
 
@@ -31,6 +32,14 @@ public class SignUpUserPageController {
 	private Button buttonRegistratiSignUp;
 	@FXML
 	private Button buttonBackSignUp;
+	@FXML
+	private HBox hBoxSignUp;
+	@FXML
+	private Button buttonCloseSignUp;
+	@FXML
+	private Button buttonIconizeSignUp;
+	
+	
 
 
 
@@ -42,8 +51,14 @@ public class SignUpUserPageController {
 		setFocusListenerSignUp(textFieldIndirizzoSignUp);
 		setFocusListenerSignUp(textFieldEmailSignUp);
 		setFocusListenerSignUp(textFieldConfermaPasswordSignUp);
+		buttonCloseSignUp.setOnAction(event -> WindowsManager.closeWindow());
+		buttonIconizeSignUp.setOnAction(event ->WindowsManager.iconizeWindows());
 		buttonBackSignUp.setOnAction(event->WindowsManager.loadLoginUserScene());
 		buttonInfoSignUp.setOnMouseClicked(this::showInfoPasswordSignUp);
+		textFieldPasswordSignUp.textProperty().addListener((observable, oldValue, newValue) -> ValidatePassword());
+		textFieldConfermaPasswordSignUp.textProperty().addListener((observable, oldValue, newValue) -> ValidatePassword());
+		
+		
 	}
 
 
@@ -65,5 +80,20 @@ public class SignUpUserPageController {
 			labelInfoPasswordSignUp.setVisible(!labelInfoPasswordSignUp.isVisible());
 		}
 
+	}
+	
+	private void ValidatePassword() {
+		String Password = textFieldPasswordSignUp.getText();
+		String ConfermaPassword  = textFieldConfermaPasswordSignUp.getText(); 
+		
+		if (Password.equals(ConfermaPassword)) {
+			textFieldConfermaPasswordSignUp.setStyle("-fx-border-color: #6756be ; -fx-border-width: 2px; -fx-border-radius: 5;");
+			buttonRegistratiSignUp.setDisable(false);
+			}else {
+				textFieldConfermaPasswordSignUp.setStyle("-fx-border-color: red; -fx-border-width: 2px; -fx-border-radius: 5;");
+				buttonRegistratiSignUp.setDisable(true);
+				
+				
+			}
 	}
 }
