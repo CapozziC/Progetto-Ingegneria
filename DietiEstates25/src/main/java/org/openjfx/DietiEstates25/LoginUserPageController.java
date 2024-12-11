@@ -63,7 +63,7 @@ public class LoginUserPageController {
 		buttonChiudiUser.setOnMouseClicked(event -> closeLoginPage());
 		buttonMinimizzaUser.setOnMouseClicked(event ->minimizeLoginPage());
 		buttonBackUser.setOnAction(event -> WindowsManager.loadWelcomeScene());
-		buttonAccediUser.setOnAction(event -> WindowsManager.loadHomeScene());
+		buttonAccediUser.setOnAction(event -> WindowsManager.loadSearchScene());
 		buttonRegistratiUser.setOnAction(event-> WindowsManager.loadSignUpScene());
 		passwordFieldPasswordUser.textProperty().addListener((observable, oldValue, newValue) -> {
     	textFieldPasswordVisible.setText(newValue);

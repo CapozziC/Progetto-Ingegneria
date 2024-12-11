@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label alignment="CENTER" contentDisplay="TEXT_ONLY" prefHeight="70.0" prefWidth="100.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #6756BE;" text="9:00-10:30" textFill="#6756be">
+         <font>
+            <Font name="Roboto Black" size="18.0" />
+         </font>
+      </Label>
+   </children>
+   <cursor>
+      <Cursor fx:constant="HAND" />
+   </cursor>
+</Pane>

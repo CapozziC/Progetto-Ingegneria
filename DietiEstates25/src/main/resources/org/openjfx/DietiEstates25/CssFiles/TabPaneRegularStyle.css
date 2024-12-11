@@ -1,0 +1,40 @@
+.tab-pane {
+    -fx-tab-header-background: red;
+    -fx-background-color: white;
+	-fx-background-radius: 5;
+    -fx-border-color: #6756BE;
+    -fx-border-width: 2;
+	-fx-border-radius: 5;
+}
+
+.tab {
+    -fx-background-color: #EDECF8;
+    -fx-background-radius: 2 2 0 0;
+	-fx-border-radius: 2 2 0 0;
+	-fx-border-width: 2;
+	-fx-border-color: #EDECF8;
+    -fx-text-fill: #6756BE;
+    -fx-font-size: 18px;
+	-fx-font-family: "Roboto Black";
+	-fx-cursor: hand;
+}
+
+.tab .tab-label {
+	-fx-text-fill: #6756BE;
+}
+
+.tab:selected {
+    -fx-background-color: white;
+    -fx-text-fill: #6756BE;
+	-fx-border-color: white;
+}
+
+.tab-content-area {
+    -fx-content-background: white;
+    -fx-padding: 20;
+    -fx-border-color: transparent;
+}
+
+.tab-header-background {
+	-fx-opacity: 0;
+}

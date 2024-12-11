@@ -1,8 +1,11 @@
 package org.openjfx.DietiEstates25;
 
 import javafx.animation.TranslateTransition;
+import javafx.beans.binding.Bindings;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.Label;
@@ -14,13 +17,15 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 import javafx.util.Duration;
-
-import org.openjfx.DietiEstates25.WindowsManager;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Consumer;
 
 public class HomePageController {
 	
@@ -43,11 +48,11 @@ public class HomePageController {
     @FXML
     private ImageView imageNascondi;
     
-	// Home Pane
+	// Search Pane
 	@FXML
 	private Pane paneHome;
 	@FXML
-	private Button buttonPulisciRicerca;
+	private Button buttonPulisciRicerca, buttonFiltri;
 	@FXML
 	private TextField textFieldRicerca;
 	@FXML
@@ -67,7 +72,11 @@ public class HomePageController {
     @FXML
     private PasswordField textFieldPassword, textFieldNuovaPassword, textFieldConfermaNuovaPassword;
     @FXML
-    private Button buttonAggiornaPassword;
+    private Label labelErroreVecchiaPassword, labelErroreNuovePassword;
+    @FXML
+    private ImageView imageViewErroreVecchiaPassword, imageViewErroreNuovaPassword, imageViewErroreConfermaNuovaPassword;
+    @FXML
+    private Button buttonAggiornaPassword, buttonEliminaAccount;
     
     // Supply Pane
     @FXML
@@ -92,7 +101,9 @@ public class HomePageController {
     public void initialize() {
     	buttonIconizza.setOnAction(event -> WindowsManager.iconizeWindows());
     	buttonChiudi.setOnAction(event -> WindowsManager.closeWindow());
-        buttonNascondi.setOnAction(event -> handleButtonClick());
+    	setButtonCloseImage();
+        setButtonIconizeImage();
+        buttonNascondi.setOnAction(event -> manageButtonClick());
         buttonHome.setOnAction(event -> {
         	openRightPane(paneHome);
         	setIndicatorPositionOfSidePanel(buttonHome);
@@ -111,14 +122,10 @@ public class HomePageController {
         });
         buttonLogout.setOnAction(event -> WindowsManager.loadLoginUserScene());
         buttonPulisciRicerca.setOnAction(event -> cleanSearchBar());
-        setButtonCloseImage();
-        setButtonIconizeImage();
-        addListenerToTextFieldsPassword(textFieldNuovaPassword);
-        addListenerToTextFieldsPassword(textFieldConfermaNuovaPassword);
-        addListenerToTextFieldsPassword(textFieldPassword);
-//        testTextFielsPassword(textFieldPassword);
-//        testTextFielsPassword(textFieldNuovaPassword);
-//        testTextFielsPassword(textFieldConfermaNuovaPassword);
+        buttonEliminaAccount.setOnAction(event -> DeleteAccount());
+        buttonFiltri.setOnAction(event -> showFilterWindow(null));
+        managePasswordTextfieldsStyleOnInput();
+        enableOrDisableButtonUpdatePassword();
         showAndHideButtonCleanSearchBar();
         fillChoiceBoxOrder();
         changeArrowChoiceBoxOrientation();
@@ -126,17 +133,17 @@ public class HomePageController {
         loadEstates();
     }
 
-    private void handleButtonClick() {
-        toggleButtonTextAndWidth(buttonHome, "Home");
-        toggleButtonTextAndWidth(buttonProfilo, "Profilo");
-        toggleButtonTextAndWidth(buttonOfferte, "Offerte");
-        toggleButtonTextAndWidth(buttonAppuntamenti, "Appuntamenti");
-        toggleButtonTextAndWidth(buttonLogout, "Logout");
-        toggleButtonTextAndWidth(buttonNascondi, "Nascondi");
-        toggleSidePaneWidth();
+    private void manageButtonClick() {
+        setSidePanelButtonsTextAndWidth(buttonHome, "Home");
+        setSidePanelButtonsTextAndWidth(buttonProfilo, "Profilo");
+        setSidePanelButtonsTextAndWidth(buttonOfferte, "Offerte");
+        setSidePanelButtonsTextAndWidth(buttonAppuntamenti, "Appuntamenti");
+        setSidePanelButtonsTextAndWidth(buttonLogout, "Logout");
+        setSidePanelButtonsTextAndWidth(buttonNascondi, "Nascondi");
+        resizeSidePanelWidth();
     }
 
-    private void toggleButtonTextAndWidth(Button button, String expandedText) {
+    private void setSidePanelButtonsTextAndWidth(Button button, String expandedText) {
         if (button.getText().isEmpty()) {
             button.setText(expandedText);
             button.setPrefWidth(BUTTON_WIDTH_EXPANDED);
@@ -150,7 +157,7 @@ public class HomePageController {
      * Metodo che gestisce la chiusura e l'apertura
      * del pannello laterale
      */
-    private void toggleSidePaneWidth() {
+    private void resizeSidePanelWidth() {
         double currentWidth = vBoxLaterale.getWidth();
         if (currentWidth == SIDEPANE_WIDTH_COLLAPSED) {
             vBoxLaterale.setPrefWidth(SIDEPANE_WIDTH_EXPANDED);
@@ -200,92 +207,95 @@ public class HomePageController {
 		});
     }
     
-    private void addListenerToTextFieldsPassword(PasswordField passwordfield) {
-        passwordfield.focusedProperty().addListener((observable, oldValue, newValue) -> {
+    private void checkOldPasswordTextfield() {
+    	if(textFieldPassword.getText().isEmpty()) {
+    		textFieldPassword.setStyle("-fx-border-color: #E56B6F;");
+    		imageViewErroreVecchiaPassword.setVisible(true);
+    		labelErroreVecchiaPassword.setVisible(true);
+    	}
+    	else {
+    		textFieldPassword.setStyle(null);
+    		imageViewErroreVecchiaPassword.setVisible(false);
+    		labelErroreVecchiaPassword.setVisible(false);
+    	}
+    }
+    
+    private void checkNewAndConfirmPaswordTetxFields() {
+    	if(textFieldNuovaPassword.getText().isEmpty() || textFieldConfermaNuovaPassword.getText().isEmpty() || !textFieldNuovaPassword.getText().equals(textFieldConfermaNuovaPassword.getText())) {
+    		textFieldNuovaPassword.setStyle("-fx-border-color: #E56B6F;");
+    		textFieldConfermaNuovaPassword.setStyle("-fx-border-color: #E56B6F;");
+    		imageViewErroreNuovaPassword.setVisible(true);
+    		imageViewErroreConfermaNuovaPassword.setVisible(true);
+    		labelErroreNuovePassword.setVisible(true);
+    	}
+    	else {
+    		textFieldNuovaPassword.setStyle("-fx-border-color: #A7FF97;");
+    		textFieldConfermaNuovaPassword.setStyle("-fx-border-color: #A7FF97;");
+    		imageViewErroreNuovaPassword.setVisible(false);
+    		imageViewErroreConfermaNuovaPassword.setVisible(false);
+    		labelErroreNuovePassword.setVisible(false);
+    	}
+    }
+    
+    /*
+     * Attiva o disattiva il button per aggiornare la password in base
+     * al contenuto delle textfields
+     */
+    private void enableOrDisableButtonUpdatePassword() {
+    	buttonAggiornaPassword.disableProperty().bind(
+                Bindings.createBooleanBinding(() -> 
+                	textFieldPassword.getText().isEmpty() || 
+                	textFieldNuovaPassword.getText().isEmpty() || 
+                	textFieldConfermaNuovaPassword.getText().isEmpty() || 
+                    !textFieldNuovaPassword.getText().equals(textFieldConfermaNuovaPassword.getText()),
+                    textFieldPassword.textProperty(),
+                    textFieldNuovaPassword.textProperty(),
+                    textFieldConfermaNuovaPassword.textProperty()
+                )
+        );
+    }
+    
+    /*
+     * Ogni volta che l'utente modifica il testo di una textfield o
+     * la textfield perde il focus, i metodi controllano il testo delle
+     * textfields per decidere come colorare i loro bordi
+     */
+    private void managePasswordTextfieldsStyleOnInput() {
+    	textFieldPassword.focusedProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
-                checkIfPasswordsIsEquals();
+                checkOldPasswordTextfield();
             }
         });
         
-        passwordfield.textProperty().addListener((observable, oldValue, newValue) -> {
-            checkIfPasswordsIsEquals();
+        textFieldPassword.textProperty().addListener((observable, oldValue, newValue) -> {
+            checkOldPasswordTextfield();
+        });
+        
+        textFieldNuovaPassword.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue) {
+                checkNewAndConfirmPaswordTetxFields();
+            }
+        });
+        
+        textFieldNuovaPassword.textProperty().addListener((observable, oldValue, newValue) -> {
+            checkNewAndConfirmPaswordTetxFields();
+        });
+        
+        textFieldConfermaNuovaPassword.focusedProperty().addListener((observable, oldValue, newValue) -> {
+            if (!newValue) {
+                checkNewAndConfirmPaswordTetxFields();
+            }
+        });
+        
+        textFieldConfermaNuovaPassword.textProperty().addListener((observable, oldValue, newValue) -> {
+            checkNewAndConfirmPaswordTetxFields();
         });
     }
     
-//    private void changeTextFieldBorderColor(TextField textfield, String color) {
-//    	textfield.setStyle(color);
-//    }
-//    
-//    private void testTextFielsPassword(PasswordField passwordfield) {
-//        passwordfield.focusedProperty().addListener((observable, oldValue, newValue) -> {
-//            if (!newValue) {
-//            	showUpdatePasswordButton();
-//            }
-//        });
-//    	
-//        passwordfield.textProperty().addListener((observable, oldValue, newValue) -> {
-//        	showUpdatePasswordButton();
-//      });
-//    	
-//    }
-//    
-//    private boolean checkOldPasswordLength() {
-//    	String vecchiapassword = textFieldPassword.getText();
-//    	if(vecchiapassword.length()!=0) {
-//    		changeTextFieldBorderColor(textFieldPassword, null);
-//    		return true;
-//    	}
-//    	else {
-//    		changeTextFieldBorderColor(textFieldPassword, "-fx-border-color: red;");
-//    		return false;
-//    	}
-//    }
-//    
-//    private boolean checkNewAandConfirmPassword() {
-//    	String nuovapassword = textFieldNuovaPassword.getText();
-//    	String confermanuovapassword = textFieldConfermaNuovaPassword.getText();
-//    	if(nuovapassword.equals(confermanuovapassword) && nuovapassword.length()!=0 && confermanuovapassword.length()!=0) {
-//    		changeTextFieldBorderColor(textFieldNuovaPassword, "-fx-border-color: green;");
-//    		changeTextFieldBorderColor(textFieldConfermaNuovaPassword, "-fx-border-color: green;");
-//    		return true;
-//    	}
-//    	else {
-//    		changeTextFieldBorderColor(textFieldNuovaPassword, "-fx-border-color: red;");
-//    		changeTextFieldBorderColor(textFieldConfermaNuovaPassword, "-fx-border-color: red;");
-//    		return false;
-//    	}
-//    }
-//    
-//    private void showUpdatePasswordButton() {
-//    	if(checkOldPasswordLength() && checkNewAandConfirmPassword()) {
-//    		buttonAggiornaPassword.setDisable(false);
-//    	}
-//    	else {
-//    		checkNewAandConfirmPassword();
-//    		buttonAggiornaPassword.setDisable(true);
-//    	}
-//    }
-    
-    private void checkIfPasswordsIsEquals() {
-    	String vecchiapassword = textFieldPassword.getText();
-    	String nuovapassword = textFieldNuovaPassword.getText();
-    	String confermanuovapassword = textFieldConfermaNuovaPassword.getText();
-    	if(nuovapassword.equals(confermanuovapassword) && nuovapassword.length()!=0 && confermanuovapassword.length()!=0 && vecchiapassword.length()!=0) {
-    		textFieldNuovaPassword.setStyle("-fx-border-color: green;");
-    		textFieldConfermaNuovaPassword.setStyle("-fx-border-color: green;");
-    		textFieldPassword.setStyle(null);
-    		buttonAggiornaPassword.setDisable(false);
-    	}
-    	else {
-    		textFieldNuovaPassword.setStyle("-fx-border-color: red;");
-    		textFieldConfermaNuovaPassword.setStyle("-fx-border-color: red;");
-    		textFieldPassword.setStyle("-fx-border-color: red;");
-    		buttonAggiornaPassword.setDisable(true);
-    	}
-    }
-    
     public void DeleteAccount() {
-    	WindowsManager.showDecisionPopup("Elimina account", "Stai per eliminare il tuo account per sempre", "Sei sicuro di voler eliminare l'account?", "Il tuo account è stato eliminato con successo");
+    	PopupManager.showPopup("Elimina account", "Sei sicuro di voler eliminare il tuo account?", "Error", result -> {
+    		PopupManager.showInfoPopup("Elimina account", "Il tuo account è stato eliminato");
+    	}, true);
     }
     
     private void showAndHideButtonCleanSearchBar() {
@@ -318,6 +328,28 @@ public class HomePageController {
         });
     }
     
+    public static void showFilterWindow(Consumer<Boolean> applyAction) {
+        try {
+            FXMLLoader loader = new FXMLLoader(WindowsManager.class.getResource("FilterWindow.fxml"));
+            Parent root = loader.load();
+            
+            FilterWindowController controller = loader.getController();
+            
+            if (applyAction != null) {
+                controller.setApplyCallback(applyAction);
+            }
+            
+            Stage popupStage = new Stage();
+            popupStage.setResizable(false);
+            popupStage.initStyle(StageStyle.UNDECORATED);
+            popupStage.initModality(Modality.APPLICATION_MODAL);
+            popupStage.setScene(new Scene(root));
+            popupStage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    
     /*
      * Crea oggeti di tipo Immobile e li inserisce 
      * all'interno di una ScrollPane
@@ -344,13 +376,16 @@ public class HomePageController {
      */
     private void loadAppointment() {
     	int numeroAppuntamenti = 0;
+    	Pane root;
 		try {
 			for (int i = 0; i < 10; i++) {
-				FXMLLoader loader = new FXMLLoader(getClass().getResource("AppointmentObject.fxml"));
-				Pane root = loader.load();
 				if(i%2==0) {
-					String oldstyle = root.getChildren().get(0).getStyle();
-					root.getChildren().get(0).setStyle(oldstyle+"; -fx-background-color: #edecf8;");
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("AppointmentObject.fxml"));
+					root = loader.load();
+				}
+				else {
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("AppointmentObject-Alternative.fxml"));
+					root = loader.load();
 				}
 				vBoxAppuntamenti.getChildren().add(root);
 				numeroAppuntamenti++;
