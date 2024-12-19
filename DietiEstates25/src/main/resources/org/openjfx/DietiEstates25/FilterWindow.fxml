@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" style="-fx-background-color: white; -fx-border-color: #6756BE; -fx-border-width: 5;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.FilterWindowController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-border-color: #6756BE; -fx-border-width: 5; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.FilterWindowController">
    <children>
-      <VBox alignment="CENTER" prefHeight="600.0" prefWidth="500.0" spacing="10.0">
+      <VBox alignment="CENTER" prefHeight="750.0" prefWidth="500.0" spacing="18.0">
          <children>
             <VBox prefHeight="80.0" prefWidth="460.0">
                <children>
@@ -23,8 +23,8 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="460.0" spacing="20.0" VBox.vgrow="NEVER">
                      <children>
-                        <ComboBox fx:id="comboBoxPrezzoDa" editable="true" prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
-                        <ComboBox fx:id="comboBoxPrezzoA" editable="true" prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxPrezzoDa" editable="true" prefWidth="200.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxPrezzoA" editable="true" prefWidth="200.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
                      </children>
                   </HBox>
                </children>
@@ -38,8 +38,8 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="460.0" spacing="20.0">
                      <children>
-                        <ComboBox fx:id="comboBoxSuperficieDa" editable="true" prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
-                        <ComboBox fx:id="comboBoxSuperficieA" editable="true" prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxSuperficieDa" editable="true" prefWidth="200.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxSuperficieA" editable="true" prefWidth="200.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
                      </children>
                   </HBox>
                </children>
@@ -53,8 +53,8 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" spacing="20.0">
                      <children>
-                        <ComboBox fx:id="comboBoxLocaliDa" prefWidth="100.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
-                        <ComboBox fx:id="comboBoxLocaliA" prefWidth="100.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxLocaliDa" prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxLocaliA" prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
                      </children>
                   </HBox>
                </children>
@@ -68,8 +68,8 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" spacing="20.0">
                      <children>
-                        <ComboBox fx:id="comboBoxBagniDa" prefWidth="100.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
-                        <ComboBox fx:id="comboBoxBagniA" prefWidth="100.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxBagniDa" prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxBagniA" prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
                      </children>
                   </HBox>
                </children>
@@ -93,8 +93,8 @@
                   </Label>
                   <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="NEVER">
                      <children>
-                        <ComboBox prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
-                        <ComboBox prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxClasseEnergeticaDa" prefWidth="150.0" promptText="Da" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+                        <ComboBox fx:id="comboBoxClasseEnergeticaA" prefWidth="150.0" promptText="A" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
                      </children>
                   </HBox>
                </children>
@@ -139,6 +139,34 @@
                         </JFXCheckBox>
                      </children>
                   </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Climatizzatori" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Pannelli Fotovoltaici" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Riscaldamento" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Balconi" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
                </children>
             </VBox>
             <HBox alignment="BOTTOM_CENTER">
@@ -148,7 +176,7 @@
             </HBox>
          </children>
          <padding>
-            <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
          </padding>
       </VBox>
    </children>

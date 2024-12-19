@@ -1,14 +1,5 @@
-<<<<<<< HEAD
-org/openjfx/DietiEstates25/App.class
-org/openjfx/DietiEstates25/WindowsManager.class
-org/openjfx/DietiEstates25/SignUpUserPageController.class
-org/openjfx/DietiEstates25/SplashPageController.class
-org/openjfx/DietiEstates25/HomePageController.class
-module-info.class
-org/openjfx/DietiEstates25/LoginUserPageController.class
-org/openjfx/DietiEstates25/WelcomePageController.class
-=======
 org\openjfx\DietiEstates25\App.class
+org\openjfx\DietiEstates25\HomePageProfileController.class
 org\openjfx\DietiEstates25\WelcomePageController$1.class
 org\openjfx\DietiEstates25\WelcomePageController.class
 org\openjfx\DietiEstates25\WindowsManager.class
@@ -18,9 +9,15 @@ module-info.class
 org\openjfx\DietiEstates25\LoginUserPageController.class
 org\openjfx\DietiEstates25\FilterWindowController.class
 org\openjfx\DietiEstates25\PopupManager.class
+org\openjfx\DietiEstates25\HomePageSearchController.class
+org\openjfx\DietiEstates25\EstateObjectController.class
+org\openjfx\DietiEstates25\HomePageAppointmentController.class
+org\openjfx\DietiEstates25\EstateAgentPageEstateController.class
 org\openjfx\DietiEstates25\EditablePopupController.class
 org\openjfx\DietiEstates25\WelcomePageController$1$1.class
 org\openjfx\DietiEstates25\SearchPageController.class
+org\openjfx\DietiEstates25\HomePageOfferController.class
 org\openjfx\DietiEstates25\HomePageController.class
+org\openjfx\DietiEstates25\EstateAgentPageProfileController.class
 org\openjfx\DietiEstates25\SignUpUserPageController.class
->>>>>>> ivanbranch
+org\openjfx\DietiEstates25\EstateAgentPageAppointmentController.class

@@ -1,8 +1,8 @@
 .button {
 	-fx-background-color:  #6756be;
 	-fx-cursor: HAND;
-	-fx-align: TOP_LEFT;
-	-fx-text-align: CENTER;
+	-fx-text-alignment: CENTER;
+	-fx-alignment: TOP_LEFT;
 	-fx-content-display: LEFT;
 	-fx-text-fill: white;
 	-fx-font-size: 18px;
@@ -19,8 +19,8 @@
 .button-alternative {
 	-fx-background-color:  #6756be;
 	-fx-cursor: HAND;
-	-fx-align: TOP_LEFT;
 	-fx-text-align: CENTER;
+	-fx-alignment: TOP_LEFT;
 	-fx-content-display: LEFT;
 	-fx-text-fill: white;
 	-fx-font-size: 18px;

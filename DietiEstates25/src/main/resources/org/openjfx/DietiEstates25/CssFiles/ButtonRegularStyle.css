@@ -1,6 +1,4 @@
 .button {
-	/*-fx-pref-width: 200px;
-	-fx-pref-height: 50px;*/
 	-fx-background-color:  linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);
 	-fx-text-fill: white;
 	-fx-font-size: 18px;

@@ -1,32 +1,141 @@
-.scroll-pane {
+/*Scrollpane con i bordi */
+.border-scroll-pane {
 	-fx-background: white;
 	-fx-border-width: 2px;
 	-fx-border-radius: 5;
 	-fx-border-color: #6756BE;
 	-fx-background-color: transparent;
 }
-.scroll-pane .scroll-bar:vertical {
+
+/*Barra di scorrimento verticale */
+.border-scroll-pane .scroll-bar:vertical {
 	-fx-pref-width: 10;
 	-fx-background-color: white;
 }
-.scroll-pane:hover .scroll-bar:vertical {
+.border-scroll-pane:hover .scroll-bar:vertical {
 	-fx-pref-width: 15;
 }
-.scroll-pane .scroll-bar:vertical .thumb {
+.border-scroll-pane .scroll-bar:vertical .thumb {
 	-fx-background-color: #9593D9;
 }
-.scroll-pane .scroll-bar:vertical .track {
+.border-scroll-pane .scroll-bar:vertical .track {
     -fx-background-color: white;
 	-fx-background-radius: 5;
 }
-.scroll-pane:hover .scroll-bar:vertical .track {
+.border-scroll-pane:hover .scroll-bar:vertical .track {
     -fx-background-color: #D9D7F2;
 }
-.scroll-pane .scroll-bar:vertical .increment-arrow,
-.scroll-pane .scroll-bar:vertical .decrement-arrow {
+.border-scroll-pane .scroll-bar:vertical .increment-arrow,
+.border-scroll-pane .scroll-bar:vertical .decrement-arrow {
 	-fx-background-color: #9593D9;
 }
-.scroll-pane .scroll-bar:vertical .increment-button,
-.scroll-pane .scroll-bar:vertical .decrement-button {
+.border-scroll-pane .scroll-bar:vertical .increment-button,
+.border-scroll-pane .scroll-bar:vertical .decrement-button {
     -fx-background-color: white;
+}
+
+/*Barra di scorrimento orizzontale */
+.border-scroll-pane .scroll-bar:horizontal {
+	-fx-pref-height: 10;
+	-fx-background-color: white;
+}
+.border-scroll-pane:hover .scroll-bar:horizontal {
+	-fx-pref-height: 15;
+}
+.border-scroll-pane .scroll-bar:horizontal .thumb {
+	-fx-background-color: #9593D9;
+}
+.border-scroll-pane .scroll-bar:horizontal .track {
+	-fx-background-color: white;
+	-fx-background-radius: 5;
+}
+.border-scroll-pane:hover .scroll-bar:horizontal .track {
+	-fx-background-color: #D9D7F2;
+}
+.border-scroll-pane .scroll-bar:horizontal .increment-arrow,
+.border-scroll-pane .scroll-bar:horizontal .decrement-arrow {
+	-fx-background-color: #9593D9;
+}
+.border-scroll-pane .scroll-bar:horizontal .increment-button,
+.border-scroll-pane .scroll-bar:horizontal .decrement-button {
+	-fx-background-color: white;
+}
+
+/* Nasconde i pulsanti di incremento e decremento per la barra di scorrimento verticale */
+.border-scroll-pane .scroll-bar:vertical .increment-button,
+.border-scroll-pane .scroll-bar:vertical .decrement-button,
+.noborder-scroll-pane .scroll-bar:vertical .increment-button,
+.noborder-scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+}
+
+/* Nasconde i pulsanti di incremento e decremento per la barra di scorrimento orizzontale */
+.border-scroll-pane .scroll-bar:horizontal .increment-button,
+.border-scroll-pane .scroll-bar:horizontal .decrement-button,
+.noborder-scroll-pane .scroll-bar:horizontal .increment-button,
+.noborder-scroll-pane .scroll-bar:horizontal .decrement-button {
+    -fx-opacity: 0;
+    -fx-background-color: transparent;
+}
+
+
+/*Scrollpane senza bordi */
+.noborder-scroll-pane {
+	-fx-background: white;
+	-fx-background-color: transparent;
+}
+
+/*Barra di scorrimento verticale */
+.noborder-scroll-pane .scroll-bar:vertical {
+	-fx-pref-width: 10;
+	-fx-background-color: white;
+}
+.noborder-scroll-pane:hover .scroll-bar:vertical {
+	-fx-pref-width: 15;
+}
+.noborder-scroll-pane .scroll-bar:vertical .thumb {
+	-fx-background-color: #9593D9;
+}
+.noborder-scroll-pane .scroll-bar:vertical .track {
+    -fx-background-color: white;
+	-fx-background-radius: 5;
+}
+.noborder-scroll-pane:hover .scroll-bar:vertical .track {
+    -fx-background-color: #D9D7F2;
+}
+.noborder-scroll-pane .scroll-bar:vertical .increment-arrow,
+.noborder-scroll-pane .scroll-bar:vertical .decrement-arrow {
+	-fx-background-color: #9593D9;
+}
+.noborder-scroll-pane .scroll-bar:vertical .increment-button,
+.noborder-scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-background-color: white;
+}
+
+/*Barra di scorrimento orizzontale */
+.noborder-scroll-pane .scroll-bar:horizontal {
+	-fx-pref-height: 10;
+	-fx-background-color: white;
+}
+.noborder-scroll-pane:hover .scroll-bar:horizontal {
+	-fx-pref-height: 15;
+}
+.noborder-scroll-pane .scroll-bar:horizontal .thumb {
+	-fx-background-color: #9593D9;
+}
+.noborder-scroll-pane .scroll-bar:horizontal .track {
+	-fx-background-color: white;
+	-fx-background-radius: 5;
+}
+.noborder-scroll-pane:hover .scroll-bar:horizontal .track {
+	-fx-background-color: #D9D7F2;
+}
+.noborder-scroll-pane .scroll-bar:horizontal .increment-arrow,
+.noborder-scroll-pane .scroll-bar:horizontal .decrement-arrow {
+	-fx-background-color: #9593D9;
+}
+.noborder-scroll-pane .scroll-bar:horizontal .increment-button,
+.noborder-scroll-pane .scroll-bar:horizontal .decrement-button {
+	-fx-background-color: white;
 }

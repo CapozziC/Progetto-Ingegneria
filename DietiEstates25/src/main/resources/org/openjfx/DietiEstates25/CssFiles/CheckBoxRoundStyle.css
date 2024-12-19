@@ -1,12 +1,14 @@
 .check-box {
+	-fx-background-radius: 30;
 	-fx-border-radius: 20;
 	-fx-border-width: 2;
 	-fx-border-color: #6756BE;
 	-fx-text-fill: #6756BE;
 	-fx-font-family: "Roboto Black";
-	-fx--font-size: 16px;
+	-fx-font-size: 16px;
 	-fx-padding: 10;
 	-fx-pref-height: 10;
+	-fx-cursor: hand;
 }
 
 .check-box .box {
@@ -36,18 +38,18 @@
 	-fx-font-size: 16px;
 }
 
-.check-box_selected {
+.check-box:selected {
 	-fx-border-radius: 20;
 	-fx-border-width: 2;
 	-fx-border-color: #6756BE;
 	-fx-text-fill: #6756BE;
 	-fx-font-family: "Roboto Black";
-	-fx--font-size: 16px;
+	-fx-font-size: 16px;
 	-fx-padding: 10;
 	-fx-pref-height: 10;
 }
 
 .check-box:selected .text {
-	-fx-font-size: 18px;
+	-fx-font-size: 16px;
 	-fx-font-family: "Roboto Black";
 }

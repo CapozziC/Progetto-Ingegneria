@@ -3,12 +3,7 @@
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
-<?import javafx.scene.control.ChoiceBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.Separator?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.BorderPane?>
@@ -24,7 +19,7 @@
          <children>
             <VBox fx:id="vBoxLaterale" alignment="CENTER" prefHeight="858.0" prefWidth="220.0" spacing="20.0">
                <children>
-                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Cerca" textFill="WHITE">
+                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.search" textFill="WHITE">
                      <graphic>
                         <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -38,7 +33,7 @@
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </JFXButton>
-                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Profilo" textFill="WHITE">
+                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.profile" textFill="WHITE">
                      <font>
                         <Font name="Roboto Black" size="18.0" />
                      </font>
@@ -53,7 +48,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Offerte" textFill="WHITE">
+                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.offer" textFill="WHITE">
                      <font>
                         <Font name="Roboto Black" size="18.0" />
                      </font>
@@ -68,7 +63,7 @@
                         </ImageView>
                      </graphic>
                   </JFXButton>
-                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Appuntamenti" textFill="WHITE">
+                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.appointment" textFill="WHITE">
                      <font>
                         <Font name="Roboto Black" size="18.0" />
                      </font>
@@ -85,7 +80,8 @@
                   </JFXButton>
                   <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="220.0" spacing="20.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonLogoutStyle.css" text="Logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                        <Separator prefHeight="0.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonLogoutStyle.css" text="%home.button.sidepanel.logout" textFill="WHITE" VBox.vgrow="ALWAYS">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
@@ -100,22 +96,6 @@
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <Separator prefHeight="0.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
-                        <JFXButton fx:id="buttonNascondi" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #4a3470;" stylesheets="@CssFiles/ButtonHideSidePanelStyle.css" text="Nascondi" textFill="WHITE" VBox.vgrow="ALWAYS">
-                           <font>
-                              <Font name="Roboto Black" size="18.0" />
-                           </font>
-                           <cursor>
-                              <Cursor fx:constant="HAND" />
-                           </cursor>
-                           <graphic>
-                              <ImageView fx:id="imageNascondi" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Icon/HomePage/icons8-nascondi-pannello-30.png" />
-                                 </image>
-                              </ImageView>
-                           </graphic>
-                        </JFXButton>
                      </children>
                      <VBox.margin>
                         <Insets bottom="20.0" />
@@ -126,7 +106,7 @@
                   <Insets top="20.0" />
                </padding>
             </VBox>
-            <Pane fx:id="paneSegnalino" layoutY="21.0" prefHeight="40.0" prefWidth="8.0" style="-fx-background-color: white; -fx-background-radius: 0 5 5 0;" visible="false" />
+            <Pane fx:id="paneSegnalino" layoutY="21.0" prefHeight="40.0" prefWidth="10.0" style="-fx-background-color: white; -fx-background-radius: 0 5 5 0;" visible="false" />
          </children>
       </Pane>
    </left>
@@ -161,351 +141,6 @@
       </HBox>
    </top>
    <center>
-      <StackPane fx:id="stackPaneGenerale" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-         <children>
-            <Pane fx:id="paneHome" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" StackPane.alignment="CENTER">
-               <children>
-                  <ScrollPane fx:id="scrollPaneImmobili" hbarPolicy="NEVER" layoutX="30.0" layoutY="100.0" prefHeight="720.0" prefWidth="750.0" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
-                     <content>
-                        <VBox fx:id="vBoxImmobili" alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="10.0" />
-                     </content>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="40.0" />
-                     </padding>
-                  </ScrollPane>
-                  <Label layoutX="50.0" layoutY="110.0" text="Numero di immobili trovati:" textFill="#6756be">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="labelNumeroImmobili" layoutX="290.0" layoutY="110.0" text="120 appartamenti" textFill="#e56b6f">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldRicerca" layoutX="30.0" layoutY="10.0" prefHeight="40.0" prefWidth="460.0" promptText="Cerca" stylesheets="@CssFiles/TextFieldRegularStyle.css">
-                     <padding>
-                        <Insets left="50.0" right="50.0" />
-                     </padding>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="525.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-frecce-direzionali-40.png" />
-                     </image>
-                  </ImageView>
-                  <ChoiceBox fx:id="choiceBoxOrdine" layoutX="520.0" layoutY="10.0" prefHeight="40.0" prefWidth="180.0" stylesheets="@CssFiles/ChoiceBoxStyle.css">
-                     <padding>
-                        <Insets left="30.0" />
-                     </padding>
-                  </ChoiceBox>
-                  <JFXButton fx:id="buttonFiltri" contentDisplay="GRAPHIC_ONLY" layoutX="730.0" layoutY="10.0" prefHeight="40.0" prefWidth="40.0" style="-fx-background-color: transparent; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #6756BE;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePage/icons8-filtro-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="30.0" layoutY="12.0" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePage/icons8-ricerca-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton fx:id="buttonPulisciRicerca" contentDisplay="GRAPHIC_ONLY" layoutX="442.0" layoutY="12.0" style="-fx-background-color: transparent;" visible="false">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePage/icons8-eliminare-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="30.0" layoutY="55.0" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePage/icons8-griglia-con-dettagli-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="75.0" layoutY="55.0" style="-fx-background-color: transparent;">
-                     <graphic>
-                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@Icon/HomePage/icons8-griglia-breve-30.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-               </children>
-            </Pane>
-            <Pane fx:id="paneProfilo" style="-fx-background-color: white;" visible="false" StackPane.alignment="CENTER">
-               <children>
-                  <StackPane disable="true" layoutX="185.0" layoutY="20.0" prefHeight="440.0" prefWidth="910.0" style="-fx-border-color: #6756be; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: white; -fx-background-radius: 5;" translateX="40.0">
-                     <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                     </padding>
-                  </StackPane>
-                  <StackPane disable="true" layoutX="185.0" layoutY="485.0" prefHeight="280.0" prefWidth="910.0" style="-fx-border-color: #6756be; -fx-border-radius: 5; -fx-border-width: 2; -fx-background-color: white; -fx-background-radius: 5;" translateX="40.0">
-                     <padding>
-                        <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
-                     </padding>
-                  </StackPane>
-                  <Label layoutX="266.0" layoutY="40.0" text="Informazioni utente" textFill="#6756be" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="266.0" layoutY="167.0" text="Nome" textFill="#6756be" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldNome" editable="false" layoutX="266.0" layoutY="196.0" prefHeight="40.0" prefWidth="280.0" promptText="Nome" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="552.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" translateX="40.0">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-utente-30.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="726.0" layoutY="167.0" text="Cognome" textFill="#6756be" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldCognome" editable="false" layoutX="726.0" layoutY="194.0" prefHeight="40.0" prefWidth="280.0" promptText="Cognome" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1013.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true" translateX="40.0">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-utente-30.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="266.0" layoutY="292.0" text="Email" textFill="#6756be" translateX="40.0" translateY="-60.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldEmail" editable="false" layoutX="266.0" layoutY="321.0" prefHeight="40.0" prefWidth="280.0" promptText="Email" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-60.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="552.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" translateY="-3.0">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-nuovo-messaggio-30.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="726.0" layoutY="292.0" text="Indirizzo" textFill="#6756be" translateX="40.0" translateY="-60.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldIndirizzo" editable="false" layoutX="726.0" layoutY="321.0" prefHeight="40.0" prefWidth="280.0" promptText="Indirizzo" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-60.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="1013.0" layoutY="270.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" translateY="-3.0">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-indirizzo-30.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="266.0" layoutY="417.0" text="Data Di Iscrizione" textFill="#6756be" translateX="40.0" translateY="-70.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <TextField fx:id="textFieldData" editable="false" layoutX="266.0" layoutY="446.0" prefHeight="40.0" prefWidth="280.0" promptText="gg/mm/aa" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-70.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </TextField>
-                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="552.0" layoutY="385.0" pickOnBounds="true" preserveRatio="true" translateX="40.0" translateY="-2.0">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-calendario-30.png" />
-                     </image>
-                  </ImageView>
-                  <Label layoutX="266.0" layoutY="549.0" text="Cambia Password" textFill="#6756be" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="36.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="266.0" layoutY="610.0" text="Password Corrente" textFill="#6756be" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <PasswordField fx:id="textFieldPassword" layoutX="266.0" layoutY="639.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0" translateY="-50.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" right="40.0" />
-                     </padding>
-                  </PasswordField>
-                  <Label layoutX="266.0" layoutY="655.0" text="Nuova Password" textFill="#6756be" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <PasswordField fx:id="textFieldNuovaPassword" layoutX="266.0" layoutY="684.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" right="40.0" />
-                     </padding>
-                  </PasswordField>
-                  <Label layoutX="726.0" layoutY="655.0" text="Conferma Nuova Password" textFill="#6756be" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                  </Label>
-                  <PasswordField fx:id="textFieldConfermaNuovaPassword" layoutX="726.0" layoutY="684.0" prefHeight="40.0" prefWidth="280.0" promptText="Password" stylesheets="@CssFiles/TextFieldRegularStyle.css" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                     <padding>
-                        <Insets left="10.0" right="40.0" />
-                     </padding>
-                  </PasswordField>
-                  <JFXButton fx:id="buttonAggiornaPassword" disable="true" layoutX="300.0" layoutY="790.0" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" stylesheets="@CssFiles/ButtonRegularStyle.css" text="Aggiorna Password" textFill="WHITE" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <JFXButton fx:id="buttonEliminaAccount" layoutX="765.0" layoutY="790.0" prefHeight="50.0" prefWidth="200.0" stylesheets="@CssFiles/ButtonDeleteStyle.css" text="Elimina Account" textFill="WHITE" translateX="40.0">
-                     <font>
-                        <Font name="Roboto Black" size="18.0" />
-                     </font>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                  </JFXButton>
-                  <Label fx:id="labelErroreVecchiaPassword" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="590.0" layoutY="600.0" text="Il campo non può essere vuoto" textAlignment="CENTER" textFill="#e56b6f" visible="false">
-                     <font>
-                        <Font name="Roboto Black" size="14.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="labelErroreNuovePassword" alignment="CENTER" contentDisplay="TEXT_ONLY" layoutX="570.0" layoutY="730.0" text="Le password devono corrispondere" textAlignment="CENTER" textFill="#e56b6f" visible="false">
-                     <font>
-                        <Font name="Roboto Black" size="14.0" />
-                     </font>
-                  </Label>
-                  <ImageView fx:id="imageViewErroreVecchiaPassword" fitHeight="30.0" fitWidth="30.0" layoutX="550.0" layoutY="595.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-punto-esclamativo-30.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="imageViewErroreNuovaPassword" fitHeight="30.0" fitWidth="30.0" layoutX="550.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-punto-esclamativo-30.png" />
-                     </image>
-                  </ImageView>
-                  <ImageView fx:id="imageViewErroreConfermaNuovaPassword" fitHeight="30.0" fitWidth="30.0" layoutX="1010.0" layoutY="690.0" pickOnBounds="true" preserveRatio="true" visible="false">
-                     <image>
-                        <Image url="@Icon/HomePage/icons8-punto-esclamativo-30.png" />
-                     </image>
-                  </ImageView>
-               </children>
-            </Pane>
-            <Pane fx:id="paneOfferte" style="-fx-background-color: white;" visible="false" StackPane.alignment="CENTER">
-               <children>
-                  <ScrollPane hbarPolicy="NEVER" prefHeight="860.0" prefWidth="400.0" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS" />
-                  <ScrollPane hbarPolicy="NEVER" layoutX="398.0" layoutY="1.0" prefHeight="860.0" prefWidth="980.0" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS" />
-               </children>
-            </Pane>
-            <Pane fx:id="paneAppuntamenti" style="-fx-background-color: white;" visible="false" StackPane.alignment="CENTER">
-               <children>
-                  <Pane layoutX="90.0" layoutY="20.0" prefHeight="810.0" prefWidth="1200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #6756BE;" />
-                  <Label alignment="CENTER" layoutX="145.0" layoutY="15.0" text="Lista Appuntamenti:" textAlignment="CENTER" textFill="#6756be" translateY="20.0">
-                     <font>
-                        <Font name="Roboto Black" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="760.0" layoutY="15.0" text="Hai prenotato:" textAlignment="CENTER" textFill="#6756be" translateX="80.0" translateY="20.0">
-                     <font>
-                        <Font name="Roboto Black" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label fx:id="labelNumeroAppuntamenti" layoutX="940.0" layoutY="15.0" textAlignment="CENTER" textFill="#e56b6f" translateX="80.0" translateY="20.0">
-                     <font>
-                        <Font name="Roboto Black" size="24.0" />
-                     </font>
-                  </Label>
-                  <ScrollPane fx:id="scrollPaneAppuntamenti" hbarPolicy="NEVER" layoutX="90.0" layoutY="200.0" prefHeight="630.0" prefWidth="1200.0" style="-fx-border-color: transparent;" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
-                     <padding>
-                        <Insets bottom="20.0" left="50.0" right="50.0" top="10.0" />
-                     </padding>
-                     <content>
-                        <VBox fx:id="vBoxAppuntamenti" alignment="CENTER" prefHeight="695.0" prefWidth="1080.0" spacing="10.0" />
-                     </content>
-                  </ScrollPane>
-                  <Pane layoutX="142.0" layoutY="150.0" prefHeight="50.0" prefWidth="1080.0" style="-fx-background-radius: 5; -fx-border-width: 2; -fx-border-color: #9593D9; -fx-border-radius: 5;">
-                     <children>
-                        <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="10.0" spacing="92.0">
-                           <children>
-                              <Label alignment="CENTER" text="Data" textAlignment="CENTER" textFill="#6756be">
-                                 <font>
-                                    <Font name="Roboto Black" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" text="Ora" textAlignment="CENTER" textFill="#6756be">
-                                 <font>
-                                    <Font name="Roboto Black" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label alignment="CENTER" text="Nome Appartamento" textAlignment="CENTER" textFill="#6756be">
-                                 <font>
-                                    <Font name="Roboto Black" size="24.0" />
-                                 </font>
-                              </Label>
-                           </children>
-                        </HBox>
-                     </children>
-                  </Pane>
-                  <HBox alignment="CENTER_LEFT" layoutX="140.0" layoutY="80.0" spacing="20.0" style="-fx-background-color: #EDECF8; -fx-background-radius: 5;">
-                     <children>
-                        <JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Più recente" />
-                        <JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Meno recente" />
-                     </children>
-                     <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                     </padding>
-                  </HBox>
-               </children>
-            </Pane>
-         </children>
-      </StackPane>
+      <StackPane fx:id="stackPaneMain" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

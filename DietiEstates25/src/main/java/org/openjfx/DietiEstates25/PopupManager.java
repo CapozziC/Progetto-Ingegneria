@@ -25,6 +25,7 @@ public class PopupManager {
             Parent root = loader.load();
 
             EditablePopupController controller = loader.getController();
+            controller.setColorBorder(type);
             controller.setTitle(title);
             controller.setMessage(message);
             controller.setImage(type);

@@ -7,6 +7,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 
 public class EditablePopupController {
@@ -18,8 +20,25 @@ public class EditablePopupController {
 	private ImageView imageViewPopup;
 	@FXML
 	private Button buttonOkPopup, buttonAnnullaPopup;
+	@FXML
+	private Pane paneSuperiore, paneInferiore;
+	@FXML
+	private AnchorPane anchorPanePopup;
 	
 	private Consumer<Boolean> okCallback;
+	
+	public void setColorBorder(String type) {
+		if (type.equals("Info")) {
+			paneSuperiore.setStyle("-fx-background-color: #6756BE");
+			paneInferiore.setStyle("-fx-background-color: #6756BE");
+			anchorPanePopup.setStyle("-fx-background-color: white; -fx-border-color: #6756BE");
+		}
+		else if(type.equals("Error")) {
+			paneSuperiore.setStyle("-fx-background-color: #E56B6F");
+			paneInferiore.setStyle("-fx-background-color: #E56B6F");
+			anchorPanePopup.setStyle("-fx-background-color: white; -fx-border-color: #E56B6F");
+		}
+	}
 	
 	public void setTitle(String title) {
 		labelPopup.setText(title);

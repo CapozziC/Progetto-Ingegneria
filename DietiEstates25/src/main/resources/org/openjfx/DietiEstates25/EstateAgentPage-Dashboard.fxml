@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1380.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TilePane alignment="CENTER" hgap="10.0" prefHeight="860.0" prefWidth="1380.0" vgap="10.0">
+         <children>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="300.0" prefWidth="300.0" styleClass="border-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="NEVER">
+               <content>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Annunci recenti:" textAlignment="CENTER" />
+               </content>
+            </ScrollPane>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="300.0" prefWidth="300.0" styleClass="border-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="NEVER">
+               <content>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Appuntamenti recenti:" textAlignment="CENTER" />
+               </content>
+            </ScrollPane>
+            <ScrollPane hbarPolicy="ALWAYS" prefHeight="300.0" prefWidth="300.0" styleClass="border-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="NEVER">
+               <content>
+                  <Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Annunci recenti:" textAlignment="CENTER" />
+               </content>
+            </ScrollPane>
+         </children>
+      </TilePane>
+   </children>
+</Pane>

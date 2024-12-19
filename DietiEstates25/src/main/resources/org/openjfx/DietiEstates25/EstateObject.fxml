@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="710.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: #9593D9; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="220.0" prefWidth="710.0" style="-fx-background-color: white; -fx-border-radius: 10; -fx-border-color: #9593D9; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.EstateObjectController">
    <children>
       <HBox alignment="CENTER" layoutX="4.0" layoutY="10.0" prefHeight="180.0" prefWidth="700.0" spacing="20.0">
          <children>
@@ -26,12 +26,12 @@
                <children>
                   <HBox spacing="140.0" VBox.vgrow="NEVER">
                      <children>
-                        <Label prefWidth="149.0" text="Via Appartmento">
+                        <Label prefWidth="149.0" text="Via Appartmento" textFill="#6756be">
                            <font>
                               <Font name="Roboto Black" size="18.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #9593D9; -fx-border-width: 2; -fx-border-radius: 5;" text="Nome Agenzia">
+                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-color: #9593D9; -fx-border-width: 2; -fx-border-radius: 5;" text="Nome Agenzia" textFill="#6756be">
                            <font>
                               <Font name="Roboto Black" size="14.0" />
                            </font>
@@ -40,12 +40,12 @@
                   </HBox>
                   <HBox spacing="140.0" VBox.vgrow="NEVER">
                      <children>
-                        <Label prefWidth="149.0" text="Prezzo Appartamento">
+                        <Label prefWidth="149.0" text="Prezzo Appartamento" textFill="#6756be">
                            <font>
                               <Font name="Roboto Black" size="14.0" />
                            </font>
                         </Label>
-                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #9593D9;" text="In Vendita">
+                        <Label alignment="CENTER" prefWidth="149.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #9593D9;" text="In Vendita" textFill="#6756be">
                            <font>
                               <Font name="Roboto Black" size="14.0" />
                            </font>
@@ -96,14 +96,14 @@
                         </HBox>
                      </children>
                   </HBox>
-                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Appartamento che si trova in via Antonio, perfettamente nuovo ma senza bagno, balcone, cucina, letti ecc" wrappingWidth="440.0">
+                  <Text fill="#6756be" strokeType="OUTSIDE" strokeWidth="0.0" text="Appartamento che si trova in via Antonio, perfettamente nuovo ma senza bagno, balcone, cucina, letti ecc" wrappingWidth="440.0">
                      <font>
                         <Font size="14.0" />
                      </font>
                   </Text>
                   <HBox alignment="CENTER_LEFT" spacing="10.0">
                      <children>
-                        <JFXButton alignment="CENTER" graphicTextGap="10.0" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Visita" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <JFXButton fx:id="buttonVisita" alignment="CENTER" graphicTextGap="10.0" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Visita" textAlignment="CENTER" HBox.hgrow="NEVER">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -111,14 +111,14 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imageViewVisita" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Icon/EstateObject/icons8-calendario-giallo-20.png" />
                                  </image>
                               </ImageView>
                            </graphic>
                         </JFXButton>
-                        <JFXButton alignment="CENTER" graphicTextGap="10.0" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Offri" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <JFXButton fx:id="buttonOffri" alignment="CENTER" graphicTextGap="10.0" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Offri" textAlignment="CENTER" HBox.hgrow="NEVER">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -126,7 +126,7 @@
                               <Cursor fx:constant="HAND" />
                            </cursor>
                            <graphic>
-                              <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="imageViewOffri" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@Icon/EstateObject/icons8-soldi-giallo-20.png" />
                                  </image>
@@ -134,7 +134,7 @@
                            </graphic>
                         </JFXButton>
                         <HBox prefHeight="100.0" prefWidth="80.0" />
-                        <JFXButton alignment="CENTER" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Visualizza" textAlignment="CENTER" HBox.hgrow="NEVER">
+                        <JFXButton fx:id="buttonVisualizza" alignment="CENTER" prefHeight="50.0" prefWidth="100.0" stylesheets="@CssFiles/ButtonEstateStyle.css" text="Visualizza" textAlignment="CENTER" HBox.hgrow="NEVER">
                            <font>
                               <Font size="14.0" />
                            </font>

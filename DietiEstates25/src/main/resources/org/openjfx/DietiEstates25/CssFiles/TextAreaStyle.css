@@ -1,0 +1,10 @@
+.text-area {
+    -fx-background-color: white;
+	-fx-background-radius: 2px;
+	-fx-border-width: 2px;
+	-fx-border-radius: 5;
+	-fx-border-color: #6756BE;
+    -fx-text-fill: #6756BE;
+    -fx-font-family: "Roboto Black";
+    -fx-font-size: 18px;
+}

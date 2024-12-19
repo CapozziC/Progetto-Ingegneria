@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1380.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.EstateAgentPageEstateController">
+	<children>
+		<TabPane layoutX="40.0" layoutY="40.0" prefHeight="780.0" prefWidth="1300.0" stylesheets="@CssFiles/TabPaneRegularStyle.css" tabClosingPolicy="UNAVAILABLE">
+			<tabs>
+				<Tab text="Lista Annunci" />
+				<Tab text="Crea Annuncio">
+					<content>
+						<Pane>
+							<children>
+								<ScrollPane hbarPolicy="NEVER" prefHeight="705.0" prefWidth="860.0" styleClass="border-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
+									<padding>
+										<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+									</padding>
+									<content>
+										<VBox prefWidth="810.0" spacing="30.0">
+											<children>
+												<VBox prefWidth="1200.0" spacing="20.0" VBox.vgrow="NEVER">
+													<children>
+														<Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Immagini" textAlignment="CENTER" textFill="#6756be" VBox.vgrow="NEVER">
+															<font>
+																<Font name="Roboto Black" size="24.0" />
+															</font>
+														</Label>
+														<HBox spacing="10.0" VBox.vgrow="NEVER">
+															<children>
+																<JFXButton fx:id="buttonAggiungiFoto" alignment="CENTER" contentDisplay="TOP" prefHeight="120.0" prefWidth="150.0" style="-fx-background-color: white; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-color: #6756BE;" text="Aggiungi Foto" textAlignment="CENTER" textFill="#6756be" HBox.hgrow="NEVER">
+																	<font>
+																		<Font name="Roboto Black" size="18.0" />
+																	</font>
+																	<graphic>
+																		<ImageView fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-aggiungi-immagine-40.png" />
+																			</image>
+																		</ImageView>
+																	</graphic>
+																	<cursor>
+																		<Cursor fx:constant="HAND" />
+																	</cursor>
+																</JFXButton>
+																<Pane prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonPrima" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" graphicTextGap="0.0" style="-fx-background-color: white; -fx-background-radius: 5; -fx-border-radius: 5;">
+																			<graphic>
+																				<ImageView fx:id="imageViewPrima" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="170.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonSeconda" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" graphicTextGap="0.0" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewSeconda" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="330.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonTerza" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewTerza" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="490.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonQuarta" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewQuarta" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+															</children>
+														</HBox>
+														<HBox spacing="10.0">
+															<children>
+																<Pane prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonQuinta" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewQuinta" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="170.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonSesta" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewSesta" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="330.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonSettima" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewSettima" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="490.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonOttava" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewOttava" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+																<Pane layoutX="650.0" layoutY="10.0" prefHeight="120.0" prefWidth="150.0" style="-fx-border-color: #C084f5; -fx-border-radius: 5; -fx-border-width: 2; -fx-border-style: dashed;">
+																	<children>
+																		<ImageView fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" preserveRatio="true">
+																			<image>
+																				<Image url="@Icon/EstateAgentPage/icons8-immagine-adatta-40.png" />
+																			</image>
+																		</ImageView>
+																		<JFXButton fx:id="buttonNona" alignment="CENTER" contentDisplay="GRAPHIC_ONLY" disable="true" style="-fx-background-color: white;">
+																			<graphic>
+																				<ImageView fx:id="imageViewNona" fitHeight="120.0" fitWidth="150.0" pickOnBounds="true" translateX="-9.0" translateY="-4.0" />
+																			</graphic>
+																			<cursor>
+																				<Cursor fx:constant="HAND" />
+																			</cursor>
+																		</JFXButton>
+																	</children>
+																</Pane>
+															</children>
+														</HBox>
+													</children>
+												</VBox>
+												<Separator prefWidth="200.0" VBox.vgrow="NEVER" />
+												<VBox spacing="20.0" VBox.vgrow="NEVER">
+													<children>
+														<Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Informazioni Generali" VBox.vgrow="NEVER">
+															<font>
+																<Font size="24.0" />
+															</font>
+														</Label>
+														<HBox spacing="20.0" VBox.vgrow="NEVER">
+															<children>
+																<VBox spacing="10.0" HBox.hgrow="NEVER">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Prezzo" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<TextField fx:id="textFieldPrezzo" prefWidth="250.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+																	</children>
+																</VBox>
+																<VBox spacing="10.0">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Locali" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<TextField fx:id="textFieldLocali" prefWidth="250.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+																	</children>
+																</VBox>
+																<VBox spacing="10.0">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Superficie" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<TextField fx:id="textFieldSuperficie" prefWidth="250.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+																	</children>
+																</VBox>
+															</children>
+														</HBox>
+														<HBox spacing="20.0" VBox.vgrow="NEVER">
+															<children>
+																<VBox spacing="10.0">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Piano" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<TextField fx:id="textFieldPiano" prefWidth="250.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+																	</children>
+																</VBox>
+																<VBox alignment="CENTER_LEFT" spacing="10.0">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Classe Energetica" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<ComboBox fx:id="comboBoxClasseEnergetica" prefHeight="42.0" prefWidth="250.0" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+																	</children>
+																</VBox>
+																<VBox alignment="CENTER_LEFT" spacing="10.0">
+																	<children>
+																		<Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Tipologia" VBox.vgrow="NEVER">
+																			<font>
+																				<Font size="18.0" />
+																			</font>
+																		</Label>
+																		<ComboBox fx:id="comboBoxTipologia" prefHeight="42.0" prefWidth="250.0" stylesheets="@CssFiles/ComboBoxFilterSearchStyle.css" />
+																	</children>
+																</VBox>
+															</children>
+														</HBox>
+													</children>
+												</VBox>
+												<Separator prefWidth="200.0" VBox.vgrow="NEVER" />
+                                    <VBox spacing="20.0" VBox.vgrow="NEVER">
+                                       <children>
+                                          <Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Indirizzo" />
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Via e Numero Civico" />
+                                                      <TextField fx:id="textFieldVia" prefWidth="300.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Città" />
+                                                      <TextField fx:id="textFieldCittà" prefWidth="300.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox spacing="20.0">
+                                             <children>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Provincia" />
+                                                      <TextField fx:id="textFieldProvincia" prefWidth="300.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+                                                   </children>
+                                                </VBox>
+                                                <VBox spacing="10.0">
+                                                   <children>
+                                                      <Label styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="CAP" />
+                                                      <TextField fx:id="textFieldCAP" prefWidth="300.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" VBox.vgrow="NEVER" />
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                    <Separator prefWidth="200.0" />
+												<VBox spacing="20.0" VBox.vgrow="NEVER">
+													<children>
+														<Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Informazioni Aggiuntive" VBox.vgrow="NEVER">
+															<font>
+																<Font size="24.0" />
+															</font>
+														</Label>
+														<HBox alignment="CENTER_LEFT" prefWidth="200.0" spacing="10.0">
+															<children>
+																<JFXCheckBox fx:id="checkBoxGarage" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Garage" />
+																<JFXCheckBox fx:id="checkBoxBalconi" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Balconi" />
+																<JFXCheckBox fx:id="checkBoxAscensore" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Ascensore" />
+																<JFXCheckBox fx:id="checkBoxPostoAuto" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Posto Auto" />
+																<JFXCheckBox fx:id="checkBoxPannelliFotovoltaici" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Pannelli Fotovoltaici" />
+															</children>
+														</HBox>
+														<HBox prefWidth="200.0" spacing="10.0">
+															<children>
+																<JFXCheckBox fx:id="checkBoxMobili" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Mobili" />
+																<JFXCheckBox fx:id="checkBoxClimatizzazione" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Climatizzazione" />
+																<JFXCheckBox fx:id="checkBoxRiscaldamento" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Riscaldamento" />
+																<JFXCheckBox fx:id="checkBoxPortineria" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Portineria" />
+																<JFXCheckBox fx:id="checkBoxGiardino" checkedColor="#6756be" stylesheets="@CssFiles/CheckBoxRoundStyle.css" text="Giardino" />
+															</children>
+														</HBox>
+													</children>
+												</VBox>
+												<Separator prefWidth="200.0" VBox.vgrow="NEVER" />
+												<VBox prefHeight="220.0" VBox.vgrow="NEVER">
+													<children>
+														<HBox alignment="CENTER_LEFT" spacing="520.0" VBox.vgrow="NEVER">
+															<children>
+      																<Label alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Descrizione">
+      																	<font>
+      																		<Font size="24.0" />
+      																	</font>
+      																</Label>
+      																<Label fx:id="labelNumeroCaratteri" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Caratteri: 0/200" textAlignment="CENTER" HBox.hgrow="NEVER">
+      																	<font>
+      																		<Font size="18.0" />
+      																	</font>
+      																</Label>
+															</children>
+														</HBox>
+														<TextArea fx:id="textAreaDescrizione" promptText="Aggiungi una descrizione..." stylesheets="@CssFiles/TextAreaStyle.css" wrapText="true" VBox.vgrow="NEVER">
+															<font>
+																<Font size="18.0" />
+															</font>
+															<VBox.margin>
+																<Insets right="20.0" />
+															</VBox.margin>
+														</TextArea>
+													</children>
+												</VBox>
+											</children>
+										</VBox>
+									</content>
+								</ScrollPane>
+                        <ScrollPane hbarPolicy="NEVER" layoutX="900.0" prefHeight="705.0" prefWidth="341.0" styleClass="noborder-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
+                           <content>
+      								<VBox prefHeight="470.0" prefWidth="325.0" spacing="10.0">
+      									<children>
+      										<VBox spacing="10.0" VBox.vgrow="NEVER">
+      											<children>
+      												<Label styleClass="label-superbig" stylesheets="@CssFiles/LabelStyle.css" text="Riassunto">
+      													<font>
+      														<Font size="36.0" />
+      													</font>
+      												</Label>
+      												<Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Informazioni Generali">
+      													<font>
+      														<Font size="24.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelPrezzoRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Prezzo:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelLocaliRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Locali:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelSuperficieRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Superficie:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelPianoRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Piano:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelClasseEnergeticaRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Classe Energetica:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+      												<Label fx:id="labelTipologiaRiassunto" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Tipologia:">
+      													<font>
+      														<Font size="18.0" />
+      													</font>
+      												</Label>
+                                          <Label fx:id="labelIndirizzoRiassunto" alignment="TOP_LEFT" contentDisplay="TEXT_ONLY" prefHeight="69.0" prefWidth="325.0" styleClass="label-regular" stylesheets="@CssFiles/LabelStyle.css" text="Indirizzo:" wrapText="true" VBox.vgrow="NEVER">
+                                             <font>
+                                                <Font size="18.0" />
+                                             </font>
+                                          </Label>
+      											</children>
+      										</VBox>
+      										<Separator prefWidth="200.0" />
+      										<VBox fx:id="vBoxInformazioniAggiuntive" spacing="10.0" VBox.vgrow="NEVER">
+      											<children>
+      												<Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Informazioni Aggiuntive">
+      													<font>
+      														<Font size="24.0" />
+      													</font>
+      												</Label>
+      											</children>
+      										</VBox>
+      										<Separator prefWidth="200.0" />
+      										<JFXButton fx:id="buttonPubblicaAnnuncio" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Pubblica Annuncio" />
+      									</children>
+      								</VBox>
+                           </content>
+                        </ScrollPane>
+							</children>
+						</Pane>
+					</content>
+				</Tab>
+			</tabs>
+		</TabPane>
+	</children>
+</Pane>

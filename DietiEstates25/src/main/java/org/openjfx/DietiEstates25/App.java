@@ -8,11 +8,13 @@ import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 
 import java.io.IOException;
+import java.util.Locale;
 
 public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
+    	WindowsManager.setLanguage(new Locale("it", "IT"));
     	WindowsManager.setPrimaryStage(primaryStage);
 		WindowsManager.loadWelcomeScene();
     }
@@ -20,5 +22,4 @@ public class App extends Application {
     public static void main(String[] args) {
         launch(args);
     }
-
 }
