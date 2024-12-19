@@ -12,6 +12,21 @@
 	-fx-pref-height: 40px;*/
 }
 
+.text-field-profile {
+	-fx-border-width: 2;
+	-fx-border-color:  #6756BE;
+	-fx-border-radius: 5;
+	-fx-background-color: white;
+	-fx-background-radius: 5;
+	-fx-text-alignment: CENTER_LEFT;
+	-fx-font-size: 18px;
+	-fx-font-family: "Roboto Black";
+	-fx-text-fill: #6756BE;
+	-fx-pref-width: 325px;
+	-fx-pref-height: 40px;
+	-fx-padding: 0px 50px 0px 11px;
+}
+
 .text-field-filterwindow {
 	-fx-border-width: 2;
 	-fx-border-color:  #6756BE;

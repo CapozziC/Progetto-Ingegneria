@@ -1,7 +1,7 @@
 .button {
 	-fx-background-color:  #6756be;
 	-fx-cursor: HAND;
-	-fx-align: BOTTOM_LEFT;
+	-fx-alignment: TOP_LEFT;
 	-fx-text-align: CENTER;
 	-fx-content-display: LEFT;
 	-fx-text-fill: white;

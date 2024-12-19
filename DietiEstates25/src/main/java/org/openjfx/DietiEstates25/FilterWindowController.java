@@ -1,10 +1,7 @@
 package org.openjfx.DietiEstates25;
 
 import java.util.function.Consumer;
-
 import javafx.fxml.FXML;
-
-import javafx.scene.control.TextField;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 
@@ -29,7 +26,13 @@ public class FilterWindowController {
 	@FXML
 	private ComboBox<String> comboBoxTipologia;
 	@FXML
+	private ComboBox<String> comboBoxClasseEnergeticaDa;
+	@FXML
+	private ComboBox<String> comboBoxClasseEnergeticaA;
+	@FXML
 	private Button buttonApplica;
+	
+	private boolean isUpdating = false;
 	
 	private Consumer<Boolean> applyCallback;
 	
@@ -62,6 +65,7 @@ public class FilterWindowController {
     	addItemsToRoomCombobox();
     	addItemsToBathroomCombobox();
     	addItemsToTypeCombobox();
+    	addItemsToEneryClassCombobox();
     }
     
     private void addItemsToPriceCombobox() {
@@ -91,6 +95,12 @@ public class FilterWindowController {
     private void addItemsToTypeCombobox() {
     	String typelist[] = {"In Vendita", "In Affitto"};
     	comboBoxTipologia.getItems().addAll(typelist);
+    }
+    
+    private void addItemsToEneryClassCombobox() {
+    	String eneryclasslist[] = {"A4", "A3", "A2", "A1", "B", "C"};
+    	comboBoxClasseEnergeticaDa.getItems().addAll(eneryclasslist);
+    	comboBoxClasseEnergeticaA.getItems().addAll(eneryclasslist);
     }
 
 }

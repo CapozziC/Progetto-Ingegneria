@@ -19,7 +19,9 @@ import javafx.scene.paint.Color;
 import javafx.util.Callback;
 import javafx.util.Duration;
 
+import java.io.IOException;
 import java.io.InputStream;
+import java.util.Locale;
 
 import org.openjfx.DietiEstates25.WindowsManager;
 
@@ -45,7 +47,7 @@ public class WelcomePageController {
     @FXML
     private Group groupMobile;
     @FXML
-    private Label labelGroupMobile;
+    private Label labelGroupMobileLeft, labelGroupMobileRight;
     @FXML
     private VBox vBoxMobile;
     @FXML
@@ -89,7 +91,8 @@ public class WelcomePageController {
             transition.setByX(800);
             transition.setByY(0);
             transition.setOnFinished(e -> {
-                labelGroupMobile.setText("Stai cercando casa?");
+            	labelGroupMobileLeft.setOpacity(0);
+            	labelGroupMobileRight.setOpacity(1);
                 vBoxMobile.setStyle(vboxMobileOldStyle + "; -fx-background-color: linear-gradient(to right, #6756be, #c084f5);");
             });
 
@@ -102,7 +105,8 @@ public class WelcomePageController {
             transition.setByX(-800);
             transition.setByY(0);
             transition.setOnFinished(e -> {
-                labelGroupMobile.setText("Lavori per un'agenzia immobiliare?");
+            	labelGroupMobileRight.setOpacity(0);
+            	labelGroupMobileLeft.setOpacity(1);
                 vBoxMobile.setStyle(vboxMobileOldStyle + "; -fx-background-color: linear-gradient(to left, #6756be, #c084f5);");
             });
 
@@ -175,6 +179,24 @@ public class WelcomePageController {
 
         comboBoxLingua.setCellFactory(cellFactory);
         comboBoxLingua.setButtonCell(cellFactory.call(null));
-        comboBoxLingua.getSelectionModel().select("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png");
+        if (WindowsManager.getResourceBundle().getLocale().toString().equals("it")) {
+			comboBoxLingua.getSelectionModel().select("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png");
+		}
+        else if(WindowsManager.getResourceBundle().getLocale().toString().equals("en")) {
+        	comboBoxLingua.getSelectionModel().select("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-gran-bretagna-40.png");
+        }
+		comboBoxLingua.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue != null) {
+                Locale newLocale;
+                if (newValue.equals("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png")) {
+                    newLocale = new Locale("it", "IT");
+                }
+                else {
+                    newLocale = new Locale("en", "US");
+                }
+                WindowsManager.setLanguage(newLocale);
+                WindowsManager.loadWelcomeScene();
+            }
+        });
     }
 }

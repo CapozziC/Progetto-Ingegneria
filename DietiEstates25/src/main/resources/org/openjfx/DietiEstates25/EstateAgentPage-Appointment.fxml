@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1380.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.EstateAgentPageAppointmentController">
+   <children>
+      <TabPane layoutX="40.0" layoutY="40.0" prefHeight="780.0" prefWidth="1300.0" stylesheets="@CssFiles/TabPaneRegularStyle.css" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Lista Appuntamenti">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <ScrollPane fx:id="scrollPaneAppuntamenti" hbarPolicy="NEVER" layoutY="120.0" prefHeight="550.0" prefWidth="1135.0" styleClass="noborder-scroll-pane" stylesheets="@CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding>
+                           <content>
+                              <VBox fx:id="vBoxAppuntamenti" prefHeight="695.0" prefWidth="1080.0" spacing="10.0" stylesheets="@CssFiles/TextFieldRegularStyle.css" />
+                           </content>
+                        </ScrollPane>
+                        <HBox spacing="20.0" style="-fx-background-color: #EDECF8; -fx-background-radius: 5;">
+                           <padding>
+                              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                           </padding>
+                           <children>
+                              <JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Più recente" />
+                              <JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Meno recente" />
+                           </children>
+                        </HBox>
+                        <Pane layoutY="70.0" prefHeight="50.0" prefWidth="1080.0" style="-fx-background-radius: 5; -fx-border-width: 2; -fx-border-color: #9593D9; -fx-border-radius: 5;">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="10.0" spacing="92.0">
+                                 <children>
+                                    <Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Data" />
+                                    <Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Ora" />
+                                    <Label styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Nome Appartamento" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </Pane>
+                        <Label layoutX="345.0" layoutY="15.0" styleClass="label-big" stylesheets="@CssFiles/LabelStyle.css" text="Hai prenotato:" />
+                        <Label fx:id="labelNumeroAppuntamenti" layoutX="520.0" layoutY="15.0" textFill="#e56b6f">
+                           <font>
+                              <Font name="Roboto Black" size="24.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+          <Tab text="Crea Appuntamenti">
+               <content>
+                  <Pane prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <HBox prefHeight="670.0" prefWidth="1135.0" spacing="20.0">
+                           <children>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelPrimoGiorno" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-days" stylesheets="@CssFiles/LabelStyle.css" text="GG MM" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelSecondoGiorno" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-days" stylesheets="@CssFiles/LabelStyle.css" text="GG MM" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelTerzoGiorno" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-days" stylesheets="@CssFiles/LabelStyle.css" text="GG MM" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelQuartoGiorno" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-days" stylesheets="@CssFiles/LabelStyle.css" text="GG MM" />
+                                 </children>
+                              </VBox>
+                              <VBox spacing="10.0">
+                                 <children>
+                                    <Label fx:id="labelQuintoGiorno" alignment="CENTER" contentDisplay="TEXT_ONLY" styleClass="label-days" stylesheets="@CssFiles/LabelStyle.css" text="GG MM" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </Pane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</Pane>

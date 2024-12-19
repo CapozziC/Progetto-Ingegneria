@@ -4,10 +4,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.Group?>
-<<<<<<< HEAD
-=======
 <?import javafx.scene.control.ComboBox?>
->>>>>>> ivanbranch
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -19,11 +16,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="900.0" minWidth="1600.0" prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.WelcomePageController">
    <top>
-<<<<<<< HEAD
-      <HBox alignment="CENTER_RIGHT" prefHeight="30.0" prefWidth="900.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
-=======
       <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="1600.0" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 0 0 1 0;" BorderPane.alignment="TOP_RIGHT">
->>>>>>> ivanbranch
          <children>
             <JFXButton fx:id="buttonIconizza" alignment="CENTER_RIGHT" contentDisplay="GRAPHIC_ONLY" stylesheets="@CssFiles/ButtonIconizeWindowStyle.css" HBox.hgrow="ALWAYS">
                <graphic>
@@ -55,11 +48,7 @@
    <center>
       <StackPane BorderPane.alignment="CENTER">
          <children>
-<<<<<<< HEAD
-            <HBox alignment="CENTER" StackPane.alignment="CENTER">
-=======
             <HBox alignment="CENTER" prefHeight="870.0" prefWidth="1600.0" StackPane.alignment="CENTER">
->>>>>>> ivanbranch
                <children>
                   <StackPane prefHeight="862.0" prefWidth="800.0" style="-fx-background-color: #6756be;" HBox.hgrow="NEVER">
                      <children>
@@ -80,16 +69,12 @@
                                           <Image url="@Icon/icons8-società-cliente-96.png" />
                                        </image>
                                     </ImageView>
-<<<<<<< HEAD
-                                    <Label alignment="CENTER" text="Fai parte di un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
-=======
-                                    <Label alignment="CENTER" text="Lavori per un'agenzia immobiliare?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
->>>>>>> ivanbranch
+                                    <Label alignment="CENTER" text="%welcome.label.agent" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
                                        <font>
                                           <Font name="Roboto Black" size="36.0" />
                                        </font>
                                     </Label>
-                                    <JFXButton fx:id="buttonEntraAgenzia" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" stylesheets="@CssFiles/ButtonRegularStyle.css" text="Entra" textFill="WHITE" VBox.vgrow="NEVER">
+                                    <JFXButton fx:id="buttonEntraAgenzia" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" stylesheets="@CssFiles/ButtonRegularStyle.css" text="%welcome.button.enter.agent" textFill="WHITE" VBox.vgrow="NEVER">
                                        <font>
                                           <Font name="Roboto Black" size="24.0" />
                                        </font>
@@ -128,12 +113,12 @@
                                           <Image url="@Icon/icons8-scambio-chiavi-96.png" />
                                        </image>
                                     </ImageView>
-                                    <Label alignment="CENTER" text="Stai cercando casa?" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
+                                    <Label alignment="CENTER" text="%welcome.label.signin" textAlignment="CENTER" textFill="#4a3470" VBox.vgrow="NEVER">
                                        <font>
                                           <Font name="Roboto Black" size="36.0" />
                                        </font>
                                     </Label>
-                                    <JFXButton fx:id="buttonAccediUtente" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" stylesheets="@CssFiles/ButtonRegularStyle.css" text="Accedi" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
+                                    <JFXButton fx:id="buttonAccediUtente" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonRegularStyle.css" text="%welcome.button.signin" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
                                        <font>
                                           <Font name="Roboto Black" size="24.0" />
                                        </font>
@@ -141,7 +126,7 @@
                                           <Cursor fx:constant="HAND" />
                                        </cursor>
                                     </JFXButton>
-                                    <JFXButton fx:id="buttonRegistratiUtente" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #6756be, #c084f5);" stylesheets="@CssFiles/ButtonRegularStyle.css" text="Registrati" textAlignment="CENTER" textFill="WHITE">
+                                    <JFXButton fx:id="buttonRegistratiUtente" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonRegularStyle.css" text="%welcome.button.signup" textAlignment="CENTER" textFill="WHITE">
                                        <font>
                                           <Font name="Roboto Black" size="24.0" />
                                        </font>
@@ -162,27 +147,28 @@
             </HBox>
             <Group fx:id="groupMobile" StackPane.alignment="CENTER_LEFT">
                <children>
-<<<<<<< HEAD
-                  <StackPane prefHeight="870.0" prefWidth="800.0" style="-fx-background-color: #9593D9;">
-=======
                   <StackPane prefHeight="860.0" prefWidth="800.0" style="-fx-background-color: #9593D9;">
->>>>>>> ivanbranch
                      <padding>
                         <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
                      </padding>
                   </StackPane>
-<<<<<<< HEAD
-                  <VBox fx:id="vBoxMobile" alignment="CENTER" prefHeight="870.0" prefWidth="800.0" spacing="80.0" style="-fx-background-color: linear-gradient(to left, #6756be, #c084f5);;">
-=======
                   <VBox fx:id="vBoxMobile" alignment="CENTER" prefHeight="860.0" prefWidth="800.0" spacing="80.0" style="-fx-background-color: linear-gradient(to left, #6756be, #c084f5);;">
->>>>>>> ivanbranch
                      <children>
-                        <Label fx:id="labelGroupMobile" alignment="CENTER" contentDisplay="CENTER" text="Lavori per un'agenzia immobiliare?" textAlignment="CENTER" textFill="WHITE" VBox.vgrow="NEVER">
-                           <font>
-                              <Font name="Roboto Black" size="36.0" />
-                           </font>
-                        </Label>
-                        <JFXButton fx:id="buttonGroupMobile" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: white;" text="Entra" textAlignment="CENTER" textFill="#6756be" VBox.vgrow="NEVER">
+                        <StackPane VBox.vgrow="NEVER">
+                           <children>
+                              <Label fx:id="labelGroupMobileLeft" alignment="CENTER" contentDisplay="CENTER" text="%welcome.label.mobilepanelleft" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Black" size="36.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="labelGroupMobileRight" alignment="CENTER" contentDisplay="CENTER" opacity="0.0" text="%welcome.label.mobilepanelright" textAlignment="CENTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Roboto Black" size="36.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </StackPane>
+                        <JFXButton fx:id="buttonGroupMobile" alignment="CENTER" prefHeight="60.0" prefWidth="180.0" style="-fx-background-color: white;" text="%welcome.button.mobilepanel" textAlignment="CENTER" textFill="#6756be" VBox.vgrow="NEVER">
                            <font>
                               <Font name="Roboto Black" size="24.0" />
                            </font>
@@ -192,14 +178,11 @@
                         </JFXButton>
                      </children>
                   </VBox>
-<<<<<<< HEAD
-=======
                   <ComboBox fx:id="comboBoxLingua" layoutX="700.0" layoutY="45.0" prefHeight="40.0" prefWidth="40.0" stylesheets="@CssFiles/ComboBoxLanguageStyle.css">
                      <cursor>
                         <Cursor fx:constant="HAND" />
                      </cursor>
                   </ComboBox>
->>>>>>> ivanbranch
                </children>
             </Group>
          </children>
