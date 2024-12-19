@@ -76,7 +76,7 @@ public class EstateAgentPageEstateController {
 	private void openFileChooserForImages() {
 	    FileChooser filechooser = new FileChooser();
 	    filechooser.setTitle("Seleziona uno o più file");
-	    filechooser.setInitialDirectory(new File("C:\\"));
+	    filechooser.setInitialDirectory(new File(System.getProperty("user.home")));
 	    filechooser.getExtensionFilters().addAll(
 	        new FileChooser.ExtensionFilter("All images", "*.jpeg", "*.jpg", "*.png"),
 	        new FileChooser.ExtensionFilter("JPEG images", "*.jpeg"),
