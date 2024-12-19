@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="720.0" minWidth="1280.0" prefHeight="900.0" prefWidth="1600.0" style="-fx-background-color: #6756be;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.Controllers.HomePageController">
+   <left>
+      <Pane fx:id="paneLaterale" prefHeight="720.0" prefWidth="220.0" style="-fx-background-color: #6756be;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox fx:id="vBoxLaterale" alignment="CENTER" prefHeight="858.0" prefWidth="220.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="buttonHome" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.search" textFill="WHITE">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-ricerca-bianca-30.png" />
+                           </image></ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.profile" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-profilo-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonOfferte" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.offer" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-offerte-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%home.button.sidepanel.appointment" textFill="WHITE">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-appuntamenti-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="410.0" prefWidth="220.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Separator prefHeight="0.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                        <JFXButton fx:id="buttonLogout" alignment="BOTTOM_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" style="-fx-background-color: #6756be;" stylesheets="@CssFiles/ButtonLogoutStyle.css" text="%home.button.sidepanel.logout" textFill="WHITE" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/HomePage/icons8-logout-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Pane fx:id="paneSegnalino" layoutY="21.0" prefHeight="40.0" prefWidth="10.0" style="-fx-background-color: white; -fx-background-radius: 0 5 5 0;" visible="false" />
+         </children>
+      </Pane>
+   </left>
+   <top>
+      <HBox alignment="TOP_RIGHT" prefHeight="40.0" prefWidth="1600.0" style="-fx-background-color: white; -fx-border-color: #6756be; -fx-border-width: 0 0 1 0;" BorderPane.alignment="TOP_RIGHT">
+         <children>
+            <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" stylesheets="@CssFiles/ButtonIconizeWindowStyle.css" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <ImageView fx:id="imageIconizza" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-linea-orizzontale-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXButton fx:id="buttonChiudi" contentDisplay="GRAPHIC_ONLY" stylesheets="@CssFiles/ButtonCloseWindowStyle.css" HBox.hgrow="ALWAYS">
+               <graphic>
+                  <ImageView fx:id="imageChiudi" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-eliminare-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <StackPane fx:id="stackPaneMain" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

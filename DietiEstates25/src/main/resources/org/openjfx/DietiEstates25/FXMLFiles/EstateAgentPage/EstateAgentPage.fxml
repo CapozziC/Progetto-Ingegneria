@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane prefHeight="900.0" prefWidth="1600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.Controllers.EstateAgentPageController">
+   <top>
+      <HBox alignment="CENTER_RIGHT" prefHeight="40.0" prefWidth="1600.0" style="-fx-background-color: white; -fx-border-width: 0 0 1 0; -fx-border-color: #6756BE;" BorderPane.alignment="CENTER">
+         <children>
+            <JFXButton fx:id="buttonIconizza" contentDisplay="GRAPHIC_ONLY" stylesheets="@CssFiles/ButtonIconizeWindowStyle.css">
+               <graphic>
+                  <ImageView fx:id="imageIconizza" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-linea-orizzontale-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="buttonChiudi" stylesheets="@CssFiles/ButtonCloseWindowStyle.css">
+               <graphic>
+                  <ImageView fx:id="imageChiudi" fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@Icon/TitleBar/icons8-eliminare-30.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <Pane prefHeight="720.0" prefWidth="220.0" style="-fx-background-color: #6756BE;" BorderPane.alignment="CENTER">
+         <children>
+            <VBox alignment="TOP_CENTER" prefHeight="858.0" prefWidth="220.0" spacing="20.0">
+               <children>
+                  <JFXButton fx:id="buttonDashboard" alignment="TOP_LEFT" graphicTextGap="10.0" prefHeight="40.0" prefWidth="180.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%estateAgent.button.sidepanel.dashboard">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-home-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonProfilo" alignment="TOP_LEFT" graphicTextGap="10.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%estateAgent.button.sidepanel.profile">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-profilo-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonImmobili" alignment="TOP_LEFT" graphicTextGap="10.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%estateAgent.button.sidepanel.estate">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/EstateAgentPage/icons8-azienda-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="buttonAppuntamenti" alignment="TOP_LEFT" graphicTextGap="10.0" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="%estateAgent.button.sidepanel.appointment">
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@Icon/HomePage/icons8-appuntamenti-30.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <VBox alignment="BOTTOM_CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0" VBox.vgrow="ALWAYS">
+                     <children>
+                        <Separator prefWidth="200.0" />
+                        <JFXButton fx:id="buttonLogout" alignment="TOP_LEFT" graphicTextGap="10.0" stylesheets="@CssFiles/ButtonLogoutStyle.css" text="%estateAgent.button.sidepanel.logout">
+                           <graphic>
+                              <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Icon/HomePage/icons8-logout-30.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </JFXButton>
+                     </children>
+                     <VBox.margin>
+                        <Insets bottom="20.0" />
+                     </VBox.margin>
+                  </VBox>
+               </children>
+               <padding>
+                  <Insets top="20.0" />
+               </padding>
+            </VBox>
+            <Pane fx:id="paneSegnalino" layoutY="21.0" prefHeight="40.0" prefWidth="10.0" style="-fx-background-color: white; -fx-background-radius: 0 5 5 0;" visible="false" />
+         </children>
+      </Pane>
+   </left>
+   <center>
+      <StackPane fx:id="stackPaneMain" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

@@ -23,13 +23,13 @@ public class WindowsManager {
     private static ResourceBundle resourceBundle = ResourceBundle.getBundle(BUNDLE_BASE_NAME, Locale.getDefault());
 
     // File FXML
-    private static final String WELCOME_PAGE = "WelcomePage.fxml";
-    private static final String LOGIN_USER_PAGE = "LoginUserPage.fxml";
-    private static final String SIGN_UP_PAGE = "SignUpUserPage.fxml";
+    private static final String WELCOME_PAGE = "FXMLFiles/WelcomePage/WelcomePage.fxml";
+    private static final String LOGIN_USER_PAGE = "FXMLFiles/UserAuthenticationPage/LoginUserPage.fxml";
+    private static final String SIGN_UP_PAGE = "FXMLFiles/UserAuthenticationPage/SignUpUserPage.fxml";
     private static final String SEARCH_PAGE = "SearchPage.fxml";
-    private static final String HOME_PAGE = "HomePage.fxml";
+    private static final String HOME_PAGE = "FXMLFiles/HomePage/HomePage.fxml";
     private static final String SPLASH_PAGE = "SplashPage.fxml";
-    private static final String ESTATE_AGENT_PAGE = "EstateAgentPage.fxml";
+    private static final String ESTATE_AGENT_PAGE = "FXMLFiles/EstateAgentPage/EstateAgentPage.fxml";
 
     public static void setPrimaryStage(Stage stage) {
         primaryStage = stage;

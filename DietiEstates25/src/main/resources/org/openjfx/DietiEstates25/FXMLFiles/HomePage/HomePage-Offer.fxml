@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1380.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.Controllers.HomePageOfferController">
+	<children>
+		<ScrollPane hbarPolicy="NEVER" prefHeight="860.0" prefWidth="400.0" styleClass="border-scroll-pane" stylesheets="@../../CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS" />
+		<ScrollPane hbarPolicy="NEVER" layoutX="398.0" layoutY="1.0" prefHeight="860.0" prefWidth="980.0" styleClass="border-scroll-pane" stylesheets="@../../CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS" />
+	</children>
+</Pane>

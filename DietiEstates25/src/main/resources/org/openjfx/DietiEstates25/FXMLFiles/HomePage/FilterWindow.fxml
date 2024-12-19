@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="500.0" style="-fx-border-color: #6756BE; -fx-border-width: 5; -fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.Controllers.FilterWindowController">
+   <children>
+      <VBox alignment="CENTER" prefHeight="750.0" prefWidth="500.0" spacing="18.0">
+         <children>
+            <VBox prefHeight="80.0" prefWidth="460.0">
+               <children>
+                  <Label text="Prezzo" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="460.0" spacing="20.0" VBox.vgrow="NEVER">
+                     <children>
+                        <ComboBox fx:id="comboBoxPrezzoDa" editable="true" prefWidth="200.0" promptText="Da" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                        <ComboBox fx:id="comboBoxPrezzoA" editable="true" prefWidth="200.0" promptText="A" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="80.0" prefWidth="460.0" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Superficie" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="460.0" spacing="20.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxSuperficieDa" editable="true" prefWidth="200.0" promptText="Da" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                        <ComboBox fx:id="comboBoxSuperficieA" editable="true" prefWidth="200.0" promptText="A" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER_LEFT" VBox.vgrow="NEVER">
+               <children>
+                  <Label text="Locali" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" spacing="20.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxLocaliDa" prefWidth="150.0" promptText="Da" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                        <ComboBox fx:id="comboBoxLocaliA" prefWidth="150.0" promptText="A" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label text="Bagni" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" spacing="20.0">
+                     <children>
+                        <ComboBox fx:id="comboBoxBagniDa" prefWidth="150.0" promptText="Da" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                        <ComboBox fx:id="comboBoxBagniA" prefWidth="150.0" promptText="A" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Tipologia" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboBoxTipologia" prefWidth="150.0" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                     <styleClass>
+                        <String fx:value="combo-box-base-filter" />
+                        <String fx:value="combo-box-filter" />
+                        <String fx:value="combo-box-popup-filter" />
+                     </styleClass></ComboBox>
+               </children>
+            </VBox>
+            <VBox>
+               <children>
+                  <Label text="Classe energetica" textFill="#6756be">
+                     <font>
+                        <Font name="Roboto Black" size="18.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="20.0" VBox.vgrow="NEVER">
+                     <children>
+                        <ComboBox fx:id="comboBoxClasseEnergeticaDa" prefWidth="150.0" promptText="Da" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                        <ComboBox fx:id="comboBoxClasseEnergeticaA" prefWidth="150.0" promptText="A" stylesheets="@../../CssFiles/ComboBoxStyle.css">
+                           <styleClass>
+                              <String fx:value="combo-box-base-filter" />
+                              <String fx:value="combo-box-filter" />
+                              <String fx:value="combo-box-popup-filter" />
+                           </styleClass></ComboBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="10.0">
+               <children>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" VBox.vgrow="NEVER">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Garage" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Ascensore" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Posto Auto" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Portineria" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Giardino" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Mobili" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Climatizzatori" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Pannelli Fotovoltaici" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Riscaldamento" unCheckedColor="BLACK" HBox.hgrow="NEVER">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                        <JFXCheckBox checkedColor="#6756be" prefHeight="70.0" prefWidth="120.0" styleClass="check-box-regular" stylesheets="@../../CssFiles/CheckBoxStyle.css" text="Balconi" unCheckedColor="BLACK">
+                           <font>
+                              <Font name="Roboto Black" size="18.0" />
+                           </font>
+                        </JFXCheckBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_CENTER">
+               <children>
+                  <JFXButton fx:id="buttonApplica" alignment="CENTER" contentDisplay="TEXT_ONLY" stylesheets="@CssFiles/ButtonSidePanelStyle.css" text="Applica" HBox.hgrow="NEVER" />
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="40.0" right="40.0" top="20.0" />
+         </padding>
+      </VBox>
+   </children>
+</Pane>

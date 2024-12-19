@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="860.0" prefWidth="1380.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.openjfx.DietiEstates25.Controllers.HomePageAppointmentController">
+	<children>
+		<Pane layoutX="90.0" layoutY="20.0" prefHeight="810.0" prefWidth="1200.0" style="-fx-background-color: white; -fx-border-width: 2; -fx-border-radius: 5; -fx-border-color: #6756BE;" />
+		<Label alignment="CENTER" layoutX="145.0" layoutY="15.0" text="Lista Appuntamenti:" textAlignment="CENTER" textFill="#6756be" translateY="20.0">
+			<font>
+				<Font name="Roboto Black" size="24.0" />
+			</font>
+		</Label>
+		<Label alignment="CENTER" layoutX="760.0" layoutY="15.0" text="Hai prenotato:" textAlignment="CENTER" textFill="#6756be" translateX="80.0" translateY="20.0">
+			<font>
+				<Font name="Roboto Black" size="24.0" />
+			</font>
+		</Label>
+		<Label fx:id="labelNumeroAppuntamenti" layoutX="940.0" layoutY="15.0" textAlignment="CENTER" textFill="#e56b6f" translateX="80.0" translateY="20.0">
+			<font>
+				<Font name="Roboto Black" size="24.0" />
+			</font>
+		</Label>
+		<ScrollPane fx:id="scrollPaneAppuntamenti" hbarPolicy="NEVER" layoutX="90.0" layoutY="200.0" prefHeight="630.0" prefWidth="1200.0" style="-fx-border-color: transparent;" styleClass="border-scroll-pane" stylesheets="@../../CssFiles/ScrollPaneStyle.css" vbarPolicy="ALWAYS">
+			<padding>
+				<Insets bottom="20.0" left="50.0" right="50.0" top="10.0" />
+			</padding>
+			<content>
+				<VBox fx:id="vBoxAppuntamenti" alignment="CENTER" prefHeight="695.0" prefWidth="1080.0" spacing="10.0" />
+			</content>
+		</ScrollPane>
+		<Pane layoutX="142.0" layoutY="150.0" prefHeight="50.0" prefWidth="1080.0" style="-fx-background-radius: 5; -fx-border-width: 2; -fx-border-color: #9593D9; -fx-border-radius: 5;">
+			<children>
+				<HBox alignment="CENTER_LEFT" layoutX="70.0" layoutY="10.0" spacing="92.0">
+					<children>
+						<Label alignment="CENTER" text="Data" textAlignment="CENTER" textFill="#6756be">
+							<font>
+								<Font name="Roboto Black" size="24.0" />
+							</font>
+						</Label>
+						<Label alignment="CENTER" text="Ora" textAlignment="CENTER" textFill="#6756be">
+							<font>
+								<Font name="Roboto Black" size="24.0" />
+							</font>
+						</Label>
+						<Label alignment="CENTER" text="Nome Appartamento" textAlignment="CENTER" textFill="#6756be">
+							<font>
+								<Font name="Roboto Black" size="24.0" />
+							</font>
+						</Label>
+					</children>
+				</HBox>
+			</children>
+		</Pane>
+		<HBox alignment="CENTER_LEFT" layoutX="140.0" layoutY="80.0" spacing="20.0" style="-fx-background-color: #EDECF8; -fx-background-radius: 5;">
+			<children>
+				<JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Più recente" />
+				<JFXButton stylesheets="@CssFiles/ButtonOrderStyle.css" text="Meno recente" />
+			</children>
+			<padding>
+				<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+			</padding>
+		</HBox>
+	</children>
+</Pane>
