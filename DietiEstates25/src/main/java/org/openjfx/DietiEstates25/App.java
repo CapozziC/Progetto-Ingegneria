@@ -14,7 +14,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage primaryStage) throws IOException {
-    	WindowsManager.setLanguage(new Locale("it", "IT"));
+    	WindowsManager.setLanguage(Locale.of("it", "IT"));
     	WindowsManager.setPrimaryStage(primaryStage);
 		WindowsManager.loadWelcomeScene();
     }

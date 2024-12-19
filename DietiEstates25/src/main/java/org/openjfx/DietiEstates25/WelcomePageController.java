@@ -189,10 +189,10 @@ public class WelcomePageController {
             if (newValue != null) {
                 Locale newLocale;
                 if (newValue.equals("/org/openjfx/DietiEstates25/Icon/WelcomePage/icons8-italia-40.png")) {
-                    newLocale = new Locale("it", "IT");
+                    newLocale = Locale.of("it", "IT");
                 }
                 else {
-                    newLocale = new Locale("en", "US");
+                    newLocale = Locale.of("en", "US");
                 }
                 WindowsManager.setLanguage(newLocale);
                 WindowsManager.loadWelcomeScene();
