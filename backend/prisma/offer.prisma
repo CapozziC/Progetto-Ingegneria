@@ -1,0 +1,33 @@
+enum OfferStatus {
+    PENDING
+    ACCEPTED
+    REJECTED
+}
+
+
+
+model Offer{
+    id_offer       Int      @id @default(autoincrement())
+    created_at    DateTime @default(now())
+    price         Float
+    offer_status        OfferStatus @default(PENDING)
+
+    // made by user
+    id_user      Int
+    user        User         @relation(fields: [id_user], references: [id_user], onDelete: Cascade)
+
+    // negotiated with agent / agency
+    id_agent     Int
+    agent       Agent        @relation(fields: [id_agent], references: [id_agent], onDelete: Restrict)
+
+    // for advertisement
+    id_advertisement Int
+    advertisement   Advertisement @relation(fields: [id_advertisement], references: [id_advertisement], onDelete: Cascade)
+
+
+    @@index([id_user])
+    @@index([id_agent])
+    @@index([id_advertisement])
+    @@map("offer")  
+
+}

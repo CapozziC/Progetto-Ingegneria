@@ -1,0 +1,20 @@
+enum AuthProvider {
+  GOOGLE
+  FACEBOOK
+  GITHUB
+}
+
+
+model ProviderAccount {
+  id_provider_account            Int      @id @default(autoincrement())
+  provider        AuthProvider
+  token           String
+  authDate        DateTime @default(now())
+
+  // Relation with user
+  id_user          Int
+  user            User     @relation(fields: [id_user], references: [id_user], onDelete: Cascade)
+
+  @@index([id_user])
+  @@map("provider_account")
+}

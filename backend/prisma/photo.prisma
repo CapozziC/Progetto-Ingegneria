@@ -1,0 +1,19 @@
+enum PhotoFormat {
+    JPEG
+    PNG
+}
+model Photo{
+    id_photo        Int      @id @default(autoincrement())
+    url             String
+    description     String?
+    position        Int
+    format          PhotoFormat
+    
+    // Relation with advertisement
+    id_advertisement Int
+    advertisement Advertisement @relation(fields: [id_advertisement], references: [id_advertisement], onDelete: Cascade)
+    
+    @@index([id_advertisement])
+    @@map("photo")
+}
+

@@ -3,4 +3,19 @@ model User{
   name String 
   surname String 
   email String  @unique
+
+  // Relation with advertisement
+  advertisements Advertisement[]
+  // Relation with appointment
+  appointments Appointment[]
+  // Relation with offer
+  offers Offer[]
+  // Relation with local account
+  localAccount   LocalAccount?
+  // Relation with provider accounts
+  providerAccounts ProviderAccount[]
+
+  @@map("user")
 }
+
+

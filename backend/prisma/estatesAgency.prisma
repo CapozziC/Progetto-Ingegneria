@@ -1,0 +1,11 @@
+model RealEstateAgency {
+  id_agency            Int      @id @default(autoincrement())
+  name            String
+  phoneNumber     String
+  logo            String?
+  email           String?
+
+  agents          Agent[]
+
+  @@map("real_estate_agency")
+}
