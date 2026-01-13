@@ -6,22 +6,22 @@ enum AppointmentStatus {
 }
 
 model Appointment {
-  id_appointment   Int               @id @default(autoincrement())
+  id   Int               @id @default(autoincrement())
   date          DateTime?
   time          DateTime?
   status        AppointmentStatus @default(REQUESTED)
   // Relations
-  id_advertisement    Int
-  advertisement       Advertisement           @relation(fields: [id_advertisement], references: [id_advertisement], onDelete: Cascade)
+  advertisementId    Int
+  advertisement       Advertisement           @relation(fields: [advertisementId], references: [id], onDelete: Cascade)
 
-  id_agent       Int
-  agent         Agent             @relation(fields: [id_agent], references: [id_agent], onDelete: Restrict)
+  agentId       Int
+  agent         Agent             @relation(fields: [agentId], references: [id], onDelete: Restrict)
 
-  id_user        Int
-  user          User              @relation(fields: [id_user], references: [id_user], onDelete: Cascade)
+  userId        Int
+  user          User              @relation(fields: [userId], references: [id], onDelete: Cascade)
 
-  @@index([id_advertisement])
-  @@index([id_agent])
-  @@index([id_user])
+  @@index([advertisementId])
+  @@index([agentId])
+  @@index([userId])
   @@map("appointment")
 }

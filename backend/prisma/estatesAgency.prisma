@@ -1,5 +1,5 @@
 model RealEstateAgency {
-  id_agency            Int      @id @default(autoincrement())
+  id            Int      @id @default(autoincrement())
   name            String
   phoneNumber     String
   logo            String?

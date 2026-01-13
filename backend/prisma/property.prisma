@@ -24,8 +24,8 @@ enum HousingType {
   VILLA
 }
 
-model Property {
-  id_property        Int      @id @default(autoincrement())
+model RealEstate {
+  id       Int      @id @default(autoincrement())
   size               String?
   rooms              Int
   floor              String?
@@ -45,7 +45,7 @@ model Property {
  // Relation with advertisement 1-1
   advertisement      Advertisement?
 
-  @@map("property")
+  @@map("real_estate")
 }
 
 

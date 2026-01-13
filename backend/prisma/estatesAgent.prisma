@@ -1,5 +1,5 @@
 model Agent {
-  id_agent        Int      @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   firstName       String
   lastName        String
   username        String   @unique
@@ -7,25 +7,23 @@ model Agent {
   appointmentDate DateTime @default(now())
   phoneNumber     String?
   isAdmin         Boolean  @default(false)
-  id_administrator Int
+  administratorId Int? //FK
+  agencyId        Int  //FK
   
   
 
   // belongs to agency
-  id_agency       Int
-  agency          RealEstateAgency @relation(fields: [id_agency], references: [id_agency], onDelete: Restrict)
-
-  // self-relation: appointed by another agent (admin)
- 
-  appointedBy     Agent    @relation("AgentAppointment", fields: [id_administrator], references: [id_agent], onDelete: Restrict)
-  appointedAgents Agent[]  @relation("AgentAppointment")
-
+  agency     RealEstateAgency @relation(fields: [agencyId], references: [id], onDelete: Cascade)
+ // self-relation: appointed by another agent (admin)
+  administrator    Agent?   @relation(name: "AgentAdministrator", fields: [administratorId], references: [id], onDelete: SetNull)
+  agents          Agent[]   @relation(name: "AgentAdministrator")
+  // relations
   advertisements  Advertisement[]
   appointments    Appointment[]
   offers          Offer[]
 
-  @@index([id_agency])
-  @@index([id_administrator])
+  @@index([agencyId])
+  @@index([administratorId])
   @@map("agent")
 }
   

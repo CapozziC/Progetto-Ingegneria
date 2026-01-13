@@ -1,11 +1,11 @@
 model LocalAccount {
-  id_local_account  Int      @id @default(autoincrement())
+  id  Int      @id @default(autoincrement())
   passwordHash      String
   authDate          DateTime?
   authTime          DateTime?
 
-  id_user          Int      @unique
-  user            User     @relation(fields: [id_user], references: [id_user], onDelete: Cascade)
+  userId          Int      @unique
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@map("local_account")
 }

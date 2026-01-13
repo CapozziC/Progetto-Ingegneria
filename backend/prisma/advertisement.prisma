@@ -9,31 +9,31 @@ enum StatusAdvertisement {
 }
 
 model Advertisement {
-  id_advertisement            Int @id @default(autoincrement())
-  description                 String
-  price                       Float
-  type_adv                    TypeAdvertisement
-  created_at                  DateTime @default(now())
-  updated_at                  DateTime @updatedAt
-  status_adv                  StatusAdvertisement @default(ACTIVE)
-
-    // Relation with user 
-    id_user Int
-    user User @relation(fields: [id_user], references: [id_user])
-    // Relation with property
-    id_property Int @unique
-    property Property @relation(fields: [id_property], references: [id_property])
+  id                         Int @id @default(autoincrement())
+  description                String
+  price                      Float
+  typeAdv                    TypeAdvertisement
+  createdAt                  DateTime @default(now())
+  updatedAt                  DateTime @updatedAt
+  statusAdv                  StatusAdvertisement @default(ACTIVE)
+    
+    //Relation with user 
+    userId Int
+    user User @relation(fields: [userId], references: [id])
+    // Relation with real estate
+    realEstateId Int @unique
+    realEstate  RealEstate @relation(fields: [realEstateId], references: [id])
     // Relation with agent
-    id_agent Int
-    agent Agent @relation(fields: [id_agent], references: [id_agent])
+    agentId Int
+    agent Agent @relation(fields: [agentId], references: [id])
 
     photos        Photo[]
     offers        Offer[]
     appointments  Appointment[]
 
 
-    @@index([id_agent])
-    @@index([id_user])
+    @@index([agentId])
+    @@index([userId])
     @@map("advertisement")
 }
 
