@@ -25,6 +25,10 @@
     "noUncheckedIndexedAccess": true,
     //"exactOptionalPropertyTypes": true,
 
+    //typeOrm
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+
     // Style Options
     // "noImplicitReturns": true,
     // "noImplicitOverride": true,
