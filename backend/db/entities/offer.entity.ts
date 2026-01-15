@@ -8,7 +8,7 @@ import {
 
 import { Advertisement } from "./advertisement.entity";
 import { User } from "./user.entity";
-import { RealEstateAgent } from "./realEstateAgent.entity";
+import { Agent } from "./agent.entity";
 
 export enum OfferStatus {
   PENDING = "PENDING",
@@ -21,11 +21,11 @@ export class Offer {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column({ type: "decimal" })
-  price!: number;
-
   @CreateDateColumn({ type: "timestamp with time zone" })
   createdAt!: Date;
+
+  @Column({ type: "decimal" })
+  price!: number;
 
   @Column({
     type: "enum",
@@ -42,10 +42,6 @@ export class Offer {
   @ManyToOne(() => User, (user) => user.id, { onDelete: "CASCADE" })
   user!: User;
 
-  @ManyToOne(
-    () => RealEstateAgent,
-    (realEstateAgent) => realEstateAgent.offers,
-    { onDelete: "CASCADE" }
-  )
-  realEstateAgent!: RealEstateAgent;
+  @ManyToOne(() => Agent, (agent) => agent.offers, { onDelete: "CASCADE" })
+  agent!: Agent;
 }

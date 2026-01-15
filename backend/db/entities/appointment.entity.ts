@@ -3,12 +3,13 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  UpdateDateColumn,
   ManyToOne,
 } from "typeorm";
 
 import { User } from "./user.entity";
 import { Advertisement } from "./advertisement.entity";
-import { RealEstateAgent } from "./realEstateAgent.entity";
+import { Agent } from "./agent.entity";
 
 export enum AppointmentStatus {
   REQUESTED = "REQUESTED",
@@ -23,8 +24,17 @@ export class Appointment {
   id!: number;
 
   @CreateDateColumn({ type: "timestamp with time zone" })
+  appointentAt!: Date;
+
+  @CreateDateColumn({ type: "timestamp with time zone" })
   createdAt!: Date;
 
+  @UpdateDateColumn({
+    type: "timestamp with time zone",
+    default: () => "CURRENT_TIMESTAMP",
+  })
+  updatedAt!: Date;
+  
   @Column({
     type: "enum",
     enum: AppointmentStatus,
@@ -32,13 +42,18 @@ export class Appointment {
   })
   status!: AppointmentStatus;
 
-    @ManyToOne(() => User, (user) => user.id, { onDelete: "CASCADE" })
-    user!: User;
+  @ManyToOne(() => User, (user) => user.id, { onDelete: "CASCADE" })
+  user!: User;
 
-    @ManyToOne(() => Advertisement, (advertisement) => advertisement.appointments, { onDelete: "CASCADE" })
-    advertisement!: Advertisement;
+  @ManyToOne(
+    () => Advertisement,
+    (advertisement) => advertisement.appointments,
+    { onDelete: "CASCADE" }
+  )
+  advertisement!: Advertisement;
 
-    @ManyToOne(() => RealEstateAgent, (realEstateAgent) => realEstateAgent.appointments, { onDelete: "CASCADE" })
-    realEstateAgent!: RealEstateAgent;
-    
+  @ManyToOne(() => Agent, (agent) => agent.appointments, {
+    onDelete: "CASCADE",
+  })
+  agent!: Agent;
 }

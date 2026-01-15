@@ -3,7 +3,10 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  OneToOne,
 } from "typeorm";
+
+import { User } from "./user.entity";
 
 @Entity("local_account")
 export class LocalAccount {
@@ -18,4 +21,7 @@ export class LocalAccount {
 
   @CreateDateColumn({ type: "timestamp with time zone" })
   authDate!: Date;
+
+  @OneToOne(() => User, { nullable: true, onDelete: "CASCADE" })
+  user?: User;
 }

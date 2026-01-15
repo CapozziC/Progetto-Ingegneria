@@ -7,8 +7,8 @@ import {
 } from "typeorm";
 import { Advertisement } from "./advertisement.entity";
 import { User } from "./user.entity";
-import { RealEstateAgent } from "./realEstateAgent.entity";
-import { RealEstateAgency } from "./realEstateAgency.entity";
+import { Agent } from "./agent.entity";
+import { Agency } from "./agency.entity";
 
 export enum Format {
   JPEG = "JPEG",
@@ -21,32 +21,30 @@ export class Photo {
   @PrimaryGeneratedColumn()
   id!: number;
 
-  @Column()
-  url!: string;
-
-  @Column({ type: "int" })
-  position!: number;
-
   @Column({
     type: "enum",
     enum: Format,
   })
   format!: Format;
 
+  @Column()
+  url!: string;
+
+  @Column({
+    type: "int",
+    default: 0,
+  })
+  poition!: number;
+
   @ManyToOne(() => Advertisement, (advertisement) => advertisement.photos, {
     onDelete: "CASCADE",
   })
   advertisement!: Advertisement;
 
-  @OneToOne(() => RealEstateAgency, (realEstateAgency) => realEstateAgency.id, {
+  @OneToOne(() => Agency, {
     onDelete: "CASCADE",
   })
-  realEstateAgency!: RealEstateAgency;
-
-  @OneToOne(() => RealEstateAgent, (realEstateAgent) => realEstateAgent.id, {
-    onDelete: "CASCADE",
-  })
-  realEstateAgent!: RealEstateAgent;
+  agency!: Agency;
 
   @OneToOne(() => User, (user) => user.id, {
     onDelete: "CASCADE",

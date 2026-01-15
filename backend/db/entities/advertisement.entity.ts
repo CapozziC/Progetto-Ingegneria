@@ -3,11 +3,12 @@ import {
   PrimaryGeneratedColumn,
   Column,
   CreateDateColumn,
+  UpdateDateColumn,
   ManyToOne,
   OneToMany,
   OneToOne,
 } from "typeorm";
-import { RealEstateAgent } from "./realEstateAgent.entity";
+import { Agent } from "./agent.entity";
 import { RealEstate } from "./realEstate.entity";
 import { Appointment } from "./appointment.entity";
 
@@ -17,6 +18,11 @@ import { Offer } from "./offer.entity";
 export enum AdvertisementStatus {
   ACTIVE = "ACTIVE",
   INACTIVE = "INACTIVE",
+}
+
+export enum TypeAdvertisement {
+  SALE = "SALE",
+  RENT = "RENT",
 }
 
 @Entity("advertisement")
@@ -33,8 +39,11 @@ export class Advertisement {
   @CreateDateColumn({ type: "timestamp with time zone" })
   createdAt!: Date;
 
-  @CreateDateColumn({ type: "timestamp with time zone" })
-  UpdateAt!: Date;
+  @UpdateDateColumn({
+    type: "timestamp with time zone",
+    default: () => "CURRENT_TIMESTAMP",
+  })
+  updatedAt!: Date;
 
   @Column({
     type: "enum",
@@ -43,12 +52,16 @@ export class Advertisement {
   })
   status!: AdvertisementStatus;
 
-  @ManyToOne(
-    () => RealEstateAgent,
-    (realEstateAgent) => realEstateAgent.advertisements,
-    { onDelete: "CASCADE" }
-  )
-  realEstateAgent!: RealEstateAgent;
+  @Column({
+    type: "enum",
+    enum: TypeAdvertisement,
+  })
+  type!: TypeAdvertisement;
+
+  @ManyToOne(() => Agent, (agent) => agent.advertisements, {
+    onDelete: "CASCADE",
+  })
+  agent!: Agent;
 
   @OneToMany(() => Offer, (offer) => offer.advertisement)
   offers!: Offer[];
@@ -59,8 +72,6 @@ export class Advertisement {
   @OneToMany(() => Photo, (photo) => photo.advertisement)
   photos!: Photo[];
 
-  @OneToOne(() => RealEstate, (realEstate) => realEstate.advertisement, {
-    onDelete: "CASCADE",
-  })
+  @OneToOne(() => RealEstate)
   realEstate!: RealEstate;
 }

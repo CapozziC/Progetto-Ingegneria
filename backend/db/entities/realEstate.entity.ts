@@ -30,8 +30,8 @@ export class RealEstate {
   @Column({ type: "int" })
   size!: number;
 
-  @Column()
-  description!: string;
+  @Column({ type: "int" })
+  rooms!: number;
 
   @Column()
   floor!: String;
@@ -69,4 +69,3 @@ export class RealEstate {
   @Column({ type: "enum", enum: HousingType })
   housingType!: HousingType;
 }
-
