@@ -4,11 +4,10 @@ import {
   Column,
   ManyToOne,
   OneToOne,
+  JoinColumn,
 } from "typeorm";
 import { Advertisement } from "./advertisement";
-import { User } from "./user.entity";
-import { Agent } from "./agent";
-import { Agency } from "./agency.";
+import { Agency } from "./agency";
 
 export enum Format {
   JPEG = "JPEG",
@@ -34,7 +33,15 @@ export class Photo {
     type: "int",
     default: 0,
   })
-  poition!: number;
+  position!: number;
+
+  /**
+   * Agency this photo represents
+   * If the agency is deleted, the photo is deleted as well.
+   */
+  @OneToOne(() => Agency, { onDelete: "CASCADE" })
+  @JoinColumn()
+  agency?: Agency;
 
   /**
    * Advertisement this photo refers to
@@ -44,22 +51,4 @@ export class Photo {
     onDelete: "CASCADE",
   })
   advertisement!: Advertisement;
-
-  /**
-   * Agency this photo refers to
-   * If the agency is deleted, the photo is deleted as well.
-   */
-  @OneToOne(() => Agency, {
-    onDelete: "CASCADE",
-  })
-  agency!: Agency;
-
-  /**
-   * User this photo refers to
-   * If the user is deleted, the photo is deleted as well.
-   */
-  @OneToOne(() => User, (user) => user.id, {
-    onDelete: "CASCADE",
-  })
-  user!: User;
 }

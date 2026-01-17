@@ -1,5 +1,6 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany, OneToOne } from "typeorm";
 import { Agent } from "./agent";
+import { Photo } from "./photo";
 
 @Entity("agency")
 export class Agency {
@@ -20,4 +21,10 @@ export class Agency {
    */
   @OneToMany(() => Agent, (agent) => agent.agency)
   agent!: Agent[];
+
+  /**
+   * Photo representing this agency
+   */
+  @OneToOne(() => Photo, (photo) => photo.agency, { cascade: true })
+  photo?: Photo;
 }

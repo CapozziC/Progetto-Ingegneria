@@ -7,6 +7,7 @@ import {
   ManyToOne,
   OneToMany,
   OneToOne,
+  JoinColumn,
 } from "typeorm";
 import { Agent } from "./agent";
 import { RealEstate } from "./realEstate";
@@ -88,6 +89,7 @@ export class Advertisement {
   /**
    * Real estate property described by this advertisement
    */
-  @OneToOne(() => RealEstate)
+  @OneToOne(() => RealEstate, {onDelete: "CASCADE", cascade: true})
+  @JoinColumn()
   realEstate!: RealEstate;
 }

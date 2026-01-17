@@ -7,7 +7,7 @@ import {
   ManyToOne,
 } from "typeorm";
 
-import { User } from "./user.entity";
+import { User } from "./localUser";
 import { Advertisement } from "./advertisement";
 import { Agent } from "./agent";
 

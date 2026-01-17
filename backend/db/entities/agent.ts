@@ -9,7 +9,7 @@ import {
 import { Advertisement } from "./advertisement";
 import { Offer } from "./offer";
 import { Appointment } from "./appointment";
-import { Agency } from "./agency.";
+import { Agency } from "./agency";
 
 @Entity("agent")
 export class Agent {
@@ -67,7 +67,7 @@ export class Agent {
   /**
    * Administrator responsible for this Agent
    */
-  @ManyToOne(() => Agent, (agent) => agent.agents)
+  @ManyToOne(() => Agent, (agent) => agent.agents, {onDelete: "SET NULL"})
   administrator!: Agent;
 
   /**

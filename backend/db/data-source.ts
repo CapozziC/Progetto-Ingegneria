@@ -1,8 +1,8 @@
 import "reflect-metadata";
 import { DataSource } from "typeorm";
-import { User } from "../db/entities/user.entity";
+import { User } from "./entities/localUser";
 import { Advertisement } from "./entities/advertisement";
-import { Agency } from "./entities/agency.";
+import { Agency } from "./entities/agency";
 import { Appointment } from "./entities/appointment";
 import { Offer } from "./entities/offer";
 import { Photo } from "./entities/photo";

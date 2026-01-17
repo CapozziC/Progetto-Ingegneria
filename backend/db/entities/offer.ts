@@ -7,7 +7,7 @@ import {
 } from "typeorm";
 
 import { Advertisement } from "./advertisement";
-import { User } from "./user.entity";
+import { User } from "./localUser";
 import { Agent } from "./agent";
 
 export enum OfferStatus {
