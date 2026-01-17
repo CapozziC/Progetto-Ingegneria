@@ -6,10 +6,10 @@ import {
   OneToMany,
   ManyToOne,
 } from "typeorm";
-import { Advertisement } from "./advertisement.entity";
-import { Offer } from "./offer.entity";
-import { Appointment } from "./appointment.entity";
-import { Agency } from "./agency.entity";
+import { Advertisement } from "./advertisement";
+import { Offer } from "./offer";
+import { Appointment } from "./appointment";
+import { Agency } from "./agency.";
 
 @Entity("agent")
 export class Agent {
@@ -37,26 +37,42 @@ export class Agent {
   @Column({ default: false })
   isAdmin!: boolean;
 
-  @CreateDateColumn({ type: "timestamp with time zone" })
-  appointmentDate!: Date;
-
+  /**
+   * Advertisements managed by this Agent
+   */
   @OneToMany(() => Advertisement, (advertisement) => advertisement.agent)
   advertisements!: Advertisement[];
 
+  /**
+   * Offers managed by this Agent
+   */
   @OneToMany(() => Offer, (offer) => offer.agent)
   offers!: Offer[];
 
+  /**
+   * Appointments managed by this Agent
+   */
   @OneToMany(() => Appointment, (appointment) => appointment.agent)
   appointments!: Appointment[];
 
+  /**
+   * Real estate agency this Agent belongs to
+   * If the agency is deleted, the agent is also deleted
+   */
   @ManyToOne(() => Agency, (realEstateAgency) => realEstateAgency.agent, {
     onDelete: "CASCADE",
   })
   agency!: Agency;
 
+  /**
+   * Administrator responsible for this Agent
+   */
   @ManyToOne(() => Agent, (agent) => agent.agents)
   administrator!: Agent;
 
+  /**
+   * Agents managed by this Administrator
+   */
   @OneToMany(() => Agent, (agent) => agent.administrator)
   agents!: Agent[];
 }

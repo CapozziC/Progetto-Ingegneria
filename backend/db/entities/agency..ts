@@ -1,5 +1,5 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
-import { Agent } from "./agent.entity";
+import { Agent } from "./agent";
 
 @Entity("agency")
 export class Agency {
@@ -15,6 +15,9 @@ export class Agency {
   @Column()
   email?: string;
 
+  /**
+   * Agents that belong to this agency
+   */
   @OneToMany(() => Agent, (agent) => agent.agency)
   agent!: Agent[];
 }

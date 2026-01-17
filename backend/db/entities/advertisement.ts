@@ -8,12 +8,12 @@ import {
   OneToMany,
   OneToOne,
 } from "typeorm";
-import { Agent } from "./agent.entity";
-import { RealEstate } from "./realEstate.entity";
-import { Appointment } from "./appointment.entity";
+import { Agent } from "./agent";
+import { RealEstate } from "./realEstate";
+import { Appointment } from "./appointment";
 
-import { Photo } from "./photo.entity";
-import { Offer } from "./offer.entity";
+import { Photo } from "./photo";
+import { Offer } from "./offer";
 
 export enum AdvertisementStatus {
   ACTIVE = "ACTIVE",
@@ -58,20 +58,36 @@ export class Advertisement {
   })
   type!: TypeAdvertisement;
 
+  /**
+   * Agent who published and manages this advertisement.
+   * If the agent is deleted, the advertisement is deleted as well.
+   */
   @ManyToOne(() => Agent, (agent) => agent.advertisements, {
     onDelete: "CASCADE",
   })
   agent!: Agent;
 
+  /**
+   * Offers received for this advertisement
+   */
   @OneToMany(() => Offer, (offer) => offer.advertisement)
   offers!: Offer[];
 
+  /**
+   * Appointments scheduled for this advertisement
+   */
   @OneToMany(() => Appointment, (appointment) => appointment.advertisement)
   appointments!: Appointment[];
 
+  /**
+   * Photos associated with this advertisement
+   */
   @OneToMany(() => Photo, (photo) => photo.advertisement)
   photos!: Photo[];
 
+  /**
+   * Real estate property described by this advertisement
+   */
   @OneToOne(() => RealEstate)
   realEstate!: RealEstate;
 }

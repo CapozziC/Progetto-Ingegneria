@@ -6,9 +6,9 @@ import {
   ManyToOne,
 } from "typeorm";
 
-import { Advertisement } from "./advertisement.entity";
+import { Advertisement } from "./advertisement";
 import { User } from "./user.entity";
-import { Agent } from "./agent.entity";
+import { Agent } from "./agent";
 
 export enum OfferStatus {
   PENDING = "PENDING",
@@ -34,14 +34,26 @@ export class Offer {
   })
   status!: OfferStatus;
 
+  /**
+   * Advertisement this offer refers to
+   * If the advertisement is deleted, the offer is deleted as well.
+   */
   @ManyToOne(() => Advertisement, (advertisement) => advertisement.offers, {
     onDelete: "CASCADE",
   })
   advertisement!: Advertisement;
 
+  /**
+   * User who made this offer
+   * If the user is deleted, the offer is deleted as well.
+   */
   @ManyToOne(() => User, (user) => user.id, { onDelete: "CASCADE" })
   user!: User;
 
+  /**
+   * Agent responsible for this offer
+   * If the agent is deleted, the offer is deleted as well.
+   */
   @ManyToOne(() => Agent, (agent) => agent.offers, { onDelete: "CASCADE" })
   agent!: Agent;
 }

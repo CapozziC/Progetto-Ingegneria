@@ -5,9 +5,9 @@ import {
   CreateDateColumn,
   OneToMany,
 } from "typeorm";
-import { Appointment } from "./appointment.entity";
-import { Offer } from "./offer.entity";
-import { ProviderAccount } from "./providerAccount.entity";
+import { Appointment } from "./appointment";
+import { Offer } from "./offer";
+import { ProviderAccount } from "./providerAccount";
 
 @Entity("user")
 export class User {

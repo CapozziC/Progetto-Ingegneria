@@ -8,8 +8,8 @@ import {
 } from "typeorm";
 
 import { User } from "./user.entity";
-import { Advertisement } from "./advertisement.entity";
-import { Agent } from "./agent.entity";
+import { Advertisement } from "./advertisement";
+import { Agent } from "./agent";
 
 export enum AppointmentStatus {
   REQUESTED = "REQUESTED",
@@ -24,7 +24,7 @@ export class Appointment {
   id!: number;
 
   @CreateDateColumn({ type: "timestamp with time zone" })
-  appointentAt!: Date;
+  appointmentAt!: Date;
 
   @CreateDateColumn({ type: "timestamp with time zone" })
   createdAt!: Date;
@@ -34,7 +34,7 @@ export class Appointment {
     default: () => "CURRENT_TIMESTAMP",
   })
   updatedAt!: Date;
-  
+
   @Column({
     type: "enum",
     enum: AppointmentStatus,
@@ -42,9 +42,17 @@ export class Appointment {
   })
   status!: AppointmentStatus;
 
+  /**
+   * User who requested this appointment
+   * If the user is deleted, the appointment is deleted as well.
+   */
   @ManyToOne(() => User, (user) => user.id, { onDelete: "CASCADE" })
   user!: User;
 
+  /**
+   * Advertisement this appointment refers to
+   * If the advertisement is deleted, the appointment is deleted as well.
+   */
   @ManyToOne(
     () => Advertisement,
     (advertisement) => advertisement.appointments,
@@ -52,6 +60,10 @@ export class Appointment {
   )
   advertisement!: Advertisement;
 
+  /**
+   * Agent responsible for handling this appointment
+   * If the agent is deleted, the appointment is deleted as well.
+   */
   @ManyToOne(() => Agent, (agent) => agent.appointments, {
     onDelete: "CASCADE",
   })
